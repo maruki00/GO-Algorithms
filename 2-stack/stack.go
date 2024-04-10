@@ -8,13 +8,13 @@ type Stack struct {
 }
 
 func (obj *Stack) push(item int) {
-	obj.items = append([]int{item}, obj.items...)
+	obj.items = append(obj.items, item)
 	obj.lenght++
 }
 
 func (obj *Stack) pop() int {
-	item := obj.items[0]
-	obj.items = obj.items[1:]
+	item := obj.items[obj.lenght]
+	obj.items = obj.items[:obj.lenght-2]
 	obj.lenght--
 	return item
 }
