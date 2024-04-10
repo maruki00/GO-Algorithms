@@ -22,10 +22,18 @@ func (obj *Stack) add(item any) {
 		root.next = newNode
 	}
 }
+
+func (obj*Stack)print(){
+	root := obj.root
+	for root.next !=nil{
+		println('Item : ',root.item )
+	}
+}
 func main() {
 	stack := &Stack{}
 	stack.add(1234)
 	stack.add(12344536)
 	//stack.root = &Node{next: nil, item: 123}
-	fmt.Println("Stack: ", stack.root.item)
+	stack.print()
+	// fmt.Println("Stack: ", stack.root.item)
 }
