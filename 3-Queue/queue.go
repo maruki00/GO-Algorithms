@@ -13,8 +13,8 @@ func (obj *Stack) append(item int) {
 }
 
 func (obj *Stack) get() int {
-	item := obj.items[obj.lenght-1]
-	obj.items = obj.items[:obj.lenght-2]
+	item := obj.items[0]
+	obj.items = obj.items[1:]
 	obj.lenght--
 	return item
 }
