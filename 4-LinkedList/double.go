@@ -3,19 +3,19 @@ package main
 import (
 	"fmt"
 	"sync"
+	NodeDouble - "linkedlist"
 )
 
-type SimpleLinkedList struct {
-	root   *NodeSimple
-	lenght int
-	mutex  sync.Mutex
+type DoubleLinkedList struct {
+	root  *NodeDouble
+	mutex sync.Mutex
 }
 
-func (obj *SimpleLinkedList) add(item any) {
+func (obj *Stack) add(item any) {
 	obj.mutex.Lock()
 	defer obj.mutex.Unlock()
 
-	newNode := &NodeSimple{next: nil, item: item}
+	newNode := &Node{next: nil, item: item}
 	if obj.root == nil {
 		obj.root = newNode
 		return
@@ -27,7 +27,7 @@ func (obj *SimpleLinkedList) add(item any) {
 	root.next = newNode
 }
 
-func (obj *SimpleLinkedList) print() {
+func (obj *Stack) print() {
 	obj.mutex.Lock()
 	defer obj.mutex.Unlock()
 	root := obj.root
@@ -37,7 +37,7 @@ func (obj *SimpleLinkedList) print() {
 	}
 }
 
-func (obj *SimpleLinkedList) RemoveAt(index int) {
+func (obj *Stack) RemoveAt(index int) {
 	root := obj.root
 	if index == 0 {
 		root = root.next.next
@@ -54,7 +54,7 @@ func (obj *SimpleLinkedList) RemoveAt(index int) {
 	}
 }
 func main() {
-	stack := &SimpleLinkedList{}
+	stack := &Stack{}
 	stack.add(1234)
 	stack.add(11111)
 	stack.add(22222222)
