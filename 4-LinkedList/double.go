@@ -1,75 +1,53 @@
-// package main
+package main
 
-// import (
-// 	"fmt"
-// 	"sync"
-// )
+import (
+	"fmt"
+	"sync"
+)
 
-// type NodeDouble struct {
-// 	previous *NodeDouble
-// 	next     *NodeDouble
-// 	value    any
-// }
-// type DoubleLinkedList struct {
-// 	root  *NodeDouble
-// 	mutex sync.Mutex
-// }
+type DoubleNode struct {
+	previous *DoubleNode
+	next     *DoubleNode
+	value    any
+}
 
-// func (obj *DoubleLinkedList) add(item any) {
-// 	obj.mutex.Lock()
-// 	defer obj.mutex.Unlock()
+type DoubleLinkedList struct {
+	head   *DoubleNode
+	lenght int
+	sync.Mutex
+}
 
-// 	newNode := &Node{next: nil, item: item}
-// 	if obj.root == nil {
-// 		obj.root = newNode
-// 		return
-// 	}
-// 	root := obj.root
-// 	for root.next != nil {
-// 		root = root.next
-// 	}
-// 	root.next = newNode
-// }
+func (obj *DoubleLinkedList) append(value any) {
 
-// func (obj *Stack) print() {
-// 	obj.mutex.Lock()
-// 	defer obj.mutex.Unlock()
-// 	root := obj.root
-// 	for root != nil {
-// 		fmt.Println("Item : ", root.item)
-// 		root = root.next
-// 	}
-// }
+	if obj.lenght == 0 {
+		obj.head = &DoubleNode{value: value, next: nil, previous: nil}
+		obj.lenght++
+		return
+	}
 
-// func (obj *Stack) RemoveAt(index int) {
-// 	root := obj.root
-// 	if index == 0 {
-// 		root = root.next.next
-// 		return
-// 	}
-// 	for index >= 0 {
-// 		root = root.next
-// 		fmt.Println(" ---- 1 Item : ", root.item)
-// 		index--
-// 	}
-// 	for root.next.next != nil {
-// 		root = root.next.next
-// 		fmt.Println(" ---- 2 Item : ", root.item)
-// 	}
-// }
-// func main() {
-// 	stack := &Stack{}
-// 	stack.add(1234)
-// 	stack.add(11111)
-// 	stack.add(22222222)
-// 	stack.add(333333333333)
-// 	stack.add(444444444)
-// 	stack.add(6666666666)
-// 	stack.add(77777777)
-// 	stack.add(8888888888)
-// 	stack.add(999999999)
-// 	//stack.root = &Node{next: nil, item: 123}
-// 	stack.RemoveAt(0)
-// 	stack.print()
-// 	// fmt.Println("Stack: ", stack.root.item)
-// }
+	head := obj.head
+	for head.next != nil {
+		head.previous = head
+		head = head.next
+	}
+	head = &DoubleNode{value: value, next: nil, previous: head.previous}
+	obj.lenght++
+}
+
+func (obj DoubleLinkedList) print() {
+	head := obj.head
+	for head.next != nil {
+		fmt.Println("Item: ", head.value)
+		head.previous = head
+		head = head.next
+	}
+}
+
+func main() {
+	Doube := &DoubleLinkedList{}
+	Doube.append(10)
+	Doube.append(10)
+	Doube.append(10)
+	Doube.append(10)
+	Doube.print()
+}
