@@ -69,20 +69,14 @@ func (obj *SimpleLinkedList) remove(value any) {
 		obj.lenght--
 		return
 	}
+	previos := obj.root
+	for previos.next.value != value && previos.next.next != nil {
+		obj.root = obj.root.next
+	}
 
-	// root := obj.root
-	// prev := root
-	// counter := 0
-	// for root != nil {
-	// 	if root.value != value {
-	// 		prev = root
-	// 		root = root.next
-	// 	} else {
-	// 		prev = root.next
-	// 		root = prev.next
-	// 	}
-	// 	counter++
-	// }
+	previos.next = previos.next.next
+	obj.lenght--
+
 }
 func main() {
 	stack := &SimpleLinkedList{}
@@ -99,6 +93,7 @@ func main() {
 	stack.preappend("hello world")
 	stack.print()
 	stack.remove("hello world")
+	stack.remove(999999999)
 	println("---------------------------------------------")
 	stack.print()
 	// fmt.Println("Stack: ", stack.root.value)
