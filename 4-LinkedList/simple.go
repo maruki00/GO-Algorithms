@@ -101,15 +101,12 @@ func main() {
 	stack.preappend(999999999)
 	stack.preappend(1000000001)
 	stack.preappend("hello world")
-	fmt.Println("Lenght: ", stack.lenght)
-	stack.print()
 	stack.remove("hello world")
 	stack.remove(999999999)
 	stack.remove(999999999897456)
-	fmt.Println("Lenght: ", stack.lenght)
-	println("---------------------------------------------")
-	stack.print()
+
 	stack.clear()
+	fmt.Println("Lenght: ", stack.lenght)
 	stack.print()
 
 	// fmt.Println("Stack: ", stack.root.value)
