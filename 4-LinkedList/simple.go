@@ -59,12 +59,12 @@ func (obj *SimpleLinkedList) print() {
 	}
 }
 
-func (obj *SimpleLinkedList) RemoveAt(index int) {
+func (obj *SimpleLinkedList) remove(value any) {
 	root := obj.root
 	prev := root
 	counter := 0
 	for root != nil {
-		if root.value != index {
+		if root.value != value {
 			prev = root
 			root = root.next
 		} else {
@@ -84,9 +84,9 @@ func main() {
 	stack.append(6666666666)
 	stack.append(77777777)
 	stack.append(8888888888)
-	stack.append(999999999)
-	//stack.root = &Node{next: nil, value: 123}
-	stack.preappend(00000000)
+	stack.preappend(999999999)
+	stack.preappend(1000000001)
+	stack.preappend("hello world")
 	stack.print()
 	// fmt.Println("Stack: ", stack.root.value)
 }
