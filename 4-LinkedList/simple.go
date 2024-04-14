@@ -42,7 +42,6 @@ func (obj *SimpleLinkedList) preappend(value any) {
 		obj.lenght++
 		return
 	}
-
 	node := &NodeSimple{value: value, next: nil}
 	node.next = obj.root
 	obj.root = node
@@ -60,6 +59,8 @@ func (obj *SimpleLinkedList) print() {
 }
 
 func (obj *SimpleLinkedList) remove(value any) {
+	obj.mutex.Lock()
+	defer obj.mutex.Unlock()
 	if obj.lenght == 0 {
 		return
 	}
@@ -79,6 +80,14 @@ func (obj *SimpleLinkedList) remove(value any) {
 		}
 	}
 }
+
+func (obj *SimpleLinkedList) clear() {
+	obj.mutex.Lock()
+	defer obj.mutex.Unlock()
+	obj.lenght = 0
+	obj.root = nil
+}
+
 func main() {
 	stack := &SimpleLinkedList{}
 	stack.append(1234)
@@ -100,8 +109,7 @@ func main() {
 	fmt.Println("Lenght: ", stack.lenght)
 	println("---------------------------------------------")
 	stack.print()
-	stack.print()
-	stack.print()
+	stack.clear()
 	stack.print()
 
 	// fmt.Println("Stack: ", stack.root.value)
