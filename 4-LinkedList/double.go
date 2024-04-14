@@ -26,15 +26,17 @@ func (obj *DoubleLinkedList) append(value any) {
 	}
 
 	head := obj.head
+	fmt.Println("head: ", head)
 	for head.next != nil {
 		head.previous = head
 		head = head.next
+		fmt.Println(value)
 	}
-	head = &DoubleNode{value: value, next: nil, previous: head.previous}
+	head.next = &DoubleNode{value: value, next: nil, previous: head.previous}
 	obj.lenght++
 }
 
-func (obj DoubleLinkedList) print() {
+func (obj *DoubleLinkedList) print() {
 	head := obj.head
 	for head.next != nil {
 		fmt.Println("Item: ", head.value)
@@ -44,10 +46,11 @@ func (obj DoubleLinkedList) print() {
 }
 
 func main() {
-	Doube := &DoubleLinkedList{}
-	Doube.append(10)
-	Doube.append(10)
-	Doube.append(10)
-	Doube.append(10)
-	Doube.print()
+	doube := &DoubleLinkedList{}
+	doube.append(10)
+
+	doube.append(10)
+	doube.append(10)
+	doube.append(10)
+	doube.print()
 }
