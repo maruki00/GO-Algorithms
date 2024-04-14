@@ -52,22 +52,21 @@ func (obj *DoubleLinkedList) remove(value any) {
 	}
 	head := obj.head
 	for head.next != nil {
-		if head.value != value {
+		if head.next.value != value {
 			head.previous = head
 			head = head.next
+
 		} else {
-			head.previous.next = head.next.previous
+			head.next = head.next.next
 			obj.lenght--
 			return
 		}
-
 	}
 }
 
 func main() {
 	double := &DoubleLinkedList{}
 	double.append(1)
-
 	double.append(2)
 	double.append(3)
 	double.append(4)
@@ -75,12 +74,15 @@ func main() {
 	double.append(6)
 	double.append(7)
 	double.append(8)
-
 	double.print()
 	println("-------------------------------------")
 	double.remove(1)
-	double.remove(5)
-	double.remove(7)
-
 	double.print()
+	println("-------------------------------------")
+	double.remove(5)
+	double.remove(2)
+	double.remove(7)
+	double.remove(8)
+	double.print()
+
 }
