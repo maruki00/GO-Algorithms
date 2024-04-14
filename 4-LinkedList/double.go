@@ -89,6 +89,7 @@ func main() {
 	double.remove(7)
 	double.remove(8)
 	double.clear()
+	println("-------------------------------------")
 
 	double.print()
 
