@@ -98,5 +98,8 @@ func main() {
 	stack.preappend(1000000001)
 	stack.preappend("hello world")
 	stack.print()
+	stack.remove("hello world")
+	println("---------------------------------------------")
+	stack.print()
 	// fmt.Println("Stack: ", stack.root.value)
 }
