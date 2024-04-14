@@ -17,6 +17,15 @@ type DoubleLinkedList struct {
 	sync.Mutex
 }
 
+func (obj *DoubleLinkedList) print() {
+	head := obj.head
+	for head != nil {
+		fmt.Println("Item: ", head.value)
+		head.previous = head
+		head = head.next
+	}
+}
+
 func (obj *DoubleLinkedList) append(value any) {
 	if obj.lenght == 0 {
 		obj.head = &DoubleNode{value: value, next: nil, previous: nil}
@@ -27,9 +36,8 @@ func (obj *DoubleLinkedList) append(value any) {
 	for head.next != nil {
 		head.previous = head
 		head = head.next
-		fmt.Println(value)
 	}
-	head.next = &DoubleNode{value: value, next: nil, previous: head.previous}
+	head.next = &DoubleNode{value: value, next: nil, previous: head}
 	obj.lenght++
 }
 
@@ -56,15 +64,6 @@ func (obj *DoubleLinkedList) remove(value any) {
 	}
 }
 
-func (obj *DoubleLinkedList) print() {
-	head := obj.head
-	for head.next != nil {
-		fmt.Println("Item: ", head.value)
-		head.previous = head
-		head = head.next
-	}
-}
-
 func main() {
 	double := &DoubleLinkedList{}
 	double.append(1)
@@ -75,9 +74,10 @@ func main() {
 	double.append(5)
 	double.append(6)
 	double.append(7)
+	double.append(8)
 
 	double.print()
-
+	println("-------------------------------------")
 	double.remove(1)
 	double.remove(5)
 	double.remove(7)
