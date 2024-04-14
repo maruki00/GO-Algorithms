@@ -60,19 +60,29 @@ func (obj *SimpleLinkedList) print() {
 }
 
 func (obj *SimpleLinkedList) remove(value any) {
-	root := obj.root
-	prev := root
-	counter := 0
-	for root != nil {
-		if root.value != value {
-			prev = root
-			root = root.next
-		} else {
-			prev = root.next
-			root = prev.next
-		}
-		counter++
+	if obj.lenght == 0 {
+		return
 	}
+
+	if obj.root.value == value {
+		obj.root = obj.root.next
+		obj.lenght--
+		return
+	}
+
+	// root := obj.root
+	// prev := root
+	// counter := 0
+	// for root != nil {
+	// 	if root.value != value {
+	// 		prev = root
+	// 		root = root.next
+	// 	} else {
+	// 		prev = root.next
+	// 		root = prev.next
+	// 	}
+	// 	counter++
+	// }
 }
 func main() {
 	stack := &SimpleLinkedList{}
