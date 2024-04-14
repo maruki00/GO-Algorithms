@@ -104,7 +104,6 @@ func main() {
 	stack.remove("hello world")
 	stack.remove(999999999)
 	stack.remove(999999999897456)
-
 	stack.clear()
 	fmt.Println("Lenght: ", stack.lenght)
 	stack.print()
