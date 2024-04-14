@@ -45,5 +45,19 @@ func (obj *Trie) search(w string) bool {
 }
 
 func main() {
+	trie := InitTrie()
+	toAdd := []string{
+		"aragon",
+		"oragon",
+		"oreo",
+		"hello",
+		"sdkljfh"
+	}
+
+	for _, item := range toAdd{
+		trie.insert(item)
+	}
+
+	fmt.Println("Search: ", trie.search("oreo"))
 
 }
