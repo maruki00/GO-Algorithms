@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 const Alphabites = 26
 
 type Node struct {
@@ -38,10 +40,7 @@ func (obj *Trie) search(w string) bool {
 		}
 		currebtNode = currebtNode.children[charIndex]
 	}
-	if currebtNode.isEnd == true {
-		return true
-	}
-	return false
+	return currebtNode.isEnd == true
 }
 
 func main() {
@@ -51,13 +50,13 @@ func main() {
 		"oragon",
 		"oreo",
 		"hello",
-		"sdkljfh"
+		"sdkljfh",
 	}
 
-	for _, item := range toAdd{
+	for _, item := range toAdd {
 		trie.insert(item)
 	}
 
-	fmt.Println("Search: ", trie.search("oreo"))
+	fmt.Println("Search: ", trie.search("helloworld"))
 
 }
