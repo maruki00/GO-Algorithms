@@ -5,6 +5,11 @@ import (
 	"sync"
 )
 
+type NodeSimple struct {
+	next *NodeSimple
+	item any
+}
+
 type SimpleLinkedList struct {
 	root   *NodeSimple
 	lenght int
@@ -39,18 +44,17 @@ func (obj *SimpleLinkedList) print() {
 
 func (obj *SimpleLinkedList) RemoveAt(index int) {
 	root := obj.root
-	if index == 0 {
-		root = root.next.next
-		return
-	}
-	for index >= 0 {
-		root = root.next
-		fmt.Println(" ---- 1 Item : ", root.item)
-		index--
-	}
-	for root.next.next != nil {
-		root = root.next.next
-		fmt.Println(" ---- 2 Item : ", root.item)
+	prev := root
+	counter := 0
+	for root != nil {
+		if root.item != index {
+			prev = root
+			root = root.next
+		} else {
+			prev = root.next
+			root = prev.next
+		}
+		counter++
 	}
 }
 func main() {
@@ -65,7 +69,7 @@ func main() {
 	stack.add(8888888888)
 	stack.add(999999999)
 	//stack.root = &Node{next: nil, item: 123}
-	stack.RemoveAt(0)
+	stack.RemoveAt(22222222)
 	stack.print()
 	// fmt.Println("Stack: ", stack.root.item)
 }
