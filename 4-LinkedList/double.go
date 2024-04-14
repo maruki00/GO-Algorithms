@@ -64,6 +64,11 @@ func (obj *DoubleLinkedList) remove(value any) {
 	}
 }
 
+func (obj *DoubleLinkedList) clear() {
+	obj.head = nil
+	obj.lenght = 0
+}
+
 func main() {
 	double := &DoubleLinkedList{}
 	double.append(1)
@@ -83,6 +88,8 @@ func main() {
 	double.remove(2)
 	double.remove(7)
 	double.remove(8)
+	double.clear()
+
 	double.print()
 
 }
