@@ -51,12 +51,11 @@ func main() {
 		"oreo",
 		"hello",
 		"sdkljfh",
+		"sdkljfh",
+		"aaaaaddddddggggg",
 	}
-
 	for _, item := range toAdd {
 		trie.insert(item)
 	}
-
-	fmt.Println("Search: ", trie.search("helloworld"))
-
+	fmt.Println("Search: ", trie.search("aaaaaddddddggggg"))
 }
