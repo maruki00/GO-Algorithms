@@ -22,3 +22,12 @@ func (g *Graph) Print() {
 		}
 	}
 }
+
+func main() {
+
+	g := &Graph{}
+	for i := 0; i < 5; i++ {
+		g.AddVertex(i)
+	}
+	g.Print()
+}
