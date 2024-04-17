@@ -26,11 +26,12 @@ func (g *Graph) AddEdge(from, to int) {
 	fromVertex := g.getVertex(from)
 	toVertex := g.getVertex(to)
 	if toVertex == nil || fromVertex == nil {
-		err := fmt.Errorf("Invalid Edge from %v to %d Exists", from, to)
+		err := fmt.Errorf("Vertex %v Alread Exists", from)
 		fmt.Println(err.Error())
 		return
+	} else {
+		fromVertex.adjancent = append(fromVertex.adjancent, toVertex)
 	}
-	fromVertex.adjancent = append(fromVertex.adjancent, toVertex)
 }
 
 func (g *Graph) Print() {
@@ -67,6 +68,9 @@ func main() {
 		g.AddVertex(i)
 	}
 	g.AddEdge(3, 1)
+	g.AddEdge(2, 1)
+	g.AddEdge(2, 1)
+	g.AddEdge(2, 1)
 	g.AddEdge(2, 1)
 	g.AddEdge(2, 1)
 	g.AddEdge(2, 1)
