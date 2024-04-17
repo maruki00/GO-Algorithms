@@ -62,6 +62,7 @@ func main() {
 	for i := 0; i < 5; i++ {
 		g.AddVertex(i)
 	}
-	g.AddVertex(3)
+	g.AddEdge(3, 1)
+	g.AddEdge(2, 1)
 	g.Print()
 }
