@@ -15,10 +15,18 @@ type Vertex struct {
 
 func (g *Graph) AddVertex(k int) {
 	if g.contains(g.Verteces, k) {
-		fmt.Println(fmt.Errorf("Vertex Alread Exists").Error())
+		err := fmt.Errorf("Vertex %v Alread Exists", k)
+		fmt.Println(err.Error())
 		return
 	}
 	g.Verteces = append(g.Verteces, &Vertex{key: k})
+}
+
+func (g *Graph) AddEdge(from, to int) {
+	fromVertex := g.getVertex(from)
+	toVertex := g.getVertex(to)
+
+	fromVertex.adjancent = append(fromVertex.adjancent, toVertex)
 }
 
 func (g *Graph) Print() {
@@ -28,6 +36,15 @@ func (g *Graph) Print() {
 			fmt.Printf(" %v, ", vk.key)
 		}
 	}
+}
+
+func (g *Graph) getVertex(k int) *Vertex {
+	for i, v := range g.Verteces {
+		if v.key == k {
+			return g.Verteces[i]
+		}
+	}
+	return nil
 }
 
 func (g *Graph) contains(s []*Vertex, k int) bool {
@@ -45,5 +62,6 @@ func main() {
 	for i := 0; i < 5; i++ {
 		g.AddVertex(i)
 	}
+	g.AddVertex(3)
 	g.Print()
 }
