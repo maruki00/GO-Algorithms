@@ -26,7 +26,11 @@ func (g *Graph) AddEdge(from, to int) {
 	fromVertex := g.getVertex(from)
 	toVertex := g.getVertex(to)
 	if toVertex == nil || fromVertex == nil {
-		err := fmt.Errorf("Vertex %v Alread Exists", from)
+		err := fmt.Errorf("Invalid Edge (%v--> %v).", from, to)
+		fmt.Println(err.Error())
+		return
+	} else if g.contains(fromVertex.adjancent, to) {
+		err := fmt.Errorf("Edge (%v--> %v) Already exists.", from, to)
 		fmt.Println(err.Error())
 		return
 	} else {
