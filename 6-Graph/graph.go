@@ -25,7 +25,11 @@ func (g *Graph) AddVertex(k int) {
 func (g *Graph) AddEdge(from, to int) {
 	fromVertex := g.getVertex(from)
 	toVertex := g.getVertex(to)
-
+	if toVertex == nil || fromVertex == nil {
+		err := fmt.Errorf("Invalid Edge from %v to %d Exists", from, to)
+		fmt.Println(err.Error())
+		return
+	}
 	fromVertex.adjancent = append(fromVertex.adjancent, toVertex)
 }
 
