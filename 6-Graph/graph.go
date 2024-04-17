@@ -68,5 +68,7 @@ func main() {
 	}
 	g.AddEdge(3, 1)
 	g.AddEdge(2, 1)
+	g.AddEdge(2, 1)
+	g.AddEdge(2, 1)
 	g.Print()
 }
