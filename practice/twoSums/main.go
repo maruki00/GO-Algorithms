@@ -2,22 +2,35 @@ package main
 
 import "fmt"
 
-func twoSums(nums []int, target int) []int {
+func getIndex(items map[int]int, target int) int {
+	for i, y := range items {
+		if target == y {
+			return i
+		}
+	}
+	return -1
+}
 
-	ans := 0
+func twoSum(nums []int, target int) []int {
+
 	var arrMap map[int]int
-	arrMap := make(map[int]int) //, len(nums))
+	arrMap = make(map[int]int) //, len(nums))
 
 	for index, item := range nums {
-		fmt.Print(index, item)
+		sub := target - item
+		subIndex := getIndex(arrMap, item)
+		if subIndex != -1 {
+			return []int{subIndex, index}
+		} else {
+			arrMap[index] = sub
+		}
 	}
 
-	// if conta arrMap
-
-	return []int{left, right}
+	return []int{-1, -1}
 }
 
 func main() {
 	items := []int{1, 4, 7, 9}
-	x := twoSums(items, 6)
+	x := twoSum(items, 5)
+	fmt.Print(x)
 }
