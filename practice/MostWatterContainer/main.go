@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	items := []int{1, 2, 3, 4, 5, 6}
+	items := []int{1, 8, 6, 2, 5, 4, 8, 3, 7}
 	left := 0
 	right := len(items) - 1
 	ans := 0
@@ -22,5 +22,5 @@ func main() {
 		}
 	}
 
-	fmt.Print(items, left, right)
+	fmt.Print("answer : ", ans)
 }
