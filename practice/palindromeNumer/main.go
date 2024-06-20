@@ -29,6 +29,6 @@ func isPalindrome(x int) bool {
 }
 
 func main() {
-	x := 123
+	x := 12321
 	fmt.Println(isPalindrome(x))
 }
