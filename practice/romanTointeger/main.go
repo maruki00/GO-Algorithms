@@ -1,9 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func romanToInt(s string) int {
 	x := 0
+	s = strings.ToUpper(s)
 	var numbers map[string]int = map[string]int{
 		"I": 1,
 		"V": 5,
@@ -14,11 +18,15 @@ func romanToInt(s string) int {
 		"M": 1000,
 	}
 
+	for i, y := range s {
+		fmt.Println(i, y)
+	}
+
 	fmt.Println(numbers, s)
 	return x
 
 }
 
 func main() {
-	romanToInt("xx")
+	romanToInt("xxii")
 }
