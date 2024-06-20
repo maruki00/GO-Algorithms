@@ -6,7 +6,7 @@ import (
 )
 
 func romanToInt(s string) int {
-	x := 0
+	result := 0
 	s = strings.ToUpper(s)
 	var numbers map[string]int = map[string]int{
 		"I": 1,
@@ -18,15 +18,20 @@ func romanToInt(s string) int {
 		"M": 1000,
 	}
 
-	for i, y := range s {
-		fmt.Println(i, y)
+	sLen := len(s) - 2
+
+	for i := 0; i < sLen; i += 2 {
+		romNum := string(s[i])
+		romNum2 := string(s[i+1])
+		if numbers[romNum] < numbers[romNum2] {
+			result += (numbers[romNum2] - numbers[romNum])
+		} else {
+			result += (numbers[romNum2] + numbers[romNum])
+		}
 	}
-
-	fmt.Println(numbers, s)
-	return x
-
+	return result
 }
 
 func main() {
-	romanToInt("xxii")
+	fmt.Println(romanToInt("xxii"))
 }
