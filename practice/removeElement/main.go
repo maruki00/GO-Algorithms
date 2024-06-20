@@ -5,33 +5,19 @@ import "fmt"
 func removeElement(nums []int, val int) int {
 
 	k := len(nums)
-	result := []int
-	left := 0
-	right := k - 1
-
-	for left < right {
-		if nums[left] == val {
+	position := 0
+	for i := 0; i < len(nums); i++ {
+		if nums[i] == val {
 			k--
-			left++
 		} else {
-			result = append(result.nums[left])
-			left++
-		}
-
-		if nums[right] == val {
-			k--
-			right--
-		} else {
-			result = append(result, nums[right])
-			right--
+			nums[position] = nums[i]
+			position++
 		}
 	}
-
-	fmt.Println(result)
 	return k
 }
 
 func main() {
-	items := []int{3, 2, 2, 3}
-	fmt.Println(removeElement(items, 3))
+	items := []int{2, 2, 2}
+	fmt.Println(removeElement(items, 2))
 }
