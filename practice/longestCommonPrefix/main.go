@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func getMinLen(s []string) int {
-	minLen := 0
-	for i := range s {
-		if len(i) < minLen {
+	minLen := len(string(s[0]))
+	for _, i := range s {
+		if len(string(i)) < minLen {
 			minLen = len(i)
 		}
 	}
@@ -15,10 +15,11 @@ func getMinLen(s []string) int {
 func longestCommonPrefix(strs []string) string {
 	var prifix string = ""
 	minLenght := getMinLen(strs)
+
 	for i := 0; i < minLenght; i++ {
 		tmp := strs[0][i]
 		isOk := true
-		for y := 0; y < len(strs); i++ {
+		for y := 0; y < len(strs); y++ {
 			if string(tmp) != string(strs[y][i]) {
 				isOk = false
 			}
@@ -33,6 +34,6 @@ func longestCommonPrefix(strs []string) string {
 }
 
 func main() {
-	strs := []string{"flower", "flow", "flight"}
+	strs := []string{"flower", "flow", "floght"}
 	fmt.Println(longestCommonPrefix(strs))
 }
