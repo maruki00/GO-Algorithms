@@ -16,7 +16,10 @@ func strStr(haystack string, needle string) int {
 	}
 
 	for i := 0; i < lenHaystacke; i++ {
-		if haystack[i] == needle[0] && haystack[i:i+lenNeedle+1] == needle {
+		if lenHaystacke < i+lenNeedle {
+			return -1
+		}
+		if haystack[i] == needle[0] && haystack[i:i+lenNeedle] == needle {
 			return i
 		}
 	}
