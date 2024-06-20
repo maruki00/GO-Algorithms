@@ -14,5 +14,5 @@ func mySqrt(x int) int {
 }
 
 func main() {
-	fmt.Println(mySqrt(144))
+	fmt.Println(mySqrt(8))
 }
