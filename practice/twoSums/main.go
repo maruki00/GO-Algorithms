@@ -17,7 +17,6 @@ func twoSum(nums []int, target int) []int {
 			arrMap[sub] = index
 		}
 	}
-
 	return []int{-1, -1}
 }
 

@@ -27,7 +27,6 @@ func isPalindrome(x int) bool {
 	}
 	println(reverseNum(x))
 	return reverseNum(x) == x
-
 }
 
 func main() {
