@@ -22,6 +22,8 @@ func isPalindrome(x int) bool {
 		if nums[left] != nums[right] {
 			return false
 		}
+		left++
+		right--
 	}
 
 	return true
