@@ -11,26 +11,25 @@ func numToArray(num int) []int {
 	return arr
 }
 
+func reverseNum(num int) int {
+	reversed := 0
+	for num > 0 {
+		tmp := num % 10
+		reversed *= reversed*10 + tmp
+		num = (int)(num / 10)
+	}
+	return reversed
+}
+
 func isPalindrome(x int) bool {
 	if x < 0 {
 		return false
 	}
-	nums := numToArray(x)
-	left := 0
-	right := len(nums) - 1
-	for left <= right {
-		if nums[left] != nums[right] {
-			return false
-		}
-		left++
-		right--
-	}
-
-	return true
+	return reverseNum(x) == x
 
 }
 
 func main() {
-	x := 12321
+	x := 121
 	fmt.Println(isPalindrome(x))
 }
