@@ -12,7 +12,7 @@ func numToArray(num int) []int {
 }
 
 func isPalindrome(x int) bool {
-	if x <= 10 {
+	if x < 0 {
 		return false
 	}
 	nums := numToArray(x)
