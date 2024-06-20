@@ -7,9 +7,10 @@ import (
 
 func lengthOfLastWord(s string) int {
 	s = strings.TrimSpace(s)
-	//s = strings.Split(s, ' ')
+	res := strings.Split(s, " ")
 
-	fmt.Print(s)
+	fmt.Print(res[len(res)-1])
+	return 0
 }
 
 func main() {
