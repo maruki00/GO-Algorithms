@@ -7,7 +7,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func deleteSuplicates(head *ListNode) *ListNode {
+func deleteDuplicates(head *ListNode) *ListNode {
 
 	lastItem := head.Val
 	previos := head
@@ -36,12 +36,12 @@ func main() {
 	head := &ListNode{1, nil}
 	head.Next = &ListNode{1, nil}
 	head.Next.Next = &ListNode{2, nil}
-	head.Next.Next.Next = &ListNode{3, nil}
-	head.Next.Next.Next.Next = &ListNode{4, nil}
-	head.Next.Next.Next.Next.Next = &ListNode{4, nil}
-	head.Next.Next.Next.Next.Next.Next = &ListNode{4, nil}
+	// head.Next.Next.Next = &ListNode{3, nil}
+	// head.Next.Next.Next.Next = &ListNode{4, nil}
+	// head.Next.Next.Next.Next.Next = &ListNode{4, nil}
+	// head.Next.Next.Next.Next.Next.Next = &ListNode{4, nil}
 	print(head)
-	head = deleteSuplicates(head)
+	head = deleteDuplicates(head)
 	println("_________________________________________-")
 	print(head)
 }
