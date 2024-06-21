@@ -1,33 +1,41 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func merge(nums1 []int, m int, nums2 []int, n int) {
 
-	left, right := 0, 0
-	var tmp []int = make([]int, n+m)
-	copy(tmp, nums1)
+	nums1 = append(nums1[:m], nums2[:n]...)
+	sort.Ints(nums1)
+	// left, right := 0, 0
+	// var tmp []int = make([]int, n+m)
+	// copy(tmp, nums1)
 
-	for left < m && right < n {
-		if tmp[left] < nums2[right] {
-			nums1[left+right] = tmp[left]
-			left++
-		} else {
-			nums1[left+right] = nums2[right]
-			right++
-		}
-		fmt.Println(tmp, nums1)
-	}
+	// for left < m && right < n {
+	// 	if tmp[left] < nums2[right] {
+	// 		nums1[left+right] = tmp[left]
+	// 		left++
+	// 	} else {
+	// 		nums1[left+right] = nums2[right]
+	// 		right++
+	// 	}
+	// 	fmt.Println(tmp, nums1)
+	// }
 
-	for left < m {
-		nums1[left+right] = tmp[left]
-		left++
-	}
+	// nums1 = append(nums1, tmp[left:m]...)
+	// nums1 = append(nums1, nums2[right:n]...)
 
-	for right < n {
-		nums1[left+right] = nums2[right]
-		right++
-	}
+	// for left < m {
+	// 	nums1[left+right] = tmp[left]
+	// 	left++
+	// }
+
+	// for right < n {
+	// 	nums1[left+right] = nums2[right]
+	// 	right++
+	// }
 
 }
 
