@@ -7,21 +7,40 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// func deleteDuplicates(head *ListNode) *ListNode {
+
+// 	lastItem := head.Val
+// 	previos := head
+// 	for previos.Next.Next != nil {
+// 		if previos.Next.Val != lastItem {
+// 			lastItem = previos.Val
+// 			previos = previos.Next
+
+// 		} else {
+// 			lastItem = previos.Val
+// 			previos.Next = previos.Next.Next
+// 		}
+// 	}
+// 	if previos.Next.Val == lastItem {
+// 		previos.Next = nil
+// 	}
+// 	return head
+// }
+
 func deleteDuplicates(head *ListNode) *ListNode {
+	if head == nil {
+		return nil
+	}
 
-	lastItem := head.Val
-	previos := head
-	for previos.Next.Next != nil {
-		if previos.Next.Val != lastItem {
-			previos = previos.Next
-			lastItem = previos.Val
+	current := head
 
+	for current != nil && current.Next != nil {
+		if current.Next.Val == current.Val {
+			current.Next = current.Next.Next
 		} else {
-			previos.Next = previos.Next.Next
-			lastItem = previos.Val
+			current = current.Next
 		}
 	}
-	previos.Next = nil
 	return head
 }
 
@@ -36,10 +55,13 @@ func main() {
 	head := &ListNode{1, nil}
 	head.Next = &ListNode{1, nil}
 	head.Next.Next = &ListNode{2, nil}
-	// head.Next.Next.Next = &ListNode{3, nil}
-	// head.Next.Next.Next.Next = &ListNode{4, nil}
-	// head.Next.Next.Next.Next.Next = &ListNode{4, nil}
-	// head.Next.Next.Next.Next.Next.Next = &ListNode{4, nil}
+	head.Next.Next.Next = &ListNode{3, nil}
+	head.Next.Next.Next.Next = &ListNode{4, nil}
+	head.Next.Next.Next.Next.Next = &ListNode{4, nil}
+	head.Next.Next.Next.Next.Next.Next = &ListNode{4, nil}
+	head.Next.Next.Next.Next.Next.Next.Next = &ListNode{4, nil}
+	head.Next.Next.Next.Next.Next.Next.Next.Next = &ListNode{4, nil}
+	head.Next.Next.Next.Next.Next.Next.Next.Next.Next = &ListNode{4, nil}
 	print(head)
 	head = deleteDuplicates(head)
 	println("_________________________________________-")
