@@ -5,29 +5,30 @@ import "fmt"
 func merge(nums1 []int, m int, nums2 []int, n int) {
 
 	left, right := 0, 0
-	retNums := []int{}
+	var tmp []int = make([]int, n+m)
+	copy(tmp, nums1)
 
 	for left < m && right < n {
-		if nums1[left] < nums2[right] {
-			retNums = append(retNums, nums1[left])
+		if tmp[left] < nums2[right] {
+			nums1[left+right] = tmp[left]
 			left++
 		} else {
-			retNums = append(retNums, nums2[right])
+			nums1[left+right] = nums2[right]
 			right++
 		}
+		fmt.Println(tmp, nums1)
 	}
 
 	for left < m {
-		retNums = append(retNums, nums1[left])
+		nums1[left+right] = tmp[left]
 		left++
 	}
 
 	for right < n {
-		retNums = append(retNums, nums2[right])
+		nums1[left+right] = nums2[right]
 		right++
 	}
 
-	fmt.Println("result : ", retNums)
 }
 
 func main() {
@@ -37,5 +38,6 @@ func main() {
 	nums2 := []int{2, 5, 6}
 	n := 3
 	merge(nums1, m, nums2, n)
+	fmt.Println(nums1)
 
 }
