@@ -1,0 +1,115 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddEdge	6-Graph/graph.go	/^func (g *Graph) AddEdge(from, to int) {$/;"	f
+AddVertex	6-Graph/graph.go	/^func (g *Graph) AddVertex(k int) {$/;"	f
+Alphabites	5-Trie/Trie.go	/^const Alphabites = 26$/;"	c
+DoubleLinkedList	4-LinkedList/double.go	/^type DoubleLinkedList struct {$/;"	t
+DoubleNode	4-LinkedList/double.go	/^type DoubleNode struct {$/;"	t
+Graph	6-Graph/graph.go	/^type Graph struct {$/;"	t
+InitTrie	5-Trie/Trie.go	/^func InitTrie() *Trie {$/;"	f
+ListNode	practice/addTwoNumbers/main.go	/^type ListNode struct {$/;"	t
+ListNode	practice/removeDuplicatesfromSortedList/main.go	/^type ListNode struct {$/;"	t
+Node	5-Trie/Trie.go	/^type Node struct {$/;"	t
+Node	5-Trie/tree.go	/^type Node struct {$/;"	t
+NodeSimple	4-LinkedList/simple.go	/^type NodeSimple struct {$/;"	t
+Print	6-Graph/graph.go	/^func (g *Graph) Print() {$/;"	f
+SimpleLinkedList	4-LinkedList/simple.go	/^type SimpleLinkedList struct {$/;"	t
+Stack	2-stack/stack.go	/^type Stack struct {$/;"	t
+Stack	3-Queue/queue.go	/^type Stack struct {$/;"	t
+Trie	5-Trie/Trie.go	/^type Trie struct {$/;"	t
+Vertex	6-Graph/graph.go	/^type Vertex struct {$/;"	t
+addBinary	practice/addBinary/main.go	/^func addBinary(a string, b string) string {$/;"	f
+addTwoNumbers	practice/addTwoNumbers/main.go	/^func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {$/;"	f
+append	3-Queue/queue.go	/^func (obj *Stack) append(item int) {$/;"	f
+append	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) append(value any) {$/;"	f
+append	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) append(value any) {$/;"	f
+clear	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) clear() {$/;"	f
+clear	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) clear() {$/;"	f
+climbStairs	practice/climbingStairs/main.go	/^func climbStairs(n int) int {$/;"	f
+contains	6-Graph/graph.go	/^func (g *Graph) contains(s []*Vertex, k int) bool {$/;"	f
+deleteDuplicates	practice/removeDuplicatesfromSortedList/main.go	/^func deleteDuplicates(head *ListNode) *ListNode {$/;"	f
+get	3-Queue/queue.go	/^func (obj *Stack) get() int {$/;"	f
+getMinLen	practice/longestCommonPrefix/main.go	/^func getMinLen(s []string) int {$/;"	f
+getVertex	6-Graph/graph.go	/^func (g *Graph) getVertex(k int) *Vertex {$/;"	f
+insert	5-Trie/Trie.go	/^func (obj *Trie) insert(w string) {$/;"	f
+isPalindrome	practice/palindromeNumer/main.go	/^func isPalindrome(x int) bool {$/;"	f
+lengthOfLastWord	practice/lenghtOfLastWord/main.go	/^func lengthOfLastWord(s string) int {$/;"	f
+longestCommonPrefix	practice/longestCommonPrefix/main.go	/^func longestCommonPrefix(strs []string) string {$/;"	f
+main	1-array/dynamic-array.go	/^func main() {$/;"	f
+main	1-array/dynamic-array.go	/^package main$/;"	p
+main	1-array/static-array.go	/^func main() {$/;"	f
+main	1-array/static-array.go	/^package main$/;"	p
+main	2-stack/stack.go	/^func main() {$/;"	f
+main	2-stack/stack.go	/^package main$/;"	p
+main	3-Queue/queue.go	/^func main() {$/;"	f
+main	3-Queue/queue.go	/^package main$/;"	p
+main	4-LinkedList/double.go	/^func main() {$/;"	f
+main	4-LinkedList/double.go	/^package main$/;"	p
+main	4-LinkedList/simple.go	/^func main() {$/;"	f
+main	4-LinkedList/simple.go	/^package main$/;"	p
+main	5-Trie/Trie.go	/^func main() {$/;"	f
+main	5-Trie/Trie.go	/^package main$/;"	p
+main	5-Trie/tree.go	/^package main$/;"	p
+main	6-Graph/graph.go	/^func main() {$/;"	f
+main	6-Graph/graph.go	/^package main$/;"	p
+main	7-Search/binarysearch.go	/^func main() {$/;"	f
+main	7-Search/binarysearch.go	/^package main$/;"	p
+main	7-Search/linearSearch.go	/^func main() {$/;"	f
+main	7-Search/linearSearch.go	/^package main$/;"	p
+main	practice/MostWatterContainer/main.go	/^func main() {$/;"	f
+main	practice/MostWatterContainer/main.go	/^package main$/;"	p
+main	practice/addBinary/main.go	/^func main() {$/;"	f
+main	practice/addBinary/main.go	/^package main$/;"	p
+main	practice/addTwoNumbers/main.go	/^func main() {$/;"	f
+main	practice/addTwoNumbers/main.go	/^package main$/;"	p
+main	practice/climbingStairs/main.go	/^func main() {$/;"	f
+main	practice/climbingStairs/main.go	/^package main$/;"	p
+main	practice/findIndexOfSubString/main.go	/^func main() {$/;"	f
+main	practice/findIndexOfSubString/main.go	/^package main$/;"	p
+main	practice/lenghtOfLastWord/main.go	/^func main() {$/;"	f
+main	practice/lenghtOfLastWord/main.go	/^package main$/;"	p
+main	practice/longestCommonPrefix/main.go	/^func main() {$/;"	f
+main	practice/longestCommonPrefix/main.go	/^package main$/;"	p
+main	practice/mergeSortedArray/main.go	/^func main() {$/;"	f
+main	practice/mergeSortedArray/main.go	/^package main$/;"	p
+main	practice/palindromeNumer/main.go	/^func main() {$/;"	f
+main	practice/palindromeNumer/main.go	/^package main$/;"	p
+main	practice/plusOne/main.go	/^func main() {$/;"	f
+main	practice/plusOne/main.go	/^package main$/;"	p
+main	practice/removeDuplicatesfromSortedList/main.go	/^func main() {$/;"	f
+main	practice/removeDuplicatesfromSortedList/main.go	/^package main$/;"	p
+main	practice/removeElement/main.go	/^func main() {$/;"	f
+main	practice/removeElement/main.go	/^package main$/;"	p
+main	practice/romanTointeger/main.go	/^func main() {$/;"	f
+main	practice/romanTointeger/main.go	/^package main$/;"	p
+main	practice/searchInsertPosition/main.go	/^func main() {$/;"	f
+main	practice/searchInsertPosition/main.go	/^package main$/;"	p
+main	practice/sqrt/main.go	/^func main() {$/;"	f
+main	practice/sqrt/main.go	/^package main$/;"	p
+main	practice/twoSums/main.go	/^func main() {$/;"	f
+main	practice/twoSums/main.go	/^package main$/;"	p
+merge	practice/mergeSortedArray/main.go	/^func merge(nums1 []int, m int, nums2 []int, n int) {$/;"	f
+mySqrt	practice/sqrt/main.go	/^func mySqrt(x int) int {$/;"	f
+mySqrt1	practice/sqrt/main.go	/^func mySqrt1(x int) int {$/;"	f
+numToArray	practice/palindromeNumer/main.go	/^func numToArray(num int) []int {$/;"	f
+plusOne	practice/plusOne/main.go	/^func plusOne(digits []int) []int {$/;"	f
+pop	2-stack/stack.go	/^func (obj *Stack) pop() int {$/;"	f
+preappend	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) preappend(value any) {$/;"	f
+print	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) print() {$/;"	f
+print	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) print() {$/;"	f
+print	practice/addTwoNumbers/main.go	/^func print(l1 *ListNode) {$/;"	f
+print	practice/removeDuplicatesfromSortedList/main.go	/^func print(head *ListNode) {$/;"	f
+push	2-stack/stack.go	/^func (obj *Stack) push(item int) {$/;"	f
+remove	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) remove(value any) {$/;"	f
+remove	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) remove(value any) {$/;"	f
+removeElement	practice/removeElement/main.go	/^func removeElement(nums []int, val int) int {$/;"	f
+reverseNum	practice/palindromeNumer/main.go	/^func reverseNum(num int) int {$/;"	f
+romanToInt	practice/romanTointeger/main.go	/^func romanToInt(s string) int {$/;"	f
+search	5-Trie/Trie.go	/^func (obj *Trie) search(w string) bool {$/;"	f
+searchInsert	practice/searchInsertPosition/main.go	/^func searchInsert(nums []int, target int) int {$/;"	f
+strStr	practice/findIndexOfSubString/main.go	/^func strStr(haystack string, needle string) int {$/;"	f
+twoSum	practice/twoSums/main.go	/^func twoSum(nums []int, target int) []int {$/;"	f
