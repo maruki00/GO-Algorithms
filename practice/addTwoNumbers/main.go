@@ -15,13 +15,25 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		val := (_l1.Val + l2.Val + remain)
 		_l1.Val = val % 10
 		remain = int(val / 10)
-		if _l1.Next == nil { //&& remain != 0 {
-			_l1 = &ListNode{10, nil}
-		} else {
-			_l1 = _l1.Next
-		}
+		_l1 = _l1.Next
 		l2 = l2.Next
 	}
+
+	for _l1 != nil {
+		val := (_l1.Val + l2.Val + remain)
+		_l1.Val = val % 10
+		remain = int(val / 10)
+		_l1 = _l1.Next
+	}
+
+	for l2 != nil {
+		val := (_l1.Val + l2.Val + remain)
+		_l1 = &ListNode{Val: int(val % 10), Next: nil}
+		remain = int(val / 10)
+		_l1 = _l1.Next
+		l2 = l2.Next
+	}
+
 	fmt.Println(remain)
 
 	return l1
