@@ -2,40 +2,30 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func convert(s string, numRows int) string {
 	var ret []string = make([]string, numRows)
-	index := 0
-	maxLen := len(s)
-	run := true
-	for run {
-		i := 0
-		for i = 0; i < numRows; i++ {
-			if index >= maxLen {
-				run = false
-				break
-			}
-			fmt.Println("I : ", i)
-			ret[i] = ret[i] + string(s[index])
-			index++
-		}
+	row := 0
+	inc := true
+	for _, item := range s {
 
-		for j := i - 2; j > 0; j-- {
-			if index >= maxLen {
-				run = false
-				break
-			}
-			fmt.Println("J : ", j)
-			ret[j] = ret[j] + string(s[index])
-			index++
+		ret[row] = ret[row] + string(item)
+
+		if row == 0 {
+			inc = true
+			row++
+		} else if row == numRows-1 {
+			inc = false
+			row--
 		}
 
 	}
-
-	return strings.Join(ret, "")
-
+	s = ""
+	for _, res := range ret {
+		s += res
+	}
+	return s
 }
 
 func main() {
