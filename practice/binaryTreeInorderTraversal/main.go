@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -23,5 +25,6 @@ func inorderTraversal(root *TreeNode) []int {
 }
 
 func main() {
-
+	n := &TreeNode{1, nil, &TreeNode{2, &TreeNode{3, nil, nil}, nil}}
+	fmt.Println("result : ", inorderTraversal(n))
 }
