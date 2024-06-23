@@ -22,6 +22,7 @@ Stack	2-stack/stack.go	/^type Stack struct {$/;"	t
 Stack	3-Queue/queue.go	/^type Stack struct {$/;"	t
 Trie	5-Trie/Trie.go	/^type Trie struct {$/;"	t
 Vertex	6-Graph/graph.go	/^type Vertex struct {$/;"	t
+_findMedianSortedArrays	practice/medianofTwoSortedArrays/main.go	/^func _findMedianSortedArrays(nums1 []int, nums2 []int) float64 {$/;"	f
 addBinary	practice/addBinary/main.go	/^func addBinary(a string, b string) string {$/;"	f
 addTwoNumbers	practice/addTwoNumbers/main.go	/^func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {$/;"	f
 append	3-Queue/queue.go	/^func (obj *Stack) append(item int) {$/;"	f
@@ -32,6 +33,7 @@ clear	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) clear() {$/;"	f
 climbStairs	practice/climbingStairs/main.go	/^func climbStairs(n int) int {$/;"	f
 contains	6-Graph/graph.go	/^func (g *Graph) contains(s []*Vertex, k int) bool {$/;"	f
 deleteDuplicates	practice/removeDuplicatesfromSortedList/main.go	/^func deleteDuplicates(head *ListNode) *ListNode {$/;"	f
+findMedianSortedArrays	practice/medianofTwoSortedArrays/main.go	/^func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {$/;"	f
 get	3-Queue/queue.go	/^func (obj *Stack) get() int {$/;"	f
 getMinLen	practice/longestCommonPrefix/main.go	/^func getMinLen(s []string) int {$/;"	f
 getVertex	6-Graph/graph.go	/^func (g *Graph) getVertex(k int) *Vertex {$/;"	f
@@ -39,6 +41,7 @@ insert	5-Trie/Trie.go	/^func (obj *Trie) insert(w string) {$/;"	f
 isPalindrome	practice/palindromeNumer/main.go	/^func isPalindrome(x int) bool {$/;"	f
 lengthOfLastWord	practice/lenghtOfLastWord/main.go	/^func lengthOfLastWord(s string) int {$/;"	f
 longestCommonPrefix	practice/longestCommonPrefix/main.go	/^func longestCommonPrefix(strs []string) string {$/;"	f
+longestPalindrome	practice/longestPalindromicSubstring/main.go	/^func longestPalindrome(s string) string {$/;"	f
 main	1-array/dynamic-array.go	/^func main() {$/;"	f
 main	1-array/dynamic-array.go	/^package main$/;"	p
 main	1-array/static-array.go	/^func main() {$/;"	f
@@ -74,6 +77,10 @@ main	practice/lenghtOfLastWord/main.go	/^func main() {$/;"	f
 main	practice/lenghtOfLastWord/main.go	/^package main$/;"	p
 main	practice/longestCommonPrefix/main.go	/^func main() {$/;"	f
 main	practice/longestCommonPrefix/main.go	/^package main$/;"	p
+main	practice/longestPalindromicSubstring/main.go	/^func main() {$/;"	f
+main	practice/longestPalindromicSubstring/main.go	/^package main$/;"	p
+main	practice/medianofTwoSortedArrays/main.go	/^func main() {$/;"	f
+main	practice/medianofTwoSortedArrays/main.go	/^package main$/;"	p
 main	practice/mergeSortedArray/main.go	/^func main() {$/;"	f
 main	practice/mergeSortedArray/main.go	/^package main$/;"	p
 main	practice/palindromeNumer/main.go	/^func main() {$/;"	f
@@ -108,6 +115,7 @@ remove	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) remove(value any) {
 remove	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) remove(value any) {$/;"	f
 removeElement	practice/removeElement/main.go	/^func removeElement(nums []int, val int) int {$/;"	f
 reverseNum	practice/palindromeNumer/main.go	/^func reverseNum(num int) int {$/;"	f
+reverseStr	practice/longestPalindromicSubstring/main.go	/^func reverseStr(s string) (result string) {$/;"	f
 romanToInt	practice/romanTointeger/main.go	/^func romanToInt(s string) int {$/;"	f
 search	5-Trie/Trie.go	/^func (obj *Trie) search(w string) bool {$/;"	f
 searchInsert	practice/searchInsertPosition/main.go	/^func searchInsert(nums []int, target int) int {$/;"	f
