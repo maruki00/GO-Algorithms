@@ -12,6 +12,12 @@ func reverseStr(s string) (result string) {
 func longestPalindrome(s string) string {
 
 	longest := ""
+	if len(s) <= 1 {
+		return s
+	}
+	if len(s) == 2 {
+		return string(s[0])
+	}
 	for i := 0; i < len(s); i++ {
 		left, right := i, len(s)-1
 		fmt.Println("Level 1 : ", i)
@@ -33,6 +39,8 @@ func longestPalindrome(s string) string {
 
 func main() {
 
-	s := "dabad"
-	fmt.Println(longestPalindrome(s))
+	ss := []string{"dabad", "ac", "a"}
+	for _, s := range ss {
+		fmt.Println(longestPalindrome(s))
+	}
 }
