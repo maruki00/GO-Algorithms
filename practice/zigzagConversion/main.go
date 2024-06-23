@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func convert(s string, numRows int) string {
@@ -32,12 +33,9 @@ func convert(s string, numRows int) string {
 		}
 
 	}
-	s = ""
-	for _, res := range ret {
-		s += res
-	}
 
-	return s
+	return strings.Join(ret, "")
+
 }
 
 func main() {
