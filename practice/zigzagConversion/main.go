@@ -5,21 +5,24 @@ import (
 )
 
 func convert(s string, numRows int) string {
+	if numRows == 1 {
+		return s
+	}
 	var ret []string = make([]string, numRows)
 	row := 0
 	inc := true
 	for _, item := range s {
-
-		ret[row] = ret[row] + string(item)
-
 		if row == 0 {
 			inc = true
-			row++
 		} else if row == numRows-1 {
 			inc = false
+		}
+		ret[row] = ret[row] + string(item)
+		if inc {
+			row++
+		} else {
 			row--
 		}
-
 	}
 	s = ""
 	for _, res := range ret {
@@ -29,7 +32,7 @@ func convert(s string, numRows int) string {
 }
 
 func main() {
-	s := "PAYPALISHIRING"
-	num := 3
+	s := "AB" //"PAYPALISHIRING"
+	num := 1
 	fmt.Println(convert(s, num))
 }
