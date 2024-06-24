@@ -9,7 +9,7 @@ func isPalindrome(x int) bool {
 	for num > 0 {
 		tmp := num % 10
 		reversed = reversed*10 + tmp
-		num = (int)(num / 10)
+		num = num / 10
 	}
 	return reversed == x
 }
