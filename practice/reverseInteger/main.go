@@ -1,19 +1,28 @@
 package main
 
-import "fmt"
-
-
+import (
+	"fmt"
+)
 
 func reverse(x int) int {
-	ret := 0
-	while x >0{
-		ret = ret*10 + x %10
-		x = x/10
-	} 
-	return ret
+	x32 := int32(x)
+
+	result := int32(0)
+	base := int32(10)
+	for x32 != 0 {
+		d := x32 % base
+		x32 /= base
+
+		newResult := result*base + d
+		if (newResult-d)/base != result {
+			return 0
+		}
+		result = newResult
+	}
+
+	return int(result)
 }
 
-
-func main(){
-	fmt.Println(reverse(123))
+func main() {
+	fmt.Println(reverse(1534236469))
 }
