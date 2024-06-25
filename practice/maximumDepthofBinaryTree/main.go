@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -32,5 +34,6 @@ func maxDepth(root *TreeNode) int {
 	return depth
 }
 func main() {
-
+	root := &TreeNode{3, &TreeNode{9, nil, nil}, &TreeNode{20, &TreeNode{15, nil, nil}, &TreeNode{7, nil, &TreeNode{5, nil, nil}}}}
+	fmt.Println("Result : ", maxDepth(root))
 }
