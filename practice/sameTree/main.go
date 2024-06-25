@@ -10,20 +10,29 @@ type TreeNode struct {
 
 func isSameTree(p *TreeNode, q *TreeNode) bool {
 
-	if p == nil || q == nil {
+	if p == nil && q == nil {
+		return true
+	}
+	if p == nil || q == nil || p.Val != q.Val {
 		return false
 	}
-	if p.Val != q.Val {
+	return isSameTree(p.Left, q.Left) && isSameTree(p.Right, q.Right)
+}
+
+func isSameTree_(p *TreeNode, q *TreeNode) bool {
+
+	if p == nil && q == nil {
+		return true
+	}
+	if p == nil || q == nil || p.Val != q.Val {
 		return false
 	}
-	isSameTree(p.Left, q.Right)
-	isSameTree(p.Right, q.Left)
-	return true
+	return isSameTree(p.Left, q.Left) && isSameTree(p.Right, q.Right)
 }
 
 func main() {
 	root1 := &TreeNode{1, &TreeNode{2, nil, nil}, &TreeNode{3, nil, nil}}
-	root2 := &TreeNode{1, &TreeNode{3, nil, nil}, &TreeNode{2, nil, nil}}
+	root2 := &TreeNode{1, &TreeNode{2, nil, nil}, &TreeNode{3, nil, nil}}
 
 	fmt.Println("result : ", isSameTree(root1, root2))
 }
