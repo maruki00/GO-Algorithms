@@ -4,33 +4,33 @@ import "fmt"
 
 func findCenter(edges [][]int) int {
 
-	var hashSet map[int]int = map[int]int{}
-	centerEdge := -1
-	maxEdges := 0
-
-	hashSet[edges[0][0]] += 1
-	hashSet[edges[0][1]] += 1
-	hashSet[edges[1][0]] += 1
-	hashSet[edges[1][1]] += 1
-
-	for _, i := range hashSet {
-		if hashSet[i] > maxEdges {
-			maxEdges = hashSet[i]
-			centerEdge = i
-		}
+	if edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1] {
+		return edges[0][0]
 	}
-
-	fmt.Println(hashSet)
-
-	return centerEdge
+	return edges[0][1]
 }
 
 func main() {
 	nums := [][]int{
-		{1, 2},
-		{5, 1},
-		{1, 3},
-		{1, 4},
+		{1, 10},
+		{10, 2},
+		{3, 10},
+		{10, 4},
+		{10, 5},
+		{10, 6},
+		{10, 7},
+		{8, 10},
+		{9, 10},
+		{10, 11},
+		{12, 10},
+
+		// {1, 2},
+		// {5, 1},
+		// {1, 3},
+		// {1, 4},
 	}
 	fmt.Println(findCenter(nums))
 }
+
+//  "10","6","9","3","+","-11","*","/","*","17","+","5","+"
+// ((10 * (6 / ((9 + 3) * -11))) + 17) + 5
