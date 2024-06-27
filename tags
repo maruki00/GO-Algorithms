@@ -43,6 +43,7 @@ clear	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) clear() {$/;"	f
 climbStairs	practice/climbingStairs/main.go	/^func climbStairs(n int) int {$/;"	f
 contains	6-Graph/graph.go	/^func (g *Graph) contains(s []*Vertex, k int) bool {$/;"	f
 convert	practice/zigzagConversion/main.go	/^func convert(s string, numRows int) string {$/;"	f
+dailyTemmeratures	practice/dailyTemperatures/main.go	/^func dailyTemmeratures(temperatures []int) []int {$/;"	f
 deleteDuplicates	practice/removeDuplicatesfromSortedList/main.go	/^func deleteDuplicates(head *ListNode) *ListNode {$/;"	f
 evalRPN	practice/evaluateReversePoslishNation/main.go	/^func evalRPN(tokens []string) int {$/;"	f
 findCenter	practice/findCenterOfStartGraph/main.go	/^func findCenter(edges [][]int) int {$/;"	f
@@ -97,6 +98,8 @@ main	practice/binaryTreeInorderTraversal/main.go	/^func main() {$/;"	f
 main	practice/binaryTreeInorderTraversal/main.go	/^package main$/;"	p
 main	practice/climbingStairs/main.go	/^func main() {$/;"	f
 main	practice/climbingStairs/main.go	/^package main$/;"	p
+main	practice/dailyTemperatures/main.go	/^func main() {$/;"	f
+main	practice/dailyTemperatures/main.go	/^package main$/;"	p
 main	practice/evaluateReversePoslishNation/main.go	/^func main() {$/;"	f
 main	practice/evaluateReversePoslishNation/main.go	/^package main$/;"	p
 main	practice/findCenterOfStartGraph/main.go	/^func main() {$/;"	f
