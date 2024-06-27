@@ -4,7 +4,6 @@ import "fmt"
 
 func dailyTemmeratures(temperatures []int) []int {
 
-	result := []int{}
 	l := len(temperatures)
 
 	for index := 0; index < l; index++ {
@@ -15,10 +14,10 @@ func dailyTemmeratures(temperatures []int) []int {
 				break
 			}
 		}
-		result = append(result, found-index)
+		temperatures[index] = found - index
 	}
 
-	return result
+	return temperatures
 }
 
 func main() {
