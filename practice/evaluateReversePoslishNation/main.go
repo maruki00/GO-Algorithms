@@ -10,8 +10,7 @@ type Stack struct {
 }
 
 func (obj *Stack) pop() int {
-	l := len(obj.items)
-	fmt.Println("Pop Index: ", l, obj.items)
+	l := len(obj.items) - 1
 	item := obj.items[l]
 	obj.items = obj.items[:l]
 	return item
@@ -31,39 +30,33 @@ func evalRPN(tokens []string) int {
 
 		switch token {
 		case "+":
-			x = s.pop()
 			y = s.pop()
+			x = s.pop()
 			s.push(x + y)
-			fmt.Println("+", y, x)
 		case "-":
-			x = s.pop()
 			y = s.pop()
+			x = s.pop()
 			s.push(x - y)
-			fmt.Println("-", y, x)
 		case "*":
 			x = s.pop()
 			y = s.pop()
 			s.push(x * y)
-			fmt.Println("*", y, x)
 		case "/":
-			x = s.pop()
 			y = s.pop()
+			x = s.pop()
 			s.push(x / y)
-			fmt.Println("/", y, x)
 		default:
 			if item, err := strconv.Atoi(token); err == nil {
 				s.push(item)
 			}
-			fmt.Println("default", y, x)
 		}
-		fmt.Println("token: ", token, s.items)
 	}
 
 	return s.pop()
 }
 
 func main() {
-	token := []string{"2", "1", "+", "3", "*"}
+	token := []string{"4", "13", "5", "/", "+"}
 	fmt.Println(evalRPN(token))
 
 }
