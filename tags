@@ -43,11 +43,12 @@ clear	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) clear() {$/;"	f
 climbStairs	practice/climbingStairs/main.go	/^func climbStairs(n int) int {$/;"	f
 contains	6-Graph/graph.go	/^func (g *Graph) contains(s []*Vertex, k int) bool {$/;"	f
 convert	practice/zigzagConversion/main.go	/^func convert(s string, numRows int) string {$/;"	f
-dailyTemmeratures	practice/dailyTemperatures/main.go	/^func dailyTemmeratures(temperatures []int) []int {$/;"	f
+dailyTemperatures	practice/dailyTemperatures/main.go	/^func dailyTemperatures(temperatures []int) []int {$/;"	f
 deleteDuplicates	practice/removeDuplicatesfromSortedList/main.go	/^func deleteDuplicates(head *ListNode) *ListNode {$/;"	f
 evalRPN	practice/evaluateReversePoslishNation/main.go	/^func evalRPN(tokens []string) int {$/;"	f
 findCenter	practice/findCenterOfStartGraph/main.go	/^func findCenter(edges [][]int) int {$/;"	f
 findMedianSortedArrays	practice/medianofTwoSortedArrays/main.go	/^func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {$/;"	f
+findPalindrome	practice/findFirstPalindromixString/main.go	/^func findPalindrome(words []string) string {$/;"	f
 get	3-Queue/queue.go	/^func (obj *Stack) get() int {$/;"	f
 getMinLen	practice/longestCommonPrefix/main.go	/^func getMinLen(s []string) int {$/;"	f
 getVertex	6-Graph/graph.go	/^func (g *Graph) getVertex(k int) *Vertex {$/;"	f
@@ -104,6 +105,8 @@ main	practice/evaluateReversePoslishNation/main.go	/^func main() {$/;"	f
 main	practice/evaluateReversePoslishNation/main.go	/^package main$/;"	p
 main	practice/findCenterOfStartGraph/main.go	/^func main() {$/;"	f
 main	practice/findCenterOfStartGraph/main.go	/^package main$/;"	p
+main	practice/findFirstPalindromixString/main.go	/^func main() {$/;"	f
+main	practice/findFirstPalindromixString/main.go	/^package main$/;"	p
 main	practice/findIndexOfSubString/main.go	/^func main() {$/;"	f
 main	practice/findIndexOfSubString/main.go	/^package main$/;"	p
 main	practice/lenghtOfLastWord/main.go	/^func main() {$/;"	f
@@ -112,6 +115,8 @@ main	practice/longestCommonPrefix/main.go	/^func main() {$/;"	f
 main	practice/longestCommonPrefix/main.go	/^package main$/;"	p
 main	practice/longestPalindromicSubstring/main.go	/^func main() {$/;"	f
 main	practice/longestPalindromicSubstring/main.go	/^package main$/;"	p
+main	practice/majorityElement/main.go	/^func main() {$/;"	f
+main	practice/majorityElement/main.go	/^package main$/;"	p
 main	practice/maximumDepthofBinaryTree/main.go	/^func main() {$/;"	f
 main	practice/maximumDepthofBinaryTree/main.go	/^package main$/;"	p
 main	practice/medianofTwoSortedArrays/main.go	/^func main() {$/;"	f
@@ -150,6 +155,7 @@ main	practice/twoSums/main.go	/^func main() {$/;"	f
 main	practice/twoSums/main.go	/^package main$/;"	p
 main	practice/zigzagConversion/main.go	/^func main() {$/;"	f
 main	practice/zigzagConversion/main.go	/^package main$/;"	p
+majorityElement	practice/majorityElement/main.go	/^func majorityElement(nums []int) int {$/;"	f
 maxDepth	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth(root *TreeNode) int {$/;"	f
 maxDepth_	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth_(root *TreeNode) int {$/;"	f
 merge	practice/mergeSortedArray/main.go	/^func merge(nums1 []int, m int, nums2 []int, n int) {$/;"	f
