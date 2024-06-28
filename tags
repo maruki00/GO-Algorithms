@@ -98,6 +98,8 @@ main	practice/arrayToTree/main.go	/^func main() {$/;"	f
 main	practice/arrayToTree/main.go	/^package main$/;"	p
 main	practice/balancedBinaryTree/main.go	/^func main() {$/;"	f
 main	practice/balancedBinaryTree/main.go	/^package main$/;"	p
+main	practice/bestTimeToBuyAndSekkStock/main.go	/^func main() {$/;"	f
+main	practice/bestTimeToBuyAndSekkStock/main.go	/^package main$/;"	p
 main	practice/binaryTreeInorderTraversal/main.go	/^func main() {$/;"	f
 main	practice/binaryTreeInorderTraversal/main.go	/^package main$/;"	p
 main	practice/climbingStairs/main.go	/^func main() {$/;"	f
@@ -165,6 +167,7 @@ main	practice/zigzagConversion/main.go	/^package main$/;"	p
 majorityElement	practice/majorityElement/main.go	/^func majorityElement(nums []int) int {$/;"	f
 maxDepth	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth(root *TreeNode) int {$/;"	f
 maxDepth_	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth_(root *TreeNode) int {$/;"	f
+maxProfit	practice/bestTimeToBuyAndSekkStock/main.go	/^func maxProfit(prices []int) int {$/;"	f
 merge	practice/mergeSortedArray/main.go	/^func merge(nums1 []int, m int, nums2 []int, n int) {$/;"	f
 minDepth	practice/minDepthOfBinaryTree/main.go	/^func minDepth(root *TreeNode) int {$/;"	f
 myAtoi	practice/stringToInteger/main.go	/^func myAtoi(s string) int {$/;"	f
