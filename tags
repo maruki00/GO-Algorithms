@@ -124,6 +124,8 @@ main	practice/majorityElement/main.go	/^func main() {$/;"	f
 main	practice/majorityElement/main.go	/^package main$/;"	p
 main	practice/maximumDepthofBinaryTree/main.go	/^func main() {$/;"	f
 main	practice/maximumDepthofBinaryTree/main.go	/^package main$/;"	p
+main	practice/maximumTotalImportanceOfRoads/main.go	/^func main() {$/;"	f
+main	practice/maximumTotalImportanceOfRoads/main.go	/^package main$/;"	p
 main	practice/medianofTwoSortedArrays/main.go	/^func main() {$/;"	f
 main	practice/medianofTwoSortedArrays/main.go	/^package main$/;"	p
 main	practice/mergeSortedArray/main.go	/^func main() {$/;"	f
@@ -168,6 +170,7 @@ majorityElement	practice/majorityElement/main.go	/^func majorityElement(nums []i
 maxDepth	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth(root *TreeNode) int {$/;"	f
 maxDepth_	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth_(root *TreeNode) int {$/;"	f
 maxProfit	practice/bestTimeToBuyAndSekkStock/main.go	/^func maxProfit(prices []int) int {$/;"	f
+maximunImportance	practice/maximumTotalImportanceOfRoads/main.go	/^func maximunImportance(n int, roads [][]int) int64 {$/;"	f
 merge	practice/mergeSortedArray/main.go	/^func merge(nums1 []int, m int, nums2 []int, n int) {$/;"	f
 minDepth	practice/minDepthOfBinaryTree/main.go	/^func minDepth(root *TreeNode) int {$/;"	f
 myAtoi	practice/stringToInteger/main.go	/^func myAtoi(s string) int {$/;"	f
