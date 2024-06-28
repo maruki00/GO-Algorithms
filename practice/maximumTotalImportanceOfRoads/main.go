@@ -7,12 +7,16 @@ import (
 
 func maximunImportance(n int, roads [][]int) int64 {
 	hashSet := make(map[int]int)
-	for i := range roads {
+	for _, i := range roads {
 		hashSet[i[0]]++
 		hashSet[i[1]]++
 	}
-	sort.SliceStable(hashSet, func(i, j int) bool {
-		return hashSet[i] < hashSet[j]
+	keys := []int{}
+	for _, i := range hashSet {
+		keys = append(keys, i)
+	}
+	sort.SliceStable(keys, func(i, j int) bool {
+		return hashSet[keys[i]] < hashSet[keys[j]]
 	})
 
 	fmt.Println("Result : ", hashSet)
