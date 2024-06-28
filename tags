@@ -50,6 +50,7 @@ evalRPN	practice/evaluateReversePoslishNation/main.go	/^func evalRPN(tokens []st
 findCenter	practice/findCenterOfStartGraph/main.go	/^func findCenter(edges [][]int) int {$/;"	f
 findMedianSortedArrays	practice/medianofTwoSortedArrays/main.go	/^func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {$/;"	f
 findPalindrome	practice/findFirstPalindromixString/main.go	/^func findPalindrome(words []string) string {$/;"	f
+generate	practice/pascalTriangle/main.go	/^func generate(numRows int) [][]int {$/;"	f
 get	3-Queue/queue.go	/^func (obj *Stack) get() int {$/;"	f
 getMinLen	practice/longestCommonPrefix/main.go	/^func getMinLen(s []string) int {$/;"	f
 getVertex	6-Graph/graph.go	/^func (g *Graph) getVertex(k int) *Vertex {$/;"	f
@@ -131,6 +132,8 @@ main	practice/palindromNumber/main.go	/^func main() {$/;"	f
 main	practice/palindromNumber/main.go	/^package main$/;"	p
 main	practice/palindromeNumer/main.go	/^func main() {$/;"	f
 main	practice/palindromeNumer/main.go	/^package main$/;"	p
+main	practice/pascalTriangle/main.go	/^func main() {$/;"	f
+main	practice/pascalTriangle/main.go	/^package main$/;"	p
 main	practice/pathSum/main.go	/^func main() {$/;"	f
 main	practice/pathSum/main.go	/^package main$/;"	p
 main	practice/plusOne/main.go	/^func main() {$/;"	f
