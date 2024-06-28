@@ -17,7 +17,7 @@ func hasPathSum(root *TreeNode, sum int) bool {
 		if root == nil {
 			return false
 		}
-		if sum == target {
+		if sum == target+root.Val && root.Left == nil && root.Right == nil {
 			return true
 		}
 		return dfs(root.Left, sum, target+root.Val) || dfs(root.Right, sum, target+root.Val)
@@ -27,7 +27,7 @@ func hasPathSum(root *TreeNode, sum int) bool {
 
 func main() {
 
-	nums := &TreeNode{5, &TreeNode{4, &TreeNode{11, &TreeNode{7, nil, nil}, &TreeNode{2, nil, nil}}, nil}, nil}
+	nums := &TreeNode{1, &TreeNode{2, nil, nil}, nil} // &TreeNode{4, &TreeNode{11, &TreeNode{7, nil, nil}, &TreeNode{2, nil, nil}}, nil}, nil}
 
-	fmt.Println("Result : ", hasPathSum(nums))
+	fmt.Println("Result : ", hasPathSum(nums, 1))
 }
