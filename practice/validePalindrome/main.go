@@ -13,6 +13,9 @@ func isPalindrome(s string) bool {
 			res += string(i)
 		}
 	}
+	if len(res) == 1 {
+		return false
+	}
 	l, r := 0, len(res)-1
 	for l < r {
 
@@ -26,6 +29,6 @@ func isPalindrome(s string) bool {
 }
 
 func main() {
-	s := "A man, a plan, a canal: Panamae"
+	s := " "
 	fmt.Println("result : ", isPalindrome(s))
 }
