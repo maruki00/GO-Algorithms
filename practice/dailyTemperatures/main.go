@@ -6,7 +6,7 @@ import (
 
 func dailyTemperatures(temperatures []int) []int {
 	var stack []int = make([]int, len(temperatures))
-	//var ans []int = make([]int, len(temperatures))
+	var ans []int = make([]int, len(temperatures))
 	l := 0
 	for i := 0; i < len(temperatures); i++ {
 
@@ -14,11 +14,12 @@ func dailyTemperatures(temperatures []int) []int {
 			l = len(stack)
 			last := stack[l-1]
 			stack = stack[:l-1]
-			temperatures[last] = i - last
+			ans[last] = i - last
 		}
+
 		stack = append(stack, i)
 	}
-	return temperatures
+	return ans
 }
 
 func main() {
