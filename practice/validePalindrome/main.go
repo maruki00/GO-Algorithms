@@ -3,19 +3,39 @@ package main
 import (
 	"fmt"
 	"strings"
+	"unicode"
 )
 
+func isPalindrome1(s string) bool {
+
+	s = strings.Map(func(r rune) rune {
+		if !unicode.IsLetter(r) && !unicode.IsNumber(r) {
+			return -1
+		}
+		return unicode.ToLower(r)
+	}, s)
+	l, r := 0, len(s)-1
+	for l < r {
+
+		if s[l] != s[r] {
+			return false
+		}
+		l++
+		r--
+	}
+
+	return true
+}
+
 func isPalindrome(s string) bool {
-	s = strings.ToLower(s)
+
 	res := ""
-	for _, i := range s {
-		if i >= 97 && i <= 122 {
-			res += string(i)
+	for _, r := range s {
+		if unicode.IsLetter(r) || unicode.IsNumber(r) {
+			res += strings.ToLower(string(r))
 		}
 	}
-	if len(res) == 1 {
-		return false
-	}
+
 	l, r := 0, len(res)-1
 	for l < r {
 
@@ -25,10 +45,11 @@ func isPalindrome(s string) bool {
 		l++
 		r--
 	}
+
 	return true
 }
 
 func main() {
-	s := " "
+	s := "0 P"
 	fmt.Println("result : ", isPalindrome(s))
 }
