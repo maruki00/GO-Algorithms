@@ -27,6 +27,7 @@ Stack	practice/evaluateReversePoslishNation/main.go	/^type Stack struct {$/;"	t
 TreeNode	practice/arrayToTree/main.go	/^type TreeNode struct {$/;"	t
 TreeNode	practice/balancedBinaryTree/main.go	/^type TreeNode struct {$/;"	t
 TreeNode	practice/binaryTreeInorderTraversal/main.go	/^type TreeNode struct {$/;"	t
+TreeNode	practice/binaryTreePreorderTravesal/main.go	/^type TreeNode struct {$/;"	t
 TreeNode	practice/maximumDepthofBinaryTree/main.go	/^type TreeNode struct {$/;"	t
 TreeNode	practice/minDepthOfBinaryTree/main.go	/^type TreeNode struct {$/;"	t
 TreeNode	practice/pathSum/main.go	/^type TreeNode struct {$/;"	t
@@ -107,6 +108,8 @@ main	practice/bestTimeToBuyAndSekkStock/main.go	/^func main() {$/;"	f
 main	practice/bestTimeToBuyAndSekkStock/main.go	/^package main$/;"	p
 main	practice/binaryTreeInorderTraversal/main.go	/^func main() {$/;"	f
 main	practice/binaryTreeInorderTraversal/main.go	/^package main$/;"	p
+main	practice/binaryTreePreorderTravesal/main.go	/^func main() {$/;"	f
+main	practice/binaryTreePreorderTravesal/main.go	/^package main$/;"	p
 main	practice/climbingStairs/main.go	/^func main() {$/;"	f
 main	practice/climbingStairs/main.go	/^package main$/;"	p
 main	practice/dailyTemperatures/main.go	/^func main() {$/;"	f
@@ -194,6 +197,7 @@ plusOne	practice/plusOne/main.go	/^func plusOne(digits []int) []int {$/;"	f
 pop	2-stack/stack.go	/^func (obj *Stack) pop() int {$/;"	f
 pop	practice/evaluateReversePoslishNation/main.go	/^func (obj *Stack) pop() int {$/;"	f
 preappend	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) preappend(value any) {$/;"	f
+preorderTraversal	practice/binaryTreePreorderTravesal/main.go	/^func preorderTraversal(root *TreeNode) []int {$/;"	f
 print	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) print() {$/;"	f
 print	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) print() {$/;"	f
 print	practice/addTwoNumbers/main.go	/^func print(l1 *ListNode) {$/;"	f
