@@ -53,6 +53,7 @@ findPalindrome	practice/findFirstPalindromixString/main.go	/^func findPalindrome
 generate	practice/pascalTriangle/main.go	/^func generate(numRows int) [][]int {$/;"	f
 get	3-Queue/queue.go	/^func (obj *Stack) get() int {$/;"	f
 getMinLen	practice/longestCommonPrefix/main.go	/^func getMinLen(s []string) int {$/;"	f
+getRow	practice/pascalTriangle2/main.go	/^func getRow(rowIndex int) []int {$/;"	f
 getVertex	6-Graph/graph.go	/^func (g *Graph) getVertex(k int) *Vertex {$/;"	f
 hasPathSum	practice/pathSum/main.go	/^func hasPathSum(root *TreeNode, sum int) bool {$/;"	f
 inorderTraversal	practice/binaryTreeInorderTraversal/main.go	/^func inorderTraversal(root *TreeNode) []int {$/;"	f
@@ -138,6 +139,8 @@ main	practice/palindromeNumer/main.go	/^func main() {$/;"	f
 main	practice/palindromeNumer/main.go	/^package main$/;"	p
 main	practice/pascalTriangle/main.go	/^func main() {$/;"	f
 main	practice/pascalTriangle/main.go	/^package main$/;"	p
+main	practice/pascalTriangle2/main.go	/^func main() {$/;"	f
+main	practice/pascalTriangle2/main.go	/^package main$/;"	p
 main	practice/pathSum/main.go	/^func main() {$/;"	f
 main	practice/pathSum/main.go	/^package main$/;"	p
 main	practice/plusOne/main.go	/^func main() {$/;"	f
@@ -170,7 +173,7 @@ majorityElement	practice/majorityElement/main.go	/^func majorityElement(nums []i
 maxDepth	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth(root *TreeNode) int {$/;"	f
 maxDepth_	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth_(root *TreeNode) int {$/;"	f
 maxProfit	practice/bestTimeToBuyAndSekkStock/main.go	/^func maxProfit(prices []int) int {$/;"	f
-maximunImportance	practice/maximumTotalImportanceOfRoads/main.go	/^func maximunImportance(n int, roads [][]int) int64 {$/;"	f
+maximumImportance	practice/maximumTotalImportanceOfRoads/main.go	/^func maximumImportance(n int, roads [][]int) int64 {$/;"	f
 merge	practice/mergeSortedArray/main.go	/^func merge(nums1 []int, m int, nums2 []int, n int) {$/;"	f
 minDepth	practice/minDepthOfBinaryTree/main.go	/^func minDepth(root *TreeNode) int {$/;"	f
 myAtoi	practice/stringToInteger/main.go	/^func myAtoi(s string) int {$/;"	f
