@@ -13,10 +13,11 @@ func singleNumber(nums []int) int {
 			minItem = i
 		}
 	}
+	fmt.Println(res)
 	return minItem
 }
 
 func main() {
-	nums := []int{2, 2, 1}
+	nums := []int{1, 0, 1}
 	fmt.Println("Result : ", singleNumber(nums))
 }
