@@ -13,11 +13,15 @@ func singleNumber(nums []int) int {
 			minItem = i
 		}
 	}
-	fmt.Println(res)
-	return minItem
+	for i, j := range res {
+		if j == 1 {
+			return i
+		}
+	}
+	return -1
 }
 
 func main() {
-	nums := []int{1, 0, 1}
+	nums := []int{1, 0, 1, 2, 2}
 	fmt.Println("Result : ", singleNumber(nums))
 }
