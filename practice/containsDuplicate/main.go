@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func containsDuplicate(nums []int) bool {
 
-	hashSet := make(map[int]int)
-	for _, i := range nums {
-		hashSet[i]++
-		if hashSet[i] > 1 {
+	sort.Ints(nums)
+	for i := 0; i < len(nums)-1; i++ {
+		if nums[i] == nums[i+1] {
 			return true
 		}
 	}
