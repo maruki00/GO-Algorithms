@@ -12,6 +12,7 @@ DoubleNode	4-LinkedList/double.go	/^type DoubleNode struct {$/;"	t
 Graph	6-Graph/graph.go	/^type Graph struct {$/;"	t
 InitTrie	5-Trie/Trie.go	/^func InitTrie() *Trie {$/;"	f
 ListNode	practice/addTwoNumbers/main.go	/^type ListNode struct {$/;"	t
+ListNode	practice/main.go	/^type ListNode struct {$/;"	t
 ListNode	practice/removeDuplicatesfromSortedList/main.go	/^type ListNode struct {$/;"	t
 MAXINT	practice/stringToInteger/main.go	/^const MAXINT = 2147483647$/;"	c
 MININT	practice/stringToInteger/main.go	/^const MININT = -2147483648$/;"	c
@@ -55,6 +56,7 @@ get	3-Queue/queue.go	/^func (obj *Stack) get() int {$/;"	f
 getMinLen	practice/longestCommonPrefix/main.go	/^func getMinLen(s []string) int {$/;"	f
 getRow	practice/pascalTriangle2/main.go	/^func getRow(rowIndex int) []int {$/;"	f
 getVertex	6-Graph/graph.go	/^func (g *Graph) getVertex(k int) *Vertex {$/;"	f
+hasCycle	practice/main.go	/^func hasCycle(head *ListNode) bool {$/;"	f
 hasPathSum	practice/pathSum/main.go	/^func hasPathSum(root *TreeNode, sum int) bool {$/;"	f
 inorderTraversal	practice/binaryTreeInorderTraversal/main.go	/^func inorderTraversal(root *TreeNode) []int {$/;"	f
 insert	5-Trie/Trie.go	/^func (obj *Trie) insert(w string) {$/;"	f
@@ -62,6 +64,8 @@ isBalanced	practice/balancedBinaryTree/main.go	/^func isBalanced(root *TreeNode)
 isMatch	practice/regularExpressionMatching/main.go	/^func isMatch(s string, p string) bool {$/;"	f
 isPalindrome	practice/palindromNumber/main.go	/^func isPalindrome(x int) bool {$/;"	f
 isPalindrome	practice/palindromeNumer/main.go	/^func isPalindrome(x int) bool {$/;"	f
+isPalindrome	practice/validePalindrome/main.go	/^func isPalindrome(s string) bool {$/;"	f
+isPalindrome1	practice/validePalindrome/main.go	/^func isPalindrome1(s string) bool {$/;"	f
 isSameTree	practice/sameTree/main.go	/^func isSameTree(p *TreeNode, q *TreeNode) bool {$/;"	f
 isSameTree_	practice/sameTree/main.go	/^func isSameTree_(p *TreeNode, q *TreeNode) bool {$/;"	f
 isSymmetric	practice/symmeetricTree/main.go	/^func isSymmetric(root *TreeNode) bool {$/;"	f
@@ -121,6 +125,8 @@ main	practice/longestCommonPrefix/main.go	/^func main() {$/;"	f
 main	practice/longestCommonPrefix/main.go	/^package main$/;"	p
 main	practice/longestPalindromicSubstring/main.go	/^func main() {$/;"	f
 main	practice/longestPalindromicSubstring/main.go	/^package main$/;"	p
+main	practice/main.go	/^func main() {$/;"	f
+main	practice/main.go	/^package main$/;"	p
 main	practice/majorityElement/main.go	/^func main() {$/;"	f
 main	practice/majorityElement/main.go	/^package main$/;"	p
 main	practice/maximumDepthofBinaryTree/main.go	/^func main() {$/;"	f
@@ -159,6 +165,8 @@ main	practice/sameTree/main.go	/^func main() {$/;"	f
 main	practice/sameTree/main.go	/^package main$/;"	p
 main	practice/searchInsertPosition/main.go	/^func main() {$/;"	f
 main	practice/searchInsertPosition/main.go	/^package main$/;"	p
+main	practice/singleNumber/main.go	/^func main() {$/;"	f
+main	practice/singleNumber/main.go	/^package main$/;"	p
 main	practice/sqrt/main.go	/^func main() {$/;"	f
 main	practice/sqrt/main.go	/^package main$/;"	p
 main	practice/stringToInteger/main.go	/^func main() {$/;"	f
@@ -167,6 +175,8 @@ main	practice/symmeetricTree/main.go	/^func main() {$/;"	f
 main	practice/symmeetricTree/main.go	/^package main$/;"	p
 main	practice/twoSums/main.go	/^func main() {$/;"	f
 main	practice/twoSums/main.go	/^package main$/;"	p
+main	practice/validePalindrome/main.go	/^func main() {$/;"	f
+main	practice/validePalindrome/main.go	/^package main$/;"	p
 main	practice/zigzagConversion/main.go	/^func main() {$/;"	f
 main	practice/zigzagConversion/main.go	/^package main$/;"	p
 majorityElement	practice/majorityElement/main.go	/^func majorityElement(nums []int) int {$/;"	f
@@ -198,6 +208,7 @@ reverseNum	practice/palindromeNumer/main.go	/^func reverseNum(num int) int {$/;"
 romanToInt	practice/romanTointeger/main.go	/^func romanToInt(s string) int {$/;"	f
 search	5-Trie/Trie.go	/^func (obj *Trie) search(w string) bool {$/;"	f
 searchInsert	practice/searchInsertPosition/main.go	/^func searchInsert(nums []int, target int) int {$/;"	f
+singleNumber	practice/singleNumber/main.go	/^func singleNumber(nums []int) int {$/;"	f
 sortedArrayToBTS	practice/arrayToTree/main.go	/^func sortedArrayToBTS(nums []int) *TreeNode {$/;"	f
 strStr	practice/findIndexOfSubString/main.go	/^func strStr(haystack string, needle string) int {$/;"	f
 twoSum	practice/twoSums/main.go	/^func twoSum(nums []int, target int) []int {$/;"	f
