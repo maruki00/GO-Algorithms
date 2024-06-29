@@ -21,3 +21,7 @@ func postorderTraversal(root *TreeNode) []int {
 	dfs(root)
 	return res
 }
+
+func main() {
+
+}
