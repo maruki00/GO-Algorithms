@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -11,16 +13,23 @@ func preorderTraversal(root *TreeNode) []int {
 		return []int{}
 	}
 	var items []int = []int{}
-	var dfs func(root *TreeNode) []int
+	var dfs func(root *TreeNode)
 	dfs = func(root *TreeNode) {
+		if root == nil {
+			return
+		}
 		items = append(items, root.Val)
 		dfs(root.Left)
 		dfs(root.Right)
 	}
 
-	return dfs(root)
+	dfs(root)
+	return items
 }
 
 func main() {
+
+	root := &TreeNode{1, nil, &TreeNode{2, &TreeNode{3, nil, nil}, nil}}
+	fmt.Println("Result : ", preorderTraversal(root))
 
 }
