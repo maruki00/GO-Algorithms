@@ -4,15 +4,19 @@ import "fmt"
 
 func singleNumber(nums []int) int {
 	res := make(map[int]int)
-	minItem := 0
+	minItem := nums[0]
 	for _, i := range nums {
+
 		res[i]++
-		minItem = min(minItem, res[i])
+
+		if res[minItem] > res[i] {
+			minItem = i
+		}
 	}
 	return minItem
 }
 
 func main() {
-	nums := []int{4, 1, 2, 1, 2}
+	nums := []int{2, 2, 1}
 	fmt.Println("Result : ", singleNumber(nums))
 }
