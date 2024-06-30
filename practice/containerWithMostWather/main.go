@@ -4,13 +4,13 @@ import "fmt"
 
 func maxArea(height []int) int {
 	l := len(height) - 1
-	left, right := height[0], height[l]
+	left, right := 0, l
 	maxA := 0
 	for left < right {
-		maxA = min(maxA, (right-left)*min(right, left))
-		if left < right {
+		maxA = max(maxA, (right-left)*min(height[right], height[left]))
+		if height[left] < height[right] {
 			left++
-		} else if left > right {
+		} else if height[left] > height[right] {
 			right--
 		} else {
 			left++
