@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 // func containsNearbyDuplicate(nums []int, k int) bool {
@@ -26,16 +27,16 @@ import (
 
 func containsNearbyDuplicate(nums []int, k int) bool {
 
-	found := 0
-	for i := 0; i > len(nums)-k; i++ {
-		for j := i + k; j < len(nums); j++ {
-			if nums[i] == nums[j] {
-				found++
+	found := false
+	for i := 0; i < len(nums); i++ {
+		for j := i + 1; j < len(nums); j++ {
+			if nums[i] == nums[j] && int(math.Abs(float64(i-j))) <= k {
+				found = true
 				break
 			}
 
 		}
-		if found >= 2 {
+		if found {
 			return true
 		}
 	}
@@ -43,6 +44,6 @@ func containsNearbyDuplicate(nums []int, k int) bool {
 }
 
 func main() {
-	nums := []int{1, 2, 3, 1, 2, 3}
-	fmt.Println(containsNearbyDuplicate(nums, 2))
+	nums := []int{1, 0, 1, 1}
+	fmt.Println(containsNearbyDuplicate(nums, 1))
 }
