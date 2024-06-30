@@ -2,43 +2,16 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
-// func containsNearbyDuplicate(nums []int, k int) bool {
-
-// 	hashSet := make(map[int][]int)
-// 	for index, i := range nums {
-// 		hashSet[i] = append(hashSet[i], index)
-// 		found := false
-// 		for _, j := range hashSet[i] {
-// 			fmt.Println("Result : ", index, j, index-j)
-// 			if index-j <= k {
-// 				found = true
-// 			}
-// 		}
-// 		if found {
-// 			return true
-// 		}
-// 	}
-// 	fmt.Println("result: ", hashSet)
-// 	return false
-// }
-
 func containsNearbyDuplicate(nums []int, k int) bool {
+	hashSet := make(map[int]int)
 
-	found := false
-	for i := 0; i < len(nums); i++ {
-		for j := i + 1; j < len(nums); j++ {
-			if nums[i] == nums[j] && int(math.Abs(float64(i-j))) <= k {
-				found = true
-				break
-			}
-
-		}
-		if found {
+	for i, val := range nums {
+		if v, ok := hashSet[val]; ok && i-v <= k {
 			return true
 		}
+		hashSet[val] = i
 	}
 	return false
 }
