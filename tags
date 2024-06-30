@@ -192,6 +192,7 @@ main	practice/stringToInteger/main.go	/^func main() {$/;"	f
 main	practice/stringToInteger/main.go	/^package main$/;"	p
 main	practice/symmeetricTree/main.go	/^func main() {$/;"	f
 main	practice/symmeetricTree/main.go	/^package main$/;"	p
+main	practice/treeSum/main.go	/^package main$/;"	p
 main	practice/twoSums/main.go	/^func main() {$/;"	f
 main	practice/twoSums/main.go	/^package main$/;"	p
 main	practice/validePalindrome/main.go	/^func main() {$/;"	f
