@@ -120,6 +120,8 @@ main	practice/binaryTreePreorderTravesal/main.go	/^func main() {$/;"	f
 main	practice/binaryTreePreorderTravesal/main.go	/^package main$/;"	p
 main	practice/climbingStairs/main.go	/^func main() {$/;"	f
 main	practice/climbingStairs/main.go	/^package main$/;"	p
+main	practice/containerWithMostWather/main.go	/^func main() {$/;"	f
+main	practice/containerWithMostWather/main.go	/^package main$/;"	p
 main	practice/containsDuplicate/main.go	/^func main() {$/;"	f
 main	practice/containsDuplicate/main.go	/^package main$/;"	p
 main	practice/contiansDuplicate2/main.go	/^func main() {$/;"	f
@@ -197,6 +199,7 @@ main	practice/validePalindrome/main.go	/^package main$/;"	p
 main	practice/zigzagConversion/main.go	/^func main() {$/;"	f
 main	practice/zigzagConversion/main.go	/^package main$/;"	p
 majorityElement	practice/majorityElement/main.go	/^func majorityElement(nums []int) int {$/;"	f
+maxArea	practice/containerWithMostWather/main.go	/^func maxArea(height []int) int {$/;"	f
 maxDepth	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth(root *TreeNode) int {$/;"	f
 maxDepth_	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth_(root *TreeNode) int {$/;"	f
 maxProfit	practice/bestTimeToBuyAndSekkStock/main.go	/^func maxProfit(prices []int) int {$/;"	f
