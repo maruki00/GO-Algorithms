@@ -238,7 +238,7 @@ searchInsert	practice/searchInsertPosition/main.go	/^func searchInsert(nums []in
 singleNumber	practice/singleNumber/main.go	/^func singleNumber(nums []int) int {$/;"	f
 sortedArrayToBTS	practice/arrayToTree/main.go	/^func sortedArrayToBTS(nums []int) *TreeNode {$/;"	f
 strStr	practice/findIndexOfSubString/main.go	/^func strStr(haystack string, needle string) int {$/;"	f
-threeConsecutiveOdds	practice/threeConsicutiveOdds/main.go	/^func threeConsecutiveOdds(arr p[int]) bool {$/;"	f
+threeConsecutiveOdds	practice/threeConsicutiveOdds/main.go	/^func threeConsecutiveOdds(arr []int) bool {$/;"	f
 threeSum	practice/treeSum/main.go	/^func threeSum(nums []int) [][]int {$/;"	f
 traverse	practice/allAncestorsOfANodeInADirectedAcyclicGraph/main.go	/^func traverse(graph [][]int, ans [][]int, last int) {$/;"	f
 twoSum	practice/twoSums/main.go	/^func twoSum(nums []int, target int) []int {$/;"	f
