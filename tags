@@ -65,6 +65,7 @@ hasCycle	practice/hasCycle/main.go	/^func hasCycle(head *ListNode) bool {$/;"	f
 hasPathSum	practice/pathSum/main.go	/^func hasPathSum(root *TreeNode, sum int) bool {$/;"	f
 inorderTraversal	practice/binaryTreeInorderTraversal/main.go	/^func inorderTraversal(root *TreeNode) []int {$/;"	f
 insert	5-Trie/Trie.go	/^func (obj *Trie) insert(w string) {$/;"	f
+intersect	practice/intersectionOfTwoArray2/main.go	/^func intersect(nums1 []int, nums2 []int) []int {$/;"	f
 isBalanced	practice/balancedBinaryTree/main.go	/^func isBalanced(root *TreeNode) bool {$/;"	f
 isMatch	practice/regularExpressionMatching/main.go	/^func isMatch(s string, p string) bool {$/;"	f
 isPalindrome	practice/palindromNumber/main.go	/^func isPalindrome(x int) bool {$/;"	f
@@ -138,6 +139,8 @@ main	practice/findIndexOfSubString/main.go	/^func main() {$/;"	f
 main	practice/findIndexOfSubString/main.go	/^package main$/;"	p
 main	practice/hasCycle/main.go	/^func main() {$/;"	f
 main	practice/hasCycle/main.go	/^package main$/;"	p
+main	practice/intersectionOfTwoArray2/main.go	/^func main() {$/;"	f
+main	practice/intersectionOfTwoArray2/main.go	/^package main$/;"	p
 main	practice/lenghtOfLastWord/main.go	/^func main() {$/;"	f
 main	practice/lenghtOfLastWord/main.go	/^package main$/;"	p
 main	practice/longestCommonPrefix/main.go	/^func main() {$/;"	f
