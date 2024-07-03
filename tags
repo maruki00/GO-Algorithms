@@ -42,6 +42,7 @@ addTwoNumbers	practice/addTwoNumbers/main.go	/^func addTwoNumbers(l1 *ListNode, 
 append	3-Queue/queue.go	/^func (obj *Stack) append(item int) {$/;"	f
 append	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) append(value any) {$/;"	f
 append	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) append(value any) {$/;"	f
+buildArray	practice/buildArrayFromPermutation/main.go	/^func buildArray(nums []int) []int {$/;"	f
 clear	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) clear() {$/;"	f
 clear	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) clear() {$/;"	f
 climbStairs	practice/climbingStairs/main.go	/^func climbStairs(n int) int {$/;"	f
@@ -119,6 +120,8 @@ main	practice/binaryTreePostOrderTraversal/main.go	/^func main() {$/;"	f
 main	practice/binaryTreePostOrderTraversal/main.go	/^package main$/;"	p
 main	practice/binaryTreePreorderTravesal/main.go	/^func main() {$/;"	f
 main	practice/binaryTreePreorderTravesal/main.go	/^package main$/;"	p
+main	practice/buildArrayFromPermutation/main.go	/^func main() {$/;"	f
+main	practice/buildArrayFromPermutation/main.go	/^package main$/;"	p
 main	practice/climbingStairs/main.go	/^func main() {$/;"	f
 main	practice/climbingStairs/main.go	/^package main$/;"	p
 main	practice/containerWithMostWather/main.go	/^func main() {$/;"	f
