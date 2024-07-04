@@ -2,21 +2,13 @@ package main
 
 import "fmt"
 
-func isAnagram(s string , t string ) bool {
-	ls := len(s)
-	lt := len(t)
-	if ls != lt {
-		return false
+func isAnagram(s string, t string) bool {
+	for i, j := range s {
+		fmt.Println("result : ", i, j)
 	}
-
-	for i:=0, j:=lt-1; i<ls && j>=0; i++, j--{
-		if s[i] != t[j]{
-			return false
-		}
-		return true
-	}
+	return true
 }
 
-func main(){
+func main() {
 	fmt.Println("Result : ", isAnagram("anagram", "nagaram"))
 }
