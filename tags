@@ -67,6 +67,7 @@ hasPathSum	practice/pathSum/main.go	/^func hasPathSum(root *TreeNode, sum int) b
 inorderTraversal	practice/binaryTreeInorderTraversal/main.go	/^func inorderTraversal(root *TreeNode) []int {$/;"	f
 insert	5-Trie/Trie.go	/^func (obj *Trie) insert(w string) {$/;"	f
 intersect	practice/intersectionOfTwoArray2/main.go	/^func intersect(nums1 []int, nums2 []int) []int {$/;"	f
+intersection	practice/intersectionOfTwoArray/main.go	/^func intersection(nums1 []int, nums2 []int) []int {$/;"	f
 isBalanced	practice/balancedBinaryTree/main.go	/^func isBalanced(root *TreeNode) bool {$/;"	f
 isMatch	practice/regularExpressionMatching/main.go	/^func isMatch(s string, p string) bool {$/;"	f
 isPalindrome	practice/palindromNumber/main.go	/^func isPalindrome(x int) bool {$/;"	f
@@ -142,6 +143,8 @@ main	practice/findIndexOfSubString/main.go	/^func main() {$/;"	f
 main	practice/findIndexOfSubString/main.go	/^package main$/;"	p
 main	practice/hasCycle/main.go	/^func main() {$/;"	f
 main	practice/hasCycle/main.go	/^package main$/;"	p
+main	practice/intersectionOfTwoArray/main.go	/^func main() {$/;"	f
+main	practice/intersectionOfTwoArray/main.go	/^package main$/;"	p
 main	practice/intersectionOfTwoArray2/main.go	/^func main() {$/;"	f
 main	practice/intersectionOfTwoArray2/main.go	/^package main$/;"	p
 main	practice/lenghtOfLastWord/main.go	/^func main() {$/;"	f
@@ -248,3 +251,4 @@ threeConsecutiveOdds	practice/threeConsicutiveOdds/main.go	/^func threeConsecuti
 threeSum	practice/treeSum/main.go	/^func threeSum(nums []int) [][]int {$/;"	f
 traverse	practice/allAncestorsOfANodeInADirectedAcyclicGraph/main.go	/^func traverse(graph [][]int, ans [][]int, last int) {$/;"	f
 twoSum	practice/twoSums/main.go	/^func twoSum(nums []int, target int) []int {$/;"	f
+uniqueAppend	practice/intersectionOfTwoArray/main.go	/^func uniqueAppend(nums1 []int, item int) []int {$/;"	f
