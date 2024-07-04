@@ -13,7 +13,7 @@ func uniqueAppend(nums1 []int, item int) []int {
 	return append(nums1, item)
 }
 
-func intersection(nums1 []int, nums2 []int) []int {
+func intersection_(nums1 []int, nums2 []int) []int {
 	result := []int{}
 	//sort.Ints(nums1)
 	//sort.Ints(nums2)
@@ -30,6 +30,28 @@ func intersection(nums1 []int, nums2 []int) []int {
 	}
 	fmt.Println("hashMap : ", hashSet)
 	return result
+}
+
+func intersection(nums1 []int, nums2 []int) []int {
+	if len(nums2) < len(nums1) {
+		nums1, nums2 = nums2, nums1
+	}
+
+	freq := make(map[int]bool)
+
+	for _, num := range nums1 {
+		freq[num] = true
+	}
+
+	answer := make([]int, 0)
+	for _, num := range nums2 {
+		if freq[num] == true {
+			freq[num] = false
+			answer = append(answer, num)
+		}
+	}
+
+	return answer
 }
 
 func main() {
