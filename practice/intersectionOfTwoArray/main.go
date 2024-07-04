@@ -22,11 +22,13 @@ func intersection(nums1 []int, nums2 []int) []int {
 		hashSet[j]++
 	}
 	for _, i := range nums2 {
+		fmt.Println("item : ", i)
 		if num, ok := hashSet[i]; ok {
-			result = uniqueAppend(result, num)
+			fmt.Println("found : ", num, ok, hashSet[i])
+			result = uniqueAppend(result, i)
 		}
 	}
-
+	fmt.Println("hashMap : ", hashSet)
 	return result
 }
 
