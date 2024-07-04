@@ -3,6 +3,10 @@ package main
 import "fmt"
 
 func isAnagram(s string, t string) bool {
+	if len(s)!=len(t){
+		return false
+	}
+	:w!
 	hashMap := make(map[rune]bool)
 	for _, j := range s {
 		hashMap[j] = true
