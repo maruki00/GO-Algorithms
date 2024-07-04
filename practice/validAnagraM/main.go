@@ -3,19 +3,18 @@ package main
 import "fmt"
 
 func isAnagram(s string, t string) bool {
-	if len(s)!=len(t){
+	if len(s) != len(t) {
 		return false
 	}
-	:w!
-	hashMap := make(map[rune]bool)
+	hashMap := make(map[rune]int)
 	for _, j := range s {
-		hashMap[j] = true
+		hashMap[j]++
 	}
 	for _, j := range t {
-		hashMap[j] = false
+		hashMap[j]--
 	}
 	for _, j := range hashMap {
-		if j == true {
+		if j != 0 {
 			return false
 		}
 	}
