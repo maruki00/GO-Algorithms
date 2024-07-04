@@ -54,6 +54,7 @@ dailyTemperatures	practice/dailyTemperatures/main.go	/^func dailyTemperatures(te
 deleteDuplicates	practice/removeDuplicatesfromSortedList/main.go	/^func deleteDuplicates(head *ListNode) *ListNode {$/;"	f
 evalRPN	practice/evaluateReversePoslishNation/main.go	/^func evalRPN(tokens []string) int {$/;"	f
 findCenter	practice/findCenterOfStartGraph/main.go	/^func findCenter(edges [][]int) int {$/;"	f
+findDisappearedNumbers	practice/findAllNumbersDisappearedInArray/main.go	/^func findDisappearedNumbers(nums []int) []int {$/;"	f
 findMedianSortedArrays	practice/medianofTwoSortedArrays/main.go	/^func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {$/;"	f
 findPalindrome	practice/findFirstPalindromixString/main.go	/^func findPalindrome(words []string) string {$/;"	f
 generate	practice/pascalTriangle/main.go	/^func generate(numRows int) [][]int {$/;"	f
@@ -136,6 +137,8 @@ main	practice/dailyTemperatures/main.go	/^func main() {$/;"	f
 main	practice/dailyTemperatures/main.go	/^package main$/;"	p
 main	practice/evaluateReversePoslishNation/main.go	/^func main() {$/;"	f
 main	practice/evaluateReversePoslishNation/main.go	/^package main$/;"	p
+main	practice/findAllNumbersDisappearedInArray/main.go	/^func main() {$/;"	f
+main	practice/findAllNumbersDisappearedInArray/main.go	/^package main$/;"	p
 main	practice/findCenterOfStartGraph/main.go	/^func main() {$/;"	f
 main	practice/findCenterOfStartGraph/main.go	/^package main$/;"	p
 main	practice/findFirstPalindromixString/main.go	/^func main() {$/;"	f
