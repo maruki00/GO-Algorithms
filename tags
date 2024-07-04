@@ -62,6 +62,7 @@ get	3-Queue/queue.go	/^func (obj *Stack) get() int {$/;"	f
 getAncestors	practice/allAncestorsOfANodeInADirectedAcyclicGraph/main.go	/^func getAncestors(n int, edges [][]int) [][]int {$/;"	f
 getMinLen	practice/longestCommonPrefix/main.go	/^func getMinLen(s []string) int {$/;"	f
 getRow	practice/pascalTriangle2/main.go	/^func getRow(rowIndex int) []int {$/;"	f
+getSum	practice/sumOfTwoInteger/main.go	/^func getSum(a int, b int) int {$/;"	f
 getVertex	6-Graph/graph.go	/^func (g *Graph) getVertex(k int) *Vertex {$/;"	f
 hasCycle	practice/hasCycle/main.go	/^func hasCycle(head *ListNode) bool {$/;"	f
 hasPathSum	practice/pathSum/main.go	/^func hasPathSum(root *TreeNode, sum int) bool {$/;"	f
@@ -204,6 +205,8 @@ main	practice/sqrt/main.go	/^func main() {$/;"	f
 main	practice/sqrt/main.go	/^package main$/;"	p
 main	practice/stringToInteger/main.go	/^func main() {$/;"	f
 main	practice/stringToInteger/main.go	/^package main$/;"	p
+main	practice/sumOfTwoInteger/main.go	/^func main() {$/;"	f
+main	practice/sumOfTwoInteger/main.go	/^package main$/;"	p
 main	practice/symmeetricTree/main.go	/^func main() {$/;"	f
 main	practice/symmeetricTree/main.go	/^package main$/;"	p
 main	practice/threeConsicutiveOdds/main.go	/^func main() {$/;"	f
