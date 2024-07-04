@@ -70,6 +70,7 @@ insert	5-Trie/Trie.go	/^func (obj *Trie) insert(w string) {$/;"	f
 intersect	practice/intersectionOfTwoArray2/main.go	/^func intersect(nums1 []int, nums2 []int) []int {$/;"	f
 intersection	practice/intersectionOfTwoArray/main.go	/^func intersection(nums1 []int, nums2 []int) []int {$/;"	f
 intersection_	practice/intersectionOfTwoArray/main.go	/^func intersection_(nums1 []int, nums2 []int) []int {$/;"	f
+isAnagram	practice/validAnagraM/main.go	/^func isAnagram(s string , t string ) bool {$/;"	f
 isBalanced	practice/balancedBinaryTree/main.go	/^func isBalanced(root *TreeNode) bool {$/;"	f
 isMatch	practice/regularExpressionMatching/main.go	/^func isMatch(s string, p string) bool {$/;"	f
 isPalindrome	practice/palindromNumber/main.go	/^func isPalindrome(x int) bool {$/;"	f
@@ -211,6 +212,8 @@ main	practice/treeSum/main.go	/^func main() {$/;"	f
 main	practice/treeSum/main.go	/^package main$/;"	p
 main	practice/twoSums/main.go	/^func main() {$/;"	f
 main	practice/twoSums/main.go	/^package main$/;"	p
+main	practice/validAnagraM/main.go	/^func main(){$/;"	f
+main	practice/validAnagraM/main.go	/^package main$/;"	p
 main	practice/validePalindrome/main.go	/^func main() {$/;"	f
 main	practice/validePalindrome/main.go	/^package main$/;"	p
 main	practice/zigzagConversion/main.go	/^func main() {$/;"	f
