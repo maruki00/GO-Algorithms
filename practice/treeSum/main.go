@@ -19,6 +19,7 @@ func threeSum(nums []int) [][]int {
 
 		num2Idx := num1Idx + 1
 		num3Idx := n - 1
+		
 		for num2Idx < num3Idx {
 			sum := nums[num2Idx] + nums[num3Idx] + nums[num1Idx]
 			if sum == 0 {
