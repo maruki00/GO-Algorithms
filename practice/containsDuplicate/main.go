@@ -18,16 +18,16 @@ func _containsDuplicate(nums []int) bool {
 
 func containsDuplicate(nums []int) bool {
 	hashMap := make(map[int]int)
-	for i,j := range nums {
+	for _, j := range nums {
 		hashMap[j]++
-		if hashMap[j]>1{
+		if hashMap[j] > 1 {
 			return true
 		}
 	}
-	retunr false
+	return false
 }
 
-func main() {:
+func main() {
 	nums := []int{1, 2, 3, 1}
 	fmt.Println("Result : ", containsDuplicate(nums))
 }

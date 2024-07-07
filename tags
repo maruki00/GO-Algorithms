@@ -132,7 +132,7 @@ main	practice/climbingStairs/main.go	/^func main() {$/;"	f
 main	practice/climbingStairs/main.go	/^package main$/;"	p
 main	practice/containerWithMostWather/main.go	/^func main() {$/;"	f
 main	practice/containerWithMostWather/main.go	/^package main$/;"	p
-main	practice/containsDuplicate/main.go	/^func main() {:$/;"	f
+main	practice/containsDuplicate/main.go	/^func main() {$/;"	f
 main	practice/containsDuplicate/main.go	/^package main$/;"	p
 main	practice/contiansDuplicate2/main.go	/^func main() {$/;"	f
 main	practice/contiansDuplicate2/main.go	/^package main$/;"	p
