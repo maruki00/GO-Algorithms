@@ -1,17 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func isAnagram(s string, t string) bool {
 	if len(s) != len(t) {
 		return false
 	}
-	hashMap := make(map[rune]int)
-	for _, j := range s {
-		hashMap[j]++
-	}
-	for _, j := range t {
-		hashMap[j]--
+	hashMap := make(map[byte]int)
+	for j := range len(s) {
+		hashMap[s[j]]++
+		hashMap[t[j]]--
 	}
 	for _, j := range hashMap {
 		if j != 0 {
@@ -22,5 +22,5 @@ func isAnagram(s string, t string) bool {
 }
 
 func main() {
-	fmt.Println("Result : ", isAnagram("anagram", "nagaram"))
+	fmt.Println("Result : ", isAnagram("anagraml", "nagaramk"))
 }
