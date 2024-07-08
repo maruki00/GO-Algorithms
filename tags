@@ -265,7 +265,7 @@ sortedArrayToBTS	practice/arrayToTree/main.go	/^func sortedArrayToBTS(nums []int
 strStr	practice/findIndexOfSubString/main.go	/^func strStr(haystack string, needle string) int {$/;"	f
 threeConsecutiveOdds	practice/threeConsicutiveOdds/main.go	/^func threeConsecutiveOdds(arr []int) bool {$/;"	f
 threeSum	practice/treeSum/main.go	/^func threeSum(nums []int) [][]int {$/;"	f
-topKElement	practice/topKFrequenetElements/main.go	/^func topKElement(nums []int) int {$/;"	f
+topKElement	practice/topKFrequenetElements/main.go	/^func topKElement(nums []int, k int) []int {$/;"	f
 traverse	practice/allAncestorsOfANodeInADirectedAcyclicGraph/main.go	/^func traverse(graph [][]int, ans [][]int, last int) {$/;"	f
 twoSum	practice/twoSums/main.go	/^func twoSum(nums []int, target int) []int {$/;"	f
 uniqueAppend	practice/intersectionOfTwoArray/main.go	/^func uniqueAppend(nums1 []int, item int) []int {$/;"	f

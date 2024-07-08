@@ -5,8 +5,9 @@ import (
 	"sort"
 )
 
-func topKElement(nums []int) int {
+func topKElement(nums []int, k int) []int {
 	freq := make(map[int]int)
+	out := []int{}
 	for _, j := range nums {
 		freq[j]++
 	}
@@ -15,12 +16,18 @@ func topKElement(nums []int) int {
 		keys = append(keys, j)
 	}
 	sort.SliceStable(keys, func(i, j int) bool {
-		return freq[keys[i]] < freq[keys[j]]
+		return freq[keys[i]] >= k && freq[keys[i]] > freq[keys[j]]
 	})
-	fmt.Println("result : ", freq, keys)
-	return 1
+	for _, j := range keys {
+		if freq[j] >= k {
+			fmt.Println("iotem : ", freq[j], j)
+			out = append(out, j)
+		}
+	}
+	return out
 }
 
 func main() {
-	_ = topKElement(1, 1, 1, 2, 2, 3)
+	nums := []int{1, 1, 1, 2, 2, 3}
+	fmt.Println("result : ", topKElement(nums, 2))
 }
