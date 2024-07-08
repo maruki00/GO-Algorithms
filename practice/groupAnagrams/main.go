@@ -3,14 +3,18 @@ package main
 import (
 	"fmt"
 	"sort"
+	"strings"
 )
 
 func groupAnagrams(strs []string) [][]string {
 
-	hashMap := make(map[int][]string)
+	hashMap := make(map[string][]string)
 	result := make([][]string, 0)
 	for _, j := range strs {
-		hashMap[sort.Strings(j)] = append(hashMap[tmp], j)
+		tmp := strings.Split(j, "")
+		sort.Strings(tmp)
+		key := strings.Join(tmp, "")
+		hashMap[key] = append(hashMap[key], j)
 	}
 	for _, i := range hashMap {
 		result = append(result, i)
