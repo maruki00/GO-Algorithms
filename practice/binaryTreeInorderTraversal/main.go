@@ -9,7 +9,6 @@ type TreeNode struct {
 }
 
 func inorderTraversal(root *TreeNode) []int {
-
 	var items []int
 	var dfs func(node *TreeNode)
 	dfs = func(node *TreeNode) {

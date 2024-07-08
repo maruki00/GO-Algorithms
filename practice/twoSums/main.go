@@ -10,7 +10,6 @@ func twoSum(nums []int, target int) []int {
 	for index, item := range nums {
 		sub := target - item
 		subIndex, found := arrMap[item]
-		fmt.Println(item, index, subIndex, found)
 		if found {
 			return []int{subIndex, index}
 		} else {

@@ -14,7 +14,6 @@ func hasCycle(head *ListNode) bool {
 		if slow == fast {
 			return true
 		}
-
 	}
 	return false
 

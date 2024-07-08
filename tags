@@ -65,6 +65,7 @@ getMinLen	practice/longestCommonPrefix/main.go	/^func getMinLen(s []string) int 
 getRow	practice/pascalTriangle2/main.go	/^func getRow(rowIndex int) []int {$/;"	f
 getSum	practice/sumOfTwoInteger/main.go	/^func getSum(a int, b int) int {$/;"	f
 getVertex	6-Graph/graph.go	/^func (g *Graph) getVertex(k int) *Vertex {$/;"	f
+groupAnagrams	practice/groupAnagrams/main.go	/^func groupAnagrams(strs []string) [][]string {$/;"	f
 hasCycle	practice/hasCycle/main.go	/^func hasCycle(head *ListNode) bool {$/;"	f
 hasPathSum	practice/pathSum/main.go	/^func hasPathSum(root *TreeNode, sum int) bool {$/;"	f
 inorderTraversal	practice/binaryTreeInorderTraversal/main.go	/^func inorderTraversal(root *TreeNode) []int {$/;"	f
@@ -148,6 +149,8 @@ main	practice/findFirstPalindromixString/main.go	/^func main() {$/;"	f
 main	practice/findFirstPalindromixString/main.go	/^package main$/;"	p
 main	practice/findIndexOfSubString/main.go	/^func main() {$/;"	f
 main	practice/findIndexOfSubString/main.go	/^package main$/;"	p
+main	practice/groupAnagrams/main.go	/^func main() {$/;"	f
+main	practice/groupAnagrams/main.go	/^package main$/;"	p
 main	practice/hasCycle/main.go	/^func main() {$/;"	f
 main	practice/hasCycle/main.go	/^package main$/;"	p
 main	practice/intersectionOfTwoArray/main.go	/^func main() {$/;"	f
