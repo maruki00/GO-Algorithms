@@ -158,7 +158,7 @@ main	practice/intersectionOfTwoArray/main.go	/^func main() {$/;"	f
 main	practice/intersectionOfTwoArray/main.go	/^package main$/;"	p
 main	practice/intersectionOfTwoArray2/main.go	/^func main() {$/;"	f
 main	practice/intersectionOfTwoArray2/main.go	/^package main$/;"	p
-main	practice/islandPerimeter/main.go	/^func main(){$/;"	f
+main	practice/islandPerimeter/main.go	/^func main() {$/;"	f
 main	practice/islandPerimeter/main.go	/^package main$/;"	p
 main	practice/lenghtOfLastWord/main.go	/^func main() {$/;"	f
 main	practice/lenghtOfLastWord/main.go	/^package main$/;"	p
