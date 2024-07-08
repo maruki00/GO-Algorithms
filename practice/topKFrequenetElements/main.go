@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-func topKElement(nums []int, k int) []int {
+func topKFrequent(nums []int, k int) []int {
 	freq := make(map[int]int)
 	out := []int{}
 	for _, j := range nums {
@@ -29,5 +29,5 @@ func topKElement(nums []int, k int) []int {
 
 func main() {
 	nums := []int{1, 1, 1, 2, 2, 3}
-	fmt.Println("result : ", topKElement(nums, 2))
+	fmt.Println("result : ", topKFrequent(nums, 2))
 }
