@@ -7,7 +7,7 @@ import (
 
 func topKFrequent(nums []int, k int) []int {
 	freq := make(map[int]int)
-	out := []int{}
+	//out := []int{}
 	for _, j := range nums {
 		freq[j]++
 	}
@@ -18,7 +18,10 @@ func topKFrequent(nums []int, k int) []int {
 	sort.SliceStable(keys, func(i, j int) bool {
 		return freq[keys[i]] > freq[keys[j]]
 	})
-	return out[:k]
+	if len(keys) >= k {
+		return keys[:k]
+	}
+	return keys
 }
 
 func main() {
