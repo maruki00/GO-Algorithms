@@ -58,6 +58,7 @@ findCenter	practice/findCenterOfStartGraph/main.go	/^func findCenter(edges [][]i
 findDisappearedNumbers	practice/findAllNumbersDisappearedInArray/main.go	/^func findDisappearedNumbers(nums []int) []int {$/;"	f
 findMedianSortedArrays	practice/medianofTwoSortedArrays/main.go	/^func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {$/;"	f
 findPalindrome	practice/findFirstPalindromixString/main.go	/^func findPalindrome(words []string) string {$/;"	f
+findTheWinner	practice/findTheWinnerOfTheCirculareGame/main.go	/^func findTheWinner(n int, k int) int {$/;"	f
 generate	practice/pascalTriangle/main.go	/^func generate(numRows int) [][]int {$/;"	f
 get	3-Queue/queue.go	/^func (obj *Stack) get() int {$/;"	f
 getAncestors	practice/allAncestorsOfANodeInADirectedAcyclicGraph/main.go	/^func getAncestors(n int, edges [][]int) [][]int {$/;"	f
@@ -150,6 +151,8 @@ main	practice/findFirstPalindromixString/main.go	/^func main() {$/;"	f
 main	practice/findFirstPalindromixString/main.go	/^package main$/;"	p
 main	practice/findIndexOfSubString/main.go	/^func main() {$/;"	f
 main	practice/findIndexOfSubString/main.go	/^package main$/;"	p
+main	practice/findTheWinnerOfTheCirculareGame/main.go	/^func main() {$/;"	f
+main	practice/findTheWinnerOfTheCirculareGame/main.go	/^package main$/;"	p
 main	practice/groupAnagrams/main.go	/^func main() {$/;"	f
 main	practice/groupAnagrams/main.go	/^package main$/;"	p
 main	practice/hasCycle/main.go	/^func main() {$/;"	f
