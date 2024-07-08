@@ -16,7 +16,6 @@ func groupAnagrams(strs []string) [][]string {
 		key := strings.Join(tmp, "")
 		hashMap[key] = append(hashMap[key], j)
 	}
-	Join()
 	for _, i := range hashMap {
 		result = append(result, i)
 	}
