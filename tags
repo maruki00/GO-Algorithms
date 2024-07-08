@@ -215,6 +215,8 @@ main	practice/symmeetricTree/main.go	/^func main() {$/;"	f
 main	practice/symmeetricTree/main.go	/^package main$/;"	p
 main	practice/threeConsicutiveOdds/main.go	/^func main() {$/;"	f
 main	practice/threeConsicutiveOdds/main.go	/^package main$/;"	p
+main	practice/topKFrequenetElements/main.go	/^func main() {$/;"	f
+main	practice/topKFrequenetElements/main.go	/^package main$/;"	p
 main	practice/treeSum/main.go	/^func main() {$/;"	f
 main	practice/treeSum/main.go	/^package main$/;"	p
 main	practice/twoSums/main.go	/^func main() {$/;"	f
@@ -263,6 +265,7 @@ sortedArrayToBTS	practice/arrayToTree/main.go	/^func sortedArrayToBTS(nums []int
 strStr	practice/findIndexOfSubString/main.go	/^func strStr(haystack string, needle string) int {$/;"	f
 threeConsecutiveOdds	practice/threeConsicutiveOdds/main.go	/^func threeConsecutiveOdds(arr []int) bool {$/;"	f
 threeSum	practice/treeSum/main.go	/^func threeSum(nums []int) [][]int {$/;"	f
+topKElement	practice/topKFrequenetElements/main.go	/^func topKElement(nums []int) int {$/;"	f
 traverse	practice/allAncestorsOfANodeInADirectedAcyclicGraph/main.go	/^func traverse(graph [][]int, ans [][]int, last int) {$/;"	f
 twoSum	practice/twoSums/main.go	/^func twoSum(nums []int, target int) []int {$/;"	f
 uniqueAppend	practice/intersectionOfTwoArray/main.go	/^func uniqueAppend(nums1 []int, item int) []int {$/;"	f
