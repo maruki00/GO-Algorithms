@@ -12,22 +12,16 @@ func topKFrequent(nums []int, k int) []int {
 		freq[j]++
 	}
 	keys := []int{}
-	for _, j := range freq {
+	for j, _ := range freq {
 		keys = append(keys, j)
 	}
 	sort.SliceStable(keys, func(i, j int) bool {
-		return freq[keys[i]] >= k && freq[keys[i]] > freq[keys[j]]
+		return freq[keys[i]] > freq[keys[j]]
 	})
-	for _, j := range keys {
-		if freq[j] >= k {
-			fmt.Println("iotem : ", freq[j], j)
-			out = append(out, j)
-		}
-	}
-	return out
+	return out[:k]
 }
 
 func main() {
-	nums := []int{1, 1, 1, 2, 2, 3}
+	nums := []int{-1, -1}
 	fmt.Println("result : ", topKFrequent(nums, 2))
 }
