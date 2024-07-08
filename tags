@@ -83,6 +83,7 @@ isPalindrome1	practice/validePalindrome/main.go	/^func isPalindrome1(s string) b
 isSameTree	practice/sameTree/main.go	/^func isSameTree(p *TreeNode, q *TreeNode) bool {$/;"	f
 isSameTree_	practice/sameTree/main.go	/^func isSameTree_(p *TreeNode, q *TreeNode) bool {$/;"	f
 isSymmetric	practice/symmeetricTree/main.go	/^func isSymmetric(root *TreeNode) bool {$/;"	f
+islandPerimeter	practice/islandPerimeter/main.go	/^func islandPerimeter(grid [][]int) int {$/;"	f
 lengthOfLastWord	practice/lenghtOfLastWord/main.go	/^func lengthOfLastWord(s string) int {$/;"	f
 longestCommonPrefix	practice/longestCommonPrefix/main.go	/^func longestCommonPrefix(strs []string) string {$/;"	f
 longestPalindrome	practice/longestPalindromicSubstring/main.go	/^func longestPalindrome(s string) string {$/;"	f
@@ -157,6 +158,8 @@ main	practice/intersectionOfTwoArray/main.go	/^func main() {$/;"	f
 main	practice/intersectionOfTwoArray/main.go	/^package main$/;"	p
 main	practice/intersectionOfTwoArray2/main.go	/^func main() {$/;"	f
 main	practice/intersectionOfTwoArray2/main.go	/^package main$/;"	p
+main	practice/islandPerimeter/main.go	/^func main(){$/;"	f
+main	practice/islandPerimeter/main.go	/^package main$/;"	p
 main	practice/lenghtOfLastWord/main.go	/^func main() {$/;"	f
 main	practice/lenghtOfLastWord/main.go	/^package main$/;"	p
 main	practice/longestCommonPrefix/main.go	/^func main() {$/;"	f
