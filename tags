@@ -37,6 +37,7 @@ TreeNode	practice/symmeetricTree/main.go	/^type TreeNode struct {$/;"	t
 Trie	5-Trie/Trie.go	/^type Trie struct {$/;"	t
 Vertex	6-Graph/graph.go	/^type Vertex struct {$/;"	t
 Walls	practice/main.py	/^Walls=mazegenerate(sizex,sizey)$/;"	v
+_closedIsland	practice/numberOfClosedIslanads/main.go	/^func _closedIsland(grid [][]int) int {$/;"	f
 _containsDuplicate	practice/containsDuplicate/main.go	/^func _containsDuplicate(nums []int) bool {$/;"	f
 _findMedianSortedArrays	practice/medianofTwoSortedArrays/main.go	/^func _findMedianSortedArrays(nums1 []int, nums2 []int) float64 {$/;"	f
 addBinary	practice/addBinary/main.go	/^func addBinary(a string, b string) string {$/;"	f
