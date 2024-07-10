@@ -36,6 +36,7 @@ TreeNode	practice/sameTree/main.go	/^type TreeNode struct {$/;"	t
 TreeNode	practice/symmeetricTree/main.go	/^type TreeNode struct {$/;"	t
 Trie	5-Trie/Trie.go	/^type Trie struct {$/;"	t
 Vertex	6-Graph/graph.go	/^type Vertex struct {$/;"	t
+Walls	practice/main.py	/^Walls=mazegenerate(sizex,sizey)$/;"	v
 _containsDuplicate	practice/containsDuplicate/main.go	/^func _containsDuplicate(nums []int) bool {$/;"	f
 _findMedianSortedArrays	practice/medianofTwoSortedArrays/main.go	/^func _findMedianSortedArrays(nums1 []int, nums2 []int) float64 {$/;"	f
 addBinary	practice/addBinary/main.go	/^func addBinary(a string, b string) string {$/;"	f
@@ -47,6 +48,7 @@ buildArray	practice/buildArrayFromPermutation/main.go	/^func buildArray(nums []i
 clear	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) clear() {$/;"	f
 clear	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) clear() {$/;"	f
 climbStairs	practice/climbingStairs/main.go	/^func climbStairs(n int) int {$/;"	f
+closedIsland	practice/numberOfClosedIslanads/main.go	/^func closedIsland(grid [][]int) int {$/;"	f
 contains	6-Graph/graph.go	/^func (g *Graph) contains(s []*Vertex, k int) bool {$/;"	f
 containsDuplicate	practice/containsDuplicate/main.go	/^func containsDuplicate(nums []int) bool {$/;"	f
 containsNearbyDuplicate	practice/contiansDuplicate2/main.go	/^func containsNearbyDuplicate(nums []int, k int) bool {$/;"	f
@@ -86,6 +88,7 @@ isSameTree_	practice/sameTree/main.go	/^func isSameTree_(p *TreeNode, q *TreeNod
 isSymmetric	practice/symmeetricTree/main.go	/^func isSymmetric(root *TreeNode) bool {$/;"	f
 islandPerimeter	practice/islandPerimeter/main.go	/^func islandPerimeter(grid [][]int) int {$/;"	f
 lengthOfLastWord	practice/lenghtOfLastWord/main.go	/^func lengthOfLastWord(s string) int {$/;"	f
+listsum	practice/main.py	/^def listsum(input):$/;"	f
 longestCommonPrefix	practice/longestCommonPrefix/main.go	/^func longestCommonPrefix(strs []string) string {$/;"	f
 longestPalindrome	practice/longestPalindromicSubstring/main.go	/^func longestPalindrome(s string) string {$/;"	f
 main	1-array/dynamic-array.go	/^func main() {$/;"	f
@@ -183,6 +186,8 @@ main	practice/minDepthOfBinaryTree/main.go	/^func main() {$/;"	f
 main	practice/minDepthOfBinaryTree/main.go	/^package main$/;"	p
 main	practice/missingNumber/main.go	/^func main() {$/;"	f
 main	practice/missingNumber/main.go	/^package main$/;"	p
+main	practice/numberOfClosedIslanads/main.go	/^func main() {$/;"	f
+main	practice/numberOfClosedIslanads/main.go	/^package main$/;"	p
 main	practice/palindromNumber/main.go	/^func main() {$/;"	f
 main	practice/palindromNumber/main.go	/^package main$/;"	p
 main	practice/palindromeNumer/main.go	/^func main() {$/;"	f
@@ -239,6 +244,7 @@ maxDepth	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth(root *TreeNod
 maxDepth_	practice/maximumDepthofBinaryTree/main.go	/^func maxDepth_(root *TreeNode) int {$/;"	f
 maxProfit	practice/bestTimeToBuyAndSekkStock/main.go	/^func maxProfit(prices []int) int {$/;"	f
 maximumImportance	practice/maximumTotalImportanceOfRoads/main.go	/^func maximumImportance(n int, roads [][]int) int64 {$/;"	f
+mazegenerate	practice/main.py	/^def mazegenerate(sizex,sizey):$/;"	f
 merge	practice/mergeSortedArray/main.go	/^func merge(nums1 []int, m int, nums2 []int, n int) {$/;"	f
 minDepth	practice/minDepthOfBinaryTree/main.go	/^func minDepth(root *TreeNode) int {$/;"	f
 missingNumber	practice/missingNumber/main.go	/^func missingNumber(nums []int) int {$/;"	f
@@ -256,6 +262,7 @@ print	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) print() {$/;"	f
 print	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) print() {$/;"	f
 print	practice/addTwoNumbers/main.go	/^func print(l1 *ListNode) {$/;"	f
 print	practice/removeDuplicatesfromSortedList/main.go	/^func print(head *ListNode) {$/;"	f
+printmaze	practice/main.py	/^def printmaze(sizex,sizey,Walls):$/;"	f
 push	2-stack/stack.go	/^func (obj *Stack) push(item int) {$/;"	f
 push	practice/evaluateReversePoslishNation/main.go	/^func (obj *Stack) push(val int) {$/;"	f
 remove	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) remove(value any) {$/;"	f
@@ -267,6 +274,8 @@ romanToInt	practice/romanTointeger/main.go	/^func romanToInt(s string) int {$/;"
 search	5-Trie/Trie.go	/^func (obj *Trie) search(w string) bool {$/;"	f
 searchInsert	practice/searchInsertPosition/main.go	/^func searchInsert(nums []int, target int) int {$/;"	f
 singleNumber	practice/singleNumber/main.go	/^func singleNumber(nums []int) int {$/;"	f
+sizex	practice/main.py	/^sizex=10$/;"	v
+sizey	practice/main.py	/^sizey=10$/;"	v
 sortedArrayToBTS	practice/arrayToTree/main.go	/^func sortedArrayToBTS(nums []int) *TreeNode {$/;"	f
 strStr	practice/findIndexOfSubString/main.go	/^func strStr(haystack string, needle string) int {$/;"	f
 threeConsecutiveOdds	practice/threeConsicutiveOdds/main.go	/^func threeConsecutiveOdds(arr []int) bool {$/;"	f
