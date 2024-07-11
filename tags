@@ -185,6 +185,8 @@ main	practice/mergeSortedArray/main.go	/^func main() {$/;"	f
 main	practice/mergeSortedArray/main.go	/^package main$/;"	p
 main	practice/minDepthOfBinaryTree/main.go	/^func main() {$/;"	f
 main	practice/minDepthOfBinaryTree/main.go	/^package main$/;"	p
+main	practice/minimizeMaximumOfArray/main.go	/^func main() {$/;"	f
+main	practice/minimizeMaximumOfArray/main.go	/^package main$/;"	p
 main	practice/missingNumber/main.go	/^func main() {$/;"	f
 main	practice/missingNumber/main.go	/^package main$/;"	p
 main	practice/numberOfClosedIslanads/main.go	/^func main() {$/;"	f
@@ -250,6 +252,7 @@ maximumImportance	practice/maximumTotalImportanceOfRoads/main.go	/^func maximumI
 mazegenerate	practice/main.py	/^def mazegenerate(sizex,sizey):$/;"	f
 merge	practice/mergeSortedArray/main.go	/^func merge(nums1 []int, m int, nums2 []int, n int) {$/;"	f
 minDepth	practice/minDepthOfBinaryTree/main.go	/^func minDepth(root *TreeNode) int {$/;"	f
+minimizeArrayValue	practice/minimizeMaximumOfArray/main.go	/^func minimizeArrayValue(nums []int) int {$/;"	f
 missingNumber	practice/missingNumber/main.go	/^func missingNumber(nums []int) int {$/;"	f
 myAtoi	practice/stringToInteger/main.go	/^func myAtoi(s string) int {$/;"	f
 mySqrt	practice/sqrt/main.go	/^func mySqrt(x int) int {$/;"	f
