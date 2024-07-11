@@ -12,7 +12,6 @@ func removeStarts(s string) string {
 			if len(stack) > 0 {
 				stack = stack[:len(stack)-1]
 			}
-
 		} else {
 			stack = append(stack, string(i))
 		}
