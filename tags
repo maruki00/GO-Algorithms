@@ -207,6 +207,8 @@ main	practice/removeDuplicatesfromSortedList/main.go	/^func main() {$/;"	f
 main	practice/removeDuplicatesfromSortedList/main.go	/^package main$/;"	p
 main	practice/removeElement/main.go	/^func main() {$/;"	f
 main	practice/removeElement/main.go	/^package main$/;"	p
+main	practice/removeStartsFromString/main.go	/^func main() {$/;"	f
+main	practice/removeStartsFromString/main.go	/^package main$/;"	p
 main	practice/reverseInteger/main.go	/^func main() {$/;"	f
 main	practice/reverseInteger/main.go	/^package main$/;"	p
 main	practice/romanTointeger/main.go	/^func main() {$/;"	f
@@ -269,6 +271,7 @@ push	practice/evaluateReversePoslishNation/main.go	/^func (obj *Stack) push(val 
 remove	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) remove(value any) {$/;"	f
 remove	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) remove(value any) {$/;"	f
 removeElement	practice/removeElement/main.go	/^func removeElement(nums []int, val int) int {$/;"	f
+removeStarts	practice/removeStartsFromString/main.go	/^func removeStarts(s string) string {$/;"	f
 reverse	practice/reverseInteger/main.go	/^func reverse(x int) int {$/;"	f
 reverseNum	practice/palindromeNumer/main.go	/^func reverseNum(num int) int {$/;"	f
 romanToInt	practice/romanTointeger/main.go	/^func romanToInt(s string) int {$/;"	f
