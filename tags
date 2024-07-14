@@ -19,6 +19,7 @@ MAXINT	practice/stringToInteger/main.go	/^const MAXINT = 2147483647$/;"	c
 MININT	practice/stringToInteger/main.go	/^const MININT = -2147483648$/;"	c
 Node	5-Trie/Trie.go	/^type Node struct {$/;"	t
 Node	5-Trie/tree.go	/^type Node struct {$/;"	t
+Node	practice/reverseBinaryTrie/main.go	/^type Node struct {$/;"	t
 Node	practice/reverseLinkedList/main.go	/^type Node struct {$/;"	t
 NodeSimple	4-LinkedList/simple.go	/^type NodeSimple struct {$/;"	t
 Print	6-Graph/graph.go	/^func (g *Graph) Print() {$/;"	f
@@ -214,6 +215,8 @@ main	practice/removeElement/main.go	/^func main() {$/;"	f
 main	practice/removeElement/main.go	/^package main$/;"	p
 main	practice/removeStartsFromString/main.go	/^func main() {$/;"	f
 main	practice/removeStartsFromString/main.go	/^package main$/;"	p
+main	practice/reverseBinaryTrie/main.go	/^func main() {$/;"	f
+main	practice/reverseBinaryTrie/main.go	/^package main$/;"	p
 main	practice/reverseInteger/main.go	/^func main() {$/;"	f
 main	practice/reverseInteger/main.go	/^package main$/;"	p
 main	practice/reverseLinkedList/main.go	/^func main() {$/;"	f
@@ -281,6 +284,7 @@ remove	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) remove(value any) {
 remove	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) remove(value any) {$/;"	f
 removeElement	practice/removeElement/main.go	/^func removeElement(nums []int, val int) int {$/;"	f
 removeStarts	practice/removeStartsFromString/main.go	/^func removeStarts(s string) string {$/;"	f
+reverse	practice/reverseBinaryTrie/main.go	/^func reverse(node *Node) {$/;"	f
 reverse	practice/reverseInteger/main.go	/^func reverse(x int) int {$/;"	f
 reverse	practice/reverseLinkedList/main.go	/^func reverse(list *LinkedList) *LinkedList {$/;"	f
 reverseNum	practice/palindromeNumer/main.go	/^func reverseNum(num int) int {$/;"	f
