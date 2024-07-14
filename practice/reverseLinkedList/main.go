@@ -26,7 +26,6 @@ func add(list *LinkedList, Val int) *LinkedList {
 
 func reverse(list *LinkedList) *LinkedList {
 	var l *Node
-	//ret := l
 	tmp := list.Head
 	tail := list.Head
 	for tmp != nil {
