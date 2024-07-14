@@ -11,6 +11,7 @@ DoubleLinkedList	4-LinkedList/double.go	/^type DoubleLinkedList struct {$/;"	t
 DoubleNode	4-LinkedList/double.go	/^type DoubleNode struct {$/;"	t
 Graph	6-Graph/graph.go	/^type Graph struct {$/;"	t
 InitTrie	5-Trie/Trie.go	/^func InitTrie() *Trie {$/;"	f
+LinkedList	practice/reverseLinkedList/main.go	/^type LinkedList struct {$/;"	t
 ListNode	practice/addTwoNumbers/main.go	/^type ListNode struct {$/;"	t
 ListNode	practice/hasCycle/main.go	/^type ListNode struct {$/;"	t
 ListNode	practice/removeDuplicatesfromSortedList/main.go	/^type ListNode struct {$/;"	t
@@ -18,6 +19,7 @@ MAXINT	practice/stringToInteger/main.go	/^const MAXINT = 2147483647$/;"	c
 MININT	practice/stringToInteger/main.go	/^const MININT = -2147483648$/;"	c
 Node	5-Trie/Trie.go	/^type Node struct {$/;"	t
 Node	5-Trie/tree.go	/^type Node struct {$/;"	t
+Node	practice/reverseLinkedList/main.go	/^type Node struct {$/;"	t
 NodeSimple	4-LinkedList/simple.go	/^type NodeSimple struct {$/;"	t
 Print	6-Graph/graph.go	/^func (g *Graph) Print() {$/;"	f
 SimpleLinkedList	4-LinkedList/simple.go	/^type SimpleLinkedList struct {$/;"	t
@@ -40,6 +42,7 @@ Walls	practice/main.py	/^Walls=mazegenerate(sizex,sizey)$/;"	v
 _closedIsland	practice/numberOfClosedIslanads/main.go	/^func _closedIsland(grid [][]int) int {$/;"	f
 _containsDuplicate	practice/containsDuplicate/main.go	/^func _containsDuplicate(nums []int) bool {$/;"	f
 _findMedianSortedArrays	practice/medianofTwoSortedArrays/main.go	/^func _findMedianSortedArrays(nums1 []int, nums2 []int) float64 {$/;"	f
+add	practice/reverseLinkedList/main.go	/^func add(list *LinkedList, Val int) *LinkedList {$/;"	f
 addBinary	practice/addBinary/main.go	/^func addBinary(a string, b string) string {$/;"	f
 addTwoNumbers	practice/addTwoNumbers/main.go	/^func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {$/;"	f
 append	3-Queue/queue.go	/^func (obj *Stack) append(item int) {$/;"	f
@@ -213,6 +216,8 @@ main	practice/removeStartsFromString/main.go	/^func main() {$/;"	f
 main	practice/removeStartsFromString/main.go	/^package main$/;"	p
 main	practice/reverseInteger/main.go	/^func main() {$/;"	f
 main	practice/reverseInteger/main.go	/^package main$/;"	p
+main	practice/reverseLinkedList/main.go	/^func main() {$/;"	f
+main	practice/reverseLinkedList/main.go	/^package main$/;"	p
 main	practice/romanTointeger/main.go	/^func main() {$/;"	f
 main	practice/romanTointeger/main.go	/^package main$/;"	p
 main	practice/sameTree/main.go	/^func main() {$/;"	f
@@ -268,6 +273,7 @@ print	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) print() {$/;"	f
 print	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) print() {$/;"	f
 print	practice/addTwoNumbers/main.go	/^func print(l1 *ListNode) {$/;"	f
 print	practice/removeDuplicatesfromSortedList/main.go	/^func print(head *ListNode) {$/;"	f
+print	practice/reverseLinkedList/main.go	/^func print(list *LinkedList) {$/;"	f
 printmaze	practice/main.py	/^def printmaze(sizex,sizey,Walls):$/;"	f
 push	2-stack/stack.go	/^func (obj *Stack) push(item int) {$/;"	f
 push	practice/evaluateReversePoslishNation/main.go	/^func (obj *Stack) push(val int) {$/;"	f
@@ -276,6 +282,7 @@ remove	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) remove(value any) {
 removeElement	practice/removeElement/main.go	/^func removeElement(nums []int, val int) int {$/;"	f
 removeStarts	practice/removeStartsFromString/main.go	/^func removeStarts(s string) string {$/;"	f
 reverse	practice/reverseInteger/main.go	/^func reverse(x int) int {$/;"	f
+reverse	practice/reverseLinkedList/main.go	/^func reverse(list *LinkedList) *LinkedList {$/;"	f
 reverseNum	practice/palindromeNumer/main.go	/^func reverseNum(num int) int {$/;"	f
 romanToInt	practice/romanTointeger/main.go	/^func romanToInt(s string) int {$/;"	f
 search	5-Trie/Trie.go	/^func (obj *Trie) search(w string) bool {$/;"	f
