@@ -21,8 +21,19 @@ func reverse(node *Node) {
 
 }
 
+func print(root *Node) {
+	if root == nil {
+		return
+	}
+	fmt.Println("item : ", root.Val)
+	print(root.Left)
+	print(root.Right)
+}
+
 func main() {
-	root := &Node{1, nil, nil}
+
+	root := &Node{1, &Node{3, &Node{4, nil, nil}, &Node{8, nil, nil}}, &Node{2, &Node{6, nil, nil}, &Node{9, nil, nil}}}
 	reverse(root)
+	print(root)
 	fmt.Println("Result : ", root)
 }

@@ -276,6 +276,7 @@ print	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) print() {$/;"	f
 print	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) print() {$/;"	f
 print	practice/addTwoNumbers/main.go	/^func print(l1 *ListNode) {$/;"	f
 print	practice/removeDuplicatesfromSortedList/main.go	/^func print(head *ListNode) {$/;"	f
+print	practice/reverseBinaryTrie/main.go	/^func print(root *Node) {$/;"	f
 print	practice/reverseLinkedList/main.go	/^func print(list *LinkedList) {$/;"	f
 printmaze	practice/main.py	/^def printmaze(sizex,sizey,Walls):$/;"	f
 push	2-stack/stack.go	/^func (obj *Stack) push(item int) {$/;"	f
