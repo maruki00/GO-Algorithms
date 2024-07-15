@@ -32,5 +32,8 @@ func (s Set) Get() []any {
 }
 
 func main() {
-	fmt.Println("vim-go")
+	s := NewSet(2, 4, 5, 6, 7, 5, 6, 5, 7)
+	for i, j := range s.Get() {
+		fmt.Println(i, " - ", j)
+	}
 }
