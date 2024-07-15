@@ -4,11 +4,14 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Add	8-Set/set.go	/^func (s *Set) Add(items ...any) {$/;"	f
 AddEdge	6-Graph/graph.go	/^func (g *Graph) AddEdge(from, to int) {$/;"	f
 AddVertex	6-Graph/graph.go	/^func (g *Graph) AddVertex(k int) {$/;"	f
 Alphabites	5-Trie/Trie.go	/^const Alphabites = 26$/;"	c
+Delete	8-Set/set.go	/^func (s *Set) Delete(item any) {$/;"	f
 DoubleLinkedList	4-LinkedList/double.go	/^type DoubleLinkedList struct {$/;"	t
 DoubleNode	4-LinkedList/double.go	/^type DoubleNode struct {$/;"	t
+Get	8-Set/set.go	/^func (s Set) Get() []any {$/;"	f
 Graph	6-Graph/graph.go	/^type Graph struct {$/;"	t
 InitTrie	5-Trie/Trie.go	/^func InitTrie() *Trie {$/;"	f
 LinkedList	practice/reverseLinkedList/main.go	/^type LinkedList struct {$/;"	t
@@ -17,12 +20,14 @@ ListNode	practice/hasCycle/main.go	/^type ListNode struct {$/;"	t
 ListNode	practice/removeDuplicatesfromSortedList/main.go	/^type ListNode struct {$/;"	t
 MAXINT	practice/stringToInteger/main.go	/^const MAXINT = 2147483647$/;"	c
 MININT	practice/stringToInteger/main.go	/^const MININT = -2147483648$/;"	c
+NewSet	8-Set/set.go	/^func NewSet(items ...any) *Set {$/;"	f
 Node	5-Trie/Trie.go	/^type Node struct {$/;"	t
 Node	5-Trie/tree.go	/^type Node struct {$/;"	t
 Node	practice/reverseBinaryTrie/main.go	/^type Node struct {$/;"	t
 Node	practice/reverseLinkedList/main.go	/^type Node struct {$/;"	t
 NodeSimple	4-LinkedList/simple.go	/^type NodeSimple struct {$/;"	t
 Print	6-Graph/graph.go	/^func (g *Graph) Print() {$/;"	f
+Set	8-Set/set.go	/^type Set struct {$/;"	t
 SimpleLinkedList	4-LinkedList/simple.go	/^type SimpleLinkedList struct {$/;"	t
 Stack	2-stack/stack.go	/^type Stack struct {$/;"	t
 Stack	3-Queue/queue.go	/^type Stack struct {$/;"	t
@@ -117,6 +122,8 @@ main	7-Search/binarysearch.go	/^func main() {$/;"	f
 main	7-Search/binarysearch.go	/^package main$/;"	p
 main	7-Search/linearSearch.go	/^func main() {$/;"	f
 main	7-Search/linearSearch.go	/^package main$/;"	p
+main	8-Set/set.go	/^func main() {$/;"	f
+main	8-Set/set.go	/^package main$/;"	p
 main	practice/MostWatterContainer/main.go	/^func main() {$/;"	f
 main	practice/MostWatterContainer/main.go	/^package main$/;"	p
 main	practice/addBinary/main.go	/^func main() {$/;"	f
