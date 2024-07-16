@@ -5,39 +5,45 @@ import (
 	"hash/fnv"
 )
 
+var defaultCapacity uint64 = 1 << 10
+
 type Node struct {
-	key any
+	key   any
 	value any
-	next *Node
+	next  *Node
 }
 
-type HashMap strut {
-	size int
-	capacity int
-	table *[]Node
+type HashMap struct {
+	size     uint64
+	capacity uint64
+	table    []*Node
 }
 
-func New() *HashMap{
+func New() *HashMap {
 	return &HashMap{
-		size: 0,
-		capacity: 0,
-		table: make([]*Node),
+		size:     defaultCapacity,
+		capacity: defaultCapacity,
+		table:    make([]*Node, defaultCapacity),
 	}
 }
 
+func (hm *HashMap) getHash(key any) uint64 {
+	h := fnv.New64a()
+	_, _ = h.Write([]byte(fmt.Sprintf("%v", key)))
 
+	hashValue := h.Sum64()
 
-
-func (obj *HashMap) getHash(key any) int64 {
-	r := fnv.New64a()
-	_, _ = r.Write([]byte(fmt.Printf("%v", key)))
-
-	hashValue := r.Sum64()
-	return (obj.capacity - 1) & (hashValue ^ (hashValue >> 16))
-
+	return (hm.capacity - 1) & (hashValue ^ (hashValue >> 16))
 }
 
+func (hm *HashMap) Add(key any, value any) {
+	// hash := hm.getHash()
+}
 
-func main(){
+func main() {
+	h := New()
+	hashValue := h.getHash("helloworld")
+	h.table[hashValue] = &Node{1, 1, nil}
+	fmt.Println("hello nworld", hashValue)
 
 }
