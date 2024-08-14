@@ -2,22 +2,25 @@ package main
 
 import "fmt"
 
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
 func maxProfit(prices []int) int {
-	maxProfit := 0
-	minPrice := prices[0]
+	bestProfit := 0
 
-	for i := 1; i < len(prices); i++ {
-		if minPrice > prices[i] {
-			minPrice = prices[i]
+	left := 0
+	for right := 1; right < len(prices); right++ {
+		if prices[left] > prices[right] {
+			left = right
+		} else {
+			bestProfit = max(bestProfit, prices[right]-prices[left])
 		}
-		if maxProfit < (prices[i] - minPrice) {
-			maxProfit = prices[i] - minPrice
-		}
-		//minPrice = min(prices[i], minPrice)
-		//maxProfit = max(maxProfit, (prices[i] - minPrice))
 	}
 
-	return maxProfit
+	return bestProfit
 }
 
 func main() {
