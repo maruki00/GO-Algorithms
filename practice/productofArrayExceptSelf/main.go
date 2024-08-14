@@ -10,17 +10,11 @@ func productExceptSelf(nums []int) []int {
 		res[i] = prefix
 		prefix *= nums[i]
 	}
-	//fmt.Println("prefix : ", res)
 	postfix := 1
-
 	for i := length - 1; i > -1; i-- {
 		res[i] *= postfix
-		fmt.Println("suffix : ", postfix, res[i], nums[i])
 		postfix *= nums[i]
-
 	}
-
-	//fmt.Println("suffix : ", res)
 	return res
 }
 
