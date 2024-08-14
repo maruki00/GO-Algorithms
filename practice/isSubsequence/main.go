@@ -4,13 +4,13 @@ import "fmt"
 
 func isSubsequence(s string, t string) bool {
 	j := 0
+	l := len(s)
 	for i := 0; i < len(t); i++ {
-		if s[j] == t[i] {
+		if l > j && s[j] == t[i] {
 			j++
 		}
 	}
-	fmt.Println("i-j : ", j)
-	return j == len(s)
+	return j == l
 }
 
 func main() {
