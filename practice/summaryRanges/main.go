@@ -1,22 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func summaryRanges(nums []int) []string {
 	res := []string{}
 
 	for i := 0; i < len(nums); i++ {
-		j := i
-		for j < len(nums)-1 && nums[i]+1 == nums[j+1] {
-			j++
+		fast := i + 1
+		slow := i
+		for fast < len(nums) && nums[fast] == nums[slow]+1 {
+			fast++
+			slow++
 		}
-
-		if nums[i] == nums[j] {
+		if i-slow == 0 {
 			res = append(res, fmt.Sprintf("%d", nums[i]))
 		} else {
-			res = append(res, fmt.Sprintf("%d->%d", nums[i], nums[j]))
+			res = append(res, fmt.Sprintf("%d->%d", nums[i], nums[slow]))
+			i = slow
 		}
-		i = j
 	}
 
 	return res
