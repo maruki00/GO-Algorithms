@@ -10,9 +10,8 @@ func max(a, b int) int {
 }
 func maxProfit(prices []int) int {
 	bestProfit := 0
-
 	left := 0
-	for right := 1; right < len(prices); right++ {
+	for right := 0; right < len(prices); right++ {
 		if prices[left] > prices[right] {
 			left = right
 		} else {
