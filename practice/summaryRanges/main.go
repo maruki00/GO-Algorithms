@@ -7,12 +7,8 @@ func summaryRanges(nums []int) []string {
 
 	for i := 0; i < len(nums); i++ {
 		j := i
-		for j < len(nums)-1 {
-			if nums[i]+1 == nums[j+1] {
-				j++
-			} else {
-				break
-			}
+		for j < len(nums)-1 && nums[i]+1 == nums[j+1] {
+			j++
 		}
 
 		if i == j {
