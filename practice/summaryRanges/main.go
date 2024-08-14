@@ -11,7 +11,7 @@ func summaryRanges(nums []int) []string {
 			j++
 		}
 
-		if i == j {
+		if nums[i] == nums[j] {
 			res = append(res, fmt.Sprintf("%d", nums[i]))
 		} else {
 			res = append(res, fmt.Sprintf("%d->%d", nums[i], nums[j]))
