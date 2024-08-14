@@ -8,11 +8,14 @@ Add	8-Set/set.go	/^func (s *Set) Add(items ...any) {$/;"	f
 AddEdge	6-Graph/graph.go	/^func (g *Graph) AddEdge(from, to int) {$/;"	f
 AddVertex	6-Graph/graph.go	/^func (g *Graph) AddVertex(k int) {$/;"	f
 Alphabites	5-Trie/Trie.go	/^const Alphabites = 26$/;"	c
+Contains	9-HashMap/main.go	/^func (hm *HashMap) Contains(key any) bool {$/;"	f
 Delete	8-Set/set.go	/^func (s *Set) Delete(item any) {$/;"	f
 DoubleLinkedList	4-LinkedList/double.go	/^type DoubleLinkedList struct {$/;"	t
 DoubleNode	4-LinkedList/double.go	/^type DoubleNode struct {$/;"	t
 Get	8-Set/set.go	/^func (s Set) Get() []any {$/;"	f
+Get	9-HashMap/main.go	/^func (hm *HashMap) Get(key any) any {$/;"	f
 Graph	6-Graph/graph.go	/^type Graph struct {$/;"	t
+HashMap	9-HashMap/main.go	/^type HashMap struct {$/;"	t
 InitTrie	5-Trie/Trie.go	/^func InitTrie() *Trie {$/;"	f
 LinkedList	practice/reverseLinkedList/main.go	/^type LinkedList struct {$/;"	t
 ListNode	practice/addTwoNumbers/main.go	/^type ListNode struct {$/;"	t
@@ -20,6 +23,8 @@ ListNode	practice/hasCycle/main.go	/^type ListNode struct {$/;"	t
 ListNode	practice/removeDuplicatesfromSortedList/main.go	/^type ListNode struct {$/;"	t
 MAXINT	practice/stringToInteger/main.go	/^const MAXINT = 2147483647$/;"	c
 MININT	practice/stringToInteger/main.go	/^const MININT = -2147483648$/;"	c
+Make	9-HashMap/main.go	/^func Make(size, capacity uint64) HashMap {$/;"	f
+New	9-HashMap/main.go	/^func New() *HashMap {$/;"	f
 NewSet	8-Set/set.go	/^func NewSet(items ...any) *Set {$/;"	f
 Node	5-Trie/Trie.go	/^type Node struct {$/;"	t
 Node	5-Trie/tree.go	/^type Node struct {$/;"	t
@@ -27,6 +32,7 @@ Node	practice/reverseBinaryTrie/main.go	/^type Node struct {$/;"	t
 Node	practice/reverseLinkedList/main.go	/^type Node struct {$/;"	t
 NodeSimple	4-LinkedList/simple.go	/^type NodeSimple struct {$/;"	t
 Print	6-Graph/graph.go	/^func (g *Graph) Print() {$/;"	f
+Put	9-HashMap/main.go	/^func (hm *HashMap) Put(key any, value any) any {$/;"	f
 Set	8-Set/set.go	/^type Set struct {$/;"	t
 SimpleLinkedList	4-LinkedList/simple.go	/^type SimpleLinkedList struct {$/;"	t
 Stack	2-stack/stack.go	/^type Stack struct {$/;"	t
@@ -64,6 +70,7 @@ containsDuplicate	practice/containsDuplicate/main.go	/^func containsDuplicate(nu
 containsNearbyDuplicate	practice/contiansDuplicate2/main.go	/^func containsNearbyDuplicate(nums []int, k int) bool {$/;"	f
 convert	practice/zigzagConversion/main.go	/^func convert(s string, numRows int) string {$/;"	f
 dailyTemperatures	practice/dailyTemperatures/main.go	/^func dailyTemperatures(temperatures []int) []int {$/;"	f
+defaultCapacity	9-HashMap/main.go	/^var defaultCapacity uint64 = 1 << 10$/;"	v
 deleteDuplicates	practice/removeDuplicatesfromSortedList/main.go	/^func deleteDuplicates(head *ListNode) *ListNode {$/;"	f
 evalRPN	practice/evaluateReversePoslishNation/main.go	/^func evalRPN(tokens []string) int {$/;"	f
 findCenter	practice/findCenterOfStartGraph/main.go	/^func findCenter(edges [][]int) int {$/;"	f
@@ -75,12 +82,14 @@ generate	practice/pascalTriangle/main.go	/^func generate(numRows int) [][]int {$
 get	3-Queue/queue.go	/^func (obj *Stack) get() int {$/;"	f
 getAncestors	practice/allAncestorsOfANodeInADirectedAcyclicGraph/main.go	/^func getAncestors(n int, edges [][]int) [][]int {$/;"	f
 getMinLen	practice/longestCommonPrefix/main.go	/^func getMinLen(s []string) int {$/;"	f
+getNodeByHash	9-HashMap/main.go	/^func (hm *HashMap) getNodeByHash(hash uint64) *node {$/;"	f
 getRow	practice/pascalTriangle2/main.go	/^func getRow(rowIndex int) []int {$/;"	f
 getSum	practice/sumOfTwoInteger/main.go	/^func getSum(a int, b int) int {$/;"	f
 getVertex	6-Graph/graph.go	/^func (g *Graph) getVertex(k int) *Vertex {$/;"	f
 groupAnagrams	practice/groupAnagrams/main.go	/^func groupAnagrams(strs []string) [][]string {$/;"	f
 hasCycle	practice/hasCycle/main.go	/^func hasCycle(head *ListNode) bool {$/;"	f
 hasPathSum	practice/pathSum/main.go	/^func hasPathSum(root *TreeNode, sum int) bool {$/;"	f
+hash	9-HashMap/main.go	/^func (hm *HashMap) hash(key any) uint64 {$/;"	f
 inorderTraversal	practice/binaryTreeInorderTraversal/main.go	/^func inorderTraversal(root *TreeNode) []int {$/;"	f
 insert	5-Trie/Trie.go	/^func (obj *Trie) insert(w string) {$/;"	f
 intersect	practice/intersectionOfTwoArray2/main.go	/^func intersect(nums1 []int, nums2 []int) []int {$/;"	f
@@ -124,6 +133,8 @@ main	7-Search/linearSearch.go	/^func main() {$/;"	f
 main	7-Search/linearSearch.go	/^package main$/;"	p
 main	8-Set/set.go	/^func main() {$/;"	f
 main	8-Set/set.go	/^package main$/;"	p
+main	9-HashMap/main.go	/^func main() {$/;"	f
+main	9-HashMap/main.go	/^package main$/;"	p
 main	practice/MostWatterContainer/main.go	/^func main() {$/;"	f
 main	practice/MostWatterContainer/main.go	/^package main$/;"	p
 main	practice/addBinary/main.go	/^func main() {$/;"	f
@@ -272,6 +283,9 @@ missingNumber	practice/missingNumber/main.go	/^func missingNumber(nums []int) in
 myAtoi	practice/stringToInteger/main.go	/^func myAtoi(s string) int {$/;"	f
 mySqrt	practice/sqrt/main.go	/^func mySqrt(x int) int {$/;"	f
 mySqrt1	practice/sqrt/main.go	/^func mySqrt1(x int) int {$/;"	f
+newNode	9-HashMap/main.go	/^func newNode(key any, value any) *node {$/;"	f
+newNodeWithNext	9-HashMap/main.go	/^func newNodeWithNext(key any, value any, next *node) *node {$/;"	f
+node	9-HashMap/main.go	/^type node struct {$/;"	t
 numToArray	practice/palindromeNumer/main.go	/^func numToArray(num int) []int {$/;"	f
 plusOne	practice/plusOne/main.go	/^func plusOne(digits []int) []int {$/;"	f
 pop	2-stack/stack.go	/^func (obj *Stack) pop() int {$/;"	f
@@ -288,10 +302,12 @@ print	practice/reverseLinkedList/main.go	/^func print(list *LinkedList) {$/;"	f
 printmaze	practice/main.py	/^def printmaze(sizex,sizey,Walls):$/;"	f
 push	2-stack/stack.go	/^func (obj *Stack) push(item int) {$/;"	f
 push	practice/evaluateReversePoslishNation/main.go	/^func (obj *Stack) push(val int) {$/;"	f
+putValue	9-HashMap/main.go	/^func (hm *HashMap) putValue(hash uint64, key any, value any) any {$/;"	f
 remove	4-LinkedList/double.go	/^func (obj *DoubleLinkedList) remove(value any) {$/;"	f
 remove	4-LinkedList/simple.go	/^func (obj *SimpleLinkedList) remove(value any) {$/;"	f
 removeElement	practice/removeElement/main.go	/^func removeElement(nums []int, val int) int {$/;"	f
 removeStarts	practice/removeStartsFromString/main.go	/^func removeStarts(s string) string {$/;"	f
+resize	9-HashMap/main.go	/^func (hm *HashMap) resize() {$/;"	f
 reverse	practice/reverseBinaryTrie/main.go	/^func reverse(node *Node) {$/;"	f
 reverse	practice/reverseInteger/main.go	/^func reverse(x int) int {$/;"	f
 reverse	practice/reverseLinkedList/main.go	/^func reverse(list *LinkedList) *LinkedList {$/;"	f
