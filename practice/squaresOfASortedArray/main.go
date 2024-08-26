@@ -2,26 +2,25 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"slices"
 )
 
 func sortedSquares(nums []int) []int {
 
 	l, r := 0, len(nums)-1
 	result := []int{}
-
-	for l < r {
-		lSquar := math.Sqrt(float64(nums[l]))
-		rSquar := math.Sqrt(float64(nums[r]))
+	for l <= r {
+		lSquar := nums[l] * nums[l]
+		rSquar := nums[r] * nums[r]
 		if lSquar < rSquar {
-			result = append(result, int(lSquar))
-			l++
-		} else {
 			result = append(result, int(rSquar))
 			r--
+		} else {
+			result = append(result, int(lSquar))
+			l++
 		}
 	}
-
+	slices.Reverse(result)
 	return result
 
 }
