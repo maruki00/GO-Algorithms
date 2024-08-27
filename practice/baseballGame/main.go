@@ -18,7 +18,6 @@ func (obj *Stack) Empty() bool {
 }
 
 func (obj *Stack) pop() int {
-	fmt.Println(" poping ... : ", obj.Items)
 	l := len(obj.Items)
 	if l == 0 {
 		return 0
