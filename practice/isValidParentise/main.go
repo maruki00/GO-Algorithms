@@ -3,7 +3,6 @@ package main
 import "fmt"
 
 func isValid(s string) bool {
-
 	stack := []rune{}
 	parentises := map[rune]rune{
 		'}': '{',
@@ -12,19 +11,20 @@ func isValid(s string) bool {
 	}
 
 	for _, item := range s {
+
 		if item == '{' || item == '[' || item == '(' {
 			stack = append(stack, item)
-		}
-
-		if item == '}' || item == ']' || item == ')' {
+		} else if (item == '}' || item == ']' || item == ')') && len(stack) > 0 {
 			itm := stack[len(stack)-1]
 			stack = stack[:len(stack)-1]
 			if parentises[item] != itm {
 				return false
 			}
+		} else {
+			return false
 		}
 	}
-	return true
+	return len(stack) == 0
 
 }
 
