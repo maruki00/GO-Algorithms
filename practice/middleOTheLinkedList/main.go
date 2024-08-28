@@ -19,7 +19,7 @@ func middleNode(head *ListNode) *ListNode {
 	hieghtCount := 0
 
 	for height != nil {
-		for low != nil && lowCount <= int(math.Ceil(float64(hieghtCount/2))) {
+		for lowCount < int(math.Ceil(float64(hieghtCount/2))) {
 			low = low.Next
 			lowCount++
 		}
