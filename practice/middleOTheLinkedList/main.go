@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 type ListNode struct {
@@ -19,7 +18,11 @@ func middleNode(head *ListNode) *ListNode {
 	hieghtCount := 0
 
 	for height != nil {
-		for lowCount < int(math.Ceil(float64(hieghtCount/2))) {
+		maxCount := hieghtCount / 2
+		if hieghtCount%2 == 0 {
+			maxCount--
+		}
+		for lowCount <= maxCount {
 			low = low.Next
 			lowCount++
 		}
