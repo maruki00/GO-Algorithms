@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -29,6 +31,33 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 
 }
 
+func printList(head *ListNode) {
+	tmp := head
+
+	for head != nil {
+		fmt.Println("val : ", tmp.Val)
+		tmp = tmp.Next
+	}
+}
+
 func main() {
-	
+	l := &ListNode{
+		Val: 1,
+		Next: &ListNode{
+			Val: 2,
+			Next: &ListNode{
+				Val: 3,
+				Next: &ListNode{
+					Val: 4,
+					Next: &ListNode{
+						Val:  5,
+						Next: nil,
+					},
+				},
+			},
+		},
+	}
+
+	l = removeNthFromEnd(l, 1)
+	printList(l)
 }
