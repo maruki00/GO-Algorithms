@@ -7,7 +7,7 @@ func search(nums []int, target int) int {
 
 	low, height := 0, ln
 
-	for low < height {
+	for low <= height {
 		middle := (low + height) / 2
 
 		if nums[middle] == target {
