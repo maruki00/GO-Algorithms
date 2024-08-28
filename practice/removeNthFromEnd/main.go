@@ -11,12 +11,13 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 
 	lowCount := 0
 	heightCount := 0
-
+	var prev *ListNode
 	lowPointer := head
 	heightPointer := head
 
 	for heightPointer != nil {
-		for lowCount < heightCount-(n+1) {
+		for lowCount <= heightCount-n-1 {
+			prev = lowPointer
 			lowPointer = lowPointer.Next
 			lowCount++
 		}
@@ -25,7 +26,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 		heightPointer = heightPointer.Next
 	}
 
-	lowPointer = lowPointer.Next.Next
+	prev.Next = lowPointer.Next
 
 	return head
 
@@ -34,7 +35,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 func printList(head *ListNode) {
 	tmp := head
 
-	for head != nil {
+	for tmp != nil {
 		fmt.Println("val : ", tmp.Val)
 		tmp = tmp.Next
 	}
