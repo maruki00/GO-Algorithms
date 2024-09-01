@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type ListNode struct {
 	Val  int
@@ -8,23 +10,26 @@ type ListNode struct {
 }
 
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
-
-	lw := head
-	hg := head.Next
-
-	lwCounter := 0
-	hgCounter := 0
-
-	for hg != nil {
-		hg = hg.Next
-		hgCounter++
-		for lwCounter+n < hgCounter {
-			lw = lw.Next
-		}
+	var items []int
+	counter := 0
+	h := head
+	for h != nil {
+		counter++
+		items = append(items, h.Val)
+		h = h.Next
 	}
-	lw = nil
-	return head
+	items = append(items[:counter-n], items[counter-n+1:]...)
+	if len(items) == 0 {
+		return nil
+	}
 
+	h2 := head
+	for _, item := range items {
+		h2.Val = item
+		h2 = h2.Next
+	}
+	h2.Next = nil
+	return head
 }
 
 func printList(head *ListNode) {
@@ -37,22 +42,23 @@ func printList(head *ListNode) {
 }
 
 func main() {
-	l := &ListNode{
-		Val: 1,
-		Next: &ListNode{
-			Val: 2,
-			Next: &ListNode{
-				Val: 3,
-				Next: &ListNode{
-					Val: 4,
-					Next: &ListNode{
-						Val:  5,
-						Next: nil,
-					},
-				},
-			},
-		},
-	}
+	// l := &ListNode{
+	// 	Val: 1,
+	// 	Next: &ListNode{
+	// 		Val: 2,
+	// 		Next: &ListNode{
+	// 			Val: 3,
+	// 			Next: &ListNode{
+	// 				Val: 4,
+	// 				Next: &ListNode{
+	// 					Val:  5,
+	// 					Next: nil,
+	// 				},
+	// 			},
+	// 		},
+	// 	},
+	// }
+	l := &ListNode{1, nil}
 
 	l = removeNthFromEnd(l, 1)
 	printList(l)
