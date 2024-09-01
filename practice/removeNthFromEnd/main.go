@@ -10,25 +10,27 @@ type ListNode struct {
 }
 
 func removeNthFromEnd(head *ListNode, n int) *ListNode {
-	var items []int
 	counter := 0
-	h := head
-	for h != nil {
+	tmp := head
+	nodes := []int{}
+	for tmp != nil {
 		counter++
-		items = append(items, h.Val)
-		h = h.Next
+		nodes = append(nodes, tmp.Val)
+		tmp = tmp.Next
 	}
-	items = append(items[:counter-n], items[counter-n+1:]...)
-	if len(items) == 0 {
+
+	nodes = append(nodes[:counter-n], nodes[counter-n+1:]...)
+
+	if len(nodes) == 0 {
 		return nil
 	}
 
-	h2 := head
-	for _, item := range items {
-		h2.Val = item
-		h2 = h2.Next
+	h := &ListNode{Val: nodes[0], Next: nil}
+	head = h
+	for i := 1; i < len(nodes); i++ {
+		h.Next = &ListNode{Val: nodes[i], Next: nil}
+		h = h.Next
 	}
-	h2.Next = nil
 	return head
 }
 
