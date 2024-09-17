@@ -43,11 +43,12 @@ func copyRandomList(head *Node) *Node {
 		tmp = tmp.Next
 	}
 
-	tmp2 := head
+	tmp = head
 
-	for tmp2 != nil {
-		nodes[tmp2].Next = nodes[tmp2.Next]
-		nodes[tmp2].Random = nodes[tmp2.Random]
+	for tmp != nil {
+		nodes[tmp].Next = nodes[tmp.Next]
+		nodes[tmp].Random = nodes[tmp.Random]
+		tmp = tmp.Next
 	}
 
 	return nodes[head]
