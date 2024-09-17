@@ -9,26 +9,48 @@ type Node struct {
 }
 
 func copyRandomList(head *Node) *Node {
+	// if head == nil {
+	// 	return nil
+	// }
+
+	// oldToNew := make(map[*Node]*Node)
+
+	// curr := head
+	// for curr != nil {
+	// 	oldToNew[curr] = &Node{Val: curr.Val}
+	// 	curr = curr.Next
+	// }
+
+	// curr = head
+	// for curr != nil {
+	// 	oldToNew[curr].Next = oldToNew[curr.Next]
+	// 	oldToNew[curr].Random = oldToNew[curr.Random]
+	// 	curr = curr.Next
+	// }
+
+	// return oldToNew[head]
+
 	if head == nil {
 		return nil
 	}
 
-	oldToNew := make(map[*Node]*Node)
+	nodes := make(map[*Node]*Node)
 
-	curr := head
-	for curr != nil {
-		oldToNew[curr] = &Node{Val: curr.Val}
-		curr = curr.Next
+	tmp := head
+
+	for tmp != nil {
+		nodes[tmp] = &Node{tmp.Val, nil, nil}
+		tmp = tmp.Next
 	}
 
-	curr = head
-	for curr != nil {
-		oldToNew[curr].Next = oldToNew[curr.Next]
-		oldToNew[curr].Random = oldToNew[curr.Random]
-		curr = curr.Next
+	tmp2 := head
+
+	for tmp2 != nil {
+		nodes[tmp2].Next = nodes[tmp2.Next]
+		nodes[tmp2].Random = nodes[tmp2.Random]
 	}
 
-	return oldToNew[head]
+	return nodes[head]
 }
 
 func printList(node *Node) {
