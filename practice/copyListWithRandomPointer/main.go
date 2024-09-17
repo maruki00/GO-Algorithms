@@ -9,65 +9,51 @@ type Node struct {
 }
 
 func copyRandomList(head *Node) *Node {
-
-	nodes := make(map[*Node]*Node)
-	counter := 0
-	h := head
-	var hh *Node
-	for h != nil {
-
-		Nextnode, ok := nodes[h.Next]
-		if !ok {
-			var newNode *Node
-			if Nextnode == nil {
-				newNode = nil
-			} else {
-				newNode = &Node{
-					Val:    h.Next.Val,
-					Next:   h.Next.Next,
-					Random: h.Next.Random,
-				}
-			}
-
-			nodes[newNode] = newNode
-
-		}
-
-		randomNode, ok := nodes[h.Random]
-		if !ok {
-			var newNode *Node
-			if randomNode == nil {
-				newNode = nil
-			} else {
-				newNode = &Node{
-					Val:    h.Random.Val,
-					Next:   h.Random.Next,
-					Random: h.Random.Random,
-				}
-			}
-
-			nodes[newNode] = newNode
-		}
-
-		node := &Node{
-			Val:    h.Val,
-			Next:   nodes[h.Next],
-			Random: nodes[h.Random],
-		}
-
-		nodes[node] = node
-		hh = node
-		hh = hh.Next
-		counter++
-		h = h.Next
+	if head == nil {
+		return nil
 	}
 
-	return hh
+	oldToNew := make(map[*Node]*Node)
+
+	curr := head
+	for curr != nil {
+		oldToNew[curr] = &Node{Val: curr.Val}
+		curr = curr.Next
+	}
+
+	curr = head
+	for curr != nil {
+		oldToNew[curr].Next = oldToNew[curr.Next]
+		oldToNew[curr].Random = oldToNew[curr.Random]
+		curr = curr.Next
+	}
+
+	return oldToNew[head]
+}
+
+func printList(node *Node) {
+	n := node
+	for n != nil {
+		fmt.Println("---> ", n.Val, n.Next, n.Random)
+		n = n.Next
+	}
 }
 
 func main() {
-	next := &Node{Val: 1, Next: nil, Random: nil}
-	node := &Node{Val: 10, Next: next, Random: nil}
 
-	fmt.Println("result : ", copyRandomList(node))
+	node1 := &Node{3, nil, nil}
+	node2 := &Node{3, nil, nil}
+	node3 := &Node{3, nil, nil}
+
+	node1.Next = node2
+	node1.Random = nil
+
+	node2.Next = node3
+	node2.Random = node1
+
+	printList(node1)
+
+	copied := copyRandomList(node1)
+
+	printList(copied)
 }
