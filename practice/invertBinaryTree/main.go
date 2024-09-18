@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -30,5 +32,11 @@ func invertTree(root *TreeNode) *TreeNode {
 }
 
 func main() {
-
+	root := &TreeNode{
+		Val:   2,
+		Right: &TreeNode{1, nil, nil},
+		Left:  &TreeNode{3, nil, nil},
+	}
+	res := invertTree(root)
+	fmt.Println("result : ", res, res.Left, res.Right)
 }
