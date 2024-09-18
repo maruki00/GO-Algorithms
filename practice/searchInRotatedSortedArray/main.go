@@ -11,20 +11,18 @@ func search(nums []int, target int) int {
 		if nums[middle] == target {
 			return middle
 		}
-
-		if nums[middle] > target {
-			if nums[h] > nums[middle] {
+		if nums[l] <= nums[middle] {
+			if nums[l] <= target && target < nums[middle] {
+				h = middle - 1
+			} else {
 				l = middle + 1
-				continue
 			}
-			h = middle - 1
-
 		} else {
-			if nums[h] < nums[middle] {
-				l = middle - 1
-				continue
+			if nums[middle] < target && target <= nums[h] {
+				l = middle + 1
+			} else {
+				h = middle - 1
 			}
-			l = middle + 1
 		}
 	}
 
