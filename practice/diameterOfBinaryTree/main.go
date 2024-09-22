@@ -9,20 +9,22 @@ type TreeNode struct {
 }
 
 func diameterOfBinaryTree(root *TreeNode) int {
-	pathDistance := 0
+	maxD := 0
 
-	var dfs func(node *TreeNode, longest int) int
-	dfs = func(node *TreeNode, longest int) int {
-		if node == nil {
-			return longest
+	var dfs func(root *TreeNode) int
+	dfs = func(root *TreeNode) int {
+		if root == nil {
+			return 0
 		}
-		left := dfs(node.Left, longest+1)
-		right := dfs(node.Right, longest+1)
-		fmt.Println("result : ", left, right)
-		return max((left + right), pathDistance)
+
+		left := dfs(root.Left)
+		right := dfs(root.Right)
+		maxD = max(maxD, (left + right))
+		return max(left, right) + 1
 	}
-	pathDistance = dfs(root, 0)
-	return 0
+
+	maxD = dfs(root)
+	return maxD
 }
 
 func main() {
