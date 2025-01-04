@@ -184,6 +184,5 @@ func main() {
 	h.Put(1234, 234)
 	//hashValue := h.getHash("helloworld")
 	//h.table[hashValue] = &Node{1, 1, nil}
-	fmt.Println("hello nworld", h.Contains(1))
-
+	fmt.Println("hello nworld", h.table)
 }
