@@ -2,17 +2,22 @@ package main
 
 import (
 	"container/heap"
+	"fmt"
 	"math"
 )
 
-type Heap [][]int
+type Point struct {
+	X, Y     int
+	Distance float64
+}
+type Heap []Point
 
 func (h Heap) Len() int { return len(h) }
+
 func (h Heap) Less(a, b int) bool {
-	x1, x2 := math.Pow(float64(h[a][0]), 2), math.Pow(float64(h[b][0]), 2)
-	y1, y2 := math.Pow(float64(h[a][1]), 2), math.Pow(float64(h[b][1]), 2)
-	return math.Sqrt(x1+y1) < math.Sqrt(x2+y2)
+	return h[a].Distance < h[b].Distance
 }
+
 func (h Heap) Swap(a, b int) {
 	h[a], h[b] = h[b], h[a]
 }
@@ -21,26 +26,30 @@ func (h *Heap) Pop() interface{} {
 	old := *h
 	lst := old[len(*h)-1]
 	old = old[:len(*h)-1]
+	*h = old
 	return lst
 }
 
 func (h *Heap) Push(x interface{}) {
-	*h = append(*h, x.([]int))
+	*h = append(*h, x.(Point))
 }
 
 func kClosest(points [][]int, k int) [][]int {
-	result := make([][]int, 0)
+	result := make([][]int, k)
 	h := &Heap{}
 	heap.Init(h)
 	for _, item := range points {
-		heap.Push(h, item)
+		heap.Push(h, Point{X: item[0], Y: item[1], Distance: math.Sqrt(float64(item[0]*item[0] + item[1]*item[1]))})
 	}
-	for range k {
-		result = append(result, heap.Pop(h).([]int))
+	for i := range k {
+		x := heap.Pop(h).(Point)
+		result[i] = []int{x.X, x.Y}
 	}
+
 	return result
 }
 
 func main() {
-
+	nums := [][]int{{1, 3}, {-2, 2}, {1, 3}, {-2, 2}}
+	fmt.Println("result : ", kClosest(nums, 2))
 }
