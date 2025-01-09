@@ -12,9 +12,14 @@ type ListNode struct {
 
 type Heap []*ListNode
 
+var current = 0
+
 func (h Heap) Len() int           { return len(h) }
-func (h Heap) Less(a, b int) bool { return h[a].Val < h[b].Val }
-func (h Heap) Swap(a, b int)      { h[a], h[b] = h[b], h[a] }
+func (h Heap) Less(a, b int) bool { return h[a].Val > h[b].Val }
+func (h Heap) Swap(a, b int) {
+	h[a], h[b] = h[b], h[a]
+
+}
 func (h *Heap) Pop() interface{} {
 	old := *h
 	lst := old[len(old)-1]
@@ -25,9 +30,7 @@ func (h *Heap) Pop() interface{} {
 func (h *Heap) Push(x interface{}) {
 	*h = append(*h, x.(*ListNode))
 }
-
 func mergeKLists(lists []*ListNode) *ListNode {
-	result := new(ListNode)
 
 	h := &Heap{}
 	heap.Init(h)
@@ -38,9 +41,12 @@ func mergeKLists(lists []*ListNode) *ListNode {
 			x = x.Next
 		}
 	}
+	var result *ListNode
 	for h.Len() > 0 {
-		fmt.Println(heap.Pop(h))
+		x := heap.Pop(h).(*ListNode)
+		result = &ListNode{Val: x.Val, Next: result}
 	}
+
 	return result
 }
 
@@ -48,32 +54,30 @@ func mergeKLists(lists []*ListNode) *ListNode {
 func main() {
 	lists := []*ListNode{
 		&ListNode{
-			Val: 1, 
+			Val: 1,
 			Next: &ListNode{
-				Val: 4, 
+				Val: 4,
 				Next: &ListNode{
 					Val: 5,
 				},
 			},
 		},
-		},
 		&ListNode{
-			Val: 1, 
+			Val: 1,
 			Next: &ListNode{
-				Val: 3, 
+				Val: 3,
 				Next: &ListNode{
 					Val: 4,
 				},
 			},
 		},
 		&ListNode{
-			Val: 2, 
+			Val: 2,
 			Next: &ListNode{
-				Val: 6, 
+				Val:  6,
 				Next: nil,
 			},
 		},
 	}
-
-	fmt.Println(mergeKLists(lists))	
+	fmt.Println(mergeKLists(lists))
 }
