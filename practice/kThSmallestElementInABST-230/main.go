@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 type TreeNode struct {
@@ -62,7 +61,7 @@ func bfs(root *TreeNode, counter, result *int) {
 	if root == nil {
 		return
 	}
-
+	fmt.Println("value : ", root.Val)
 	bfs(root.Left, counter, result)
 
 	*counter--
