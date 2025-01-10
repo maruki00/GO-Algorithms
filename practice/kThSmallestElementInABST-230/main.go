@@ -11,6 +11,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+/*
 type Queue []*TreeNode
 
 func (q *Queue) Dequeue() *TreeNode {
@@ -33,19 +34,44 @@ func kthSmallest(root *TreeNode, k int) int {
 	result := math.MaxInt
 	i := 0
 	nodes := &Queue{root}
-	for i < k && !nodes.Empty() {
+	for i <= k && !nodes.Empty() {
 		nd := nodes.Dequeue()
 		if nd == nil {
 			continue
 		}
 		result = min(result, nd.Val)
-		nodes.Inqueue(nd.Left)
-		nodes.Inqueue(nd.Right)
+		if nd.Right != nil {
+			nodes.Inqueue(nd.Right)
+		}
+		if nd.Left != nil {
+			nodes.Inqueue(nd.Left)
+		}
 		i++
 	}
 	return result
 }
+*/
 
+func kthSmallest(root *TreeNode, k int) int {
+	result := -1
+	bfs(root, &k, &result)
+	return result
+}
+
+func bfs(root *TreeNode, counter, result *int) {
+	if root == nil {
+		return
+	}
+
+	bfs(root.Left, counter, result)
+
+	*counter--
+	if *counter == 0 {
+		*result = root.Val
+		return
+	}
+	bfs(root.Right, counter, result)
+}
 func main() {
 	root := &TreeNode{
 		Val: 1,
