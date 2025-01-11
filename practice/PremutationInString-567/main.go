@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func equals(s1, s2 string) bool {
@@ -12,24 +11,22 @@ func equals(s1, s2 string) bool {
 	if s1 == s2 {
 		return true
 	}
-	i, j := 0, len(s1)
-	for i < len(s1) && j > 0 {
-		if s1[i] != s2[j] {
+	hashMap := make(map[byte]int)
+	for i, _ := range s1 {
+		hashMap[s1[i]]++
+		hashMap[s2[i]]--
+	}
+	for _, item := range hashMap {
+		if item != 0 {
 			return false
 		}
-		i++
-		j--
 	}
 	return true
 }
 
 func checkInclusion(s1 string, s2 string) bool {
 	l := len(s1)
-	if equals(s2[:l], s2) {
-		return true
-	}
-
-	for i := l; i < len(s2)-l; i++ {
+	for i := 0; i < len(s2)-l+1; i++ {
 		if equals(s2[i:i+l], s1) {
 			return true
 		}
@@ -39,6 +36,6 @@ func checkInclusion(s1 string, s2 string) bool {
 
 func main() {
 	s1 := "ab"
-	s2 := "eidbaooo"
+	s2 := "eidboaoo" //"eidbaooo"
 	fmt.Println("result : ", checkInclusion(s1, s2))
 }
