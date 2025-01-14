@@ -3,13 +3,12 @@ package main
 import "fmt"
 
 func reverseBits(num uint32) uint32 {
-	result := uint32(0)
-	for num > 0 {
-		fmt.Println(num, result)
-		result = uint32((result * 10) + (num % 10))
-		num /= 10
+	var res uint32
+	for i := 0; i < 32; i++ {
+		res = res<<1 + num&1
+		num >>= 1
 	}
-	return result
+	return res
 }
 
 func main() {
