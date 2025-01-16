@@ -27,6 +27,6 @@ func (this *NumArray) SumRange(left int, right int) int {
 }
 
 func main() {
-	nums := Constructor([]int{1, 4, -61, 4, -6})
+	nums := Constructor([]int{1, 4, -6})
 	fmt.Println("result : ", nums.SumRange(0, 2))
 }
