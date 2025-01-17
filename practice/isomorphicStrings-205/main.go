@@ -1,28 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func isIsomorphic(s string, t string) bool {
-	lS, lt := len(s), len(t)
-	if lS != lt {
-		return false
-	}
-
-	sChrs := make(map[byte]int, 0)
-	tChrs := make(map[byte]int, 0)
-	for i := 0; i < lS; i++ {
-		sChrs[s[i]]++
-		tChrs[t[i]]++
-	}
-	if len(sChrs) != len(tChrs) {
-		return false
-	}
-
-	for k, v := range sChrs {
-		if val, ok := tChrs[k]; !ok || val != v {
+	sPattern, tPattern := map[uint8]int{}, map[uint8]int{}
+	for index := range s {
+		if sPattern[s[index]] != tPattern[t[index]] {
 			return false
+		} else {
+			sPattern[s[index]] = index + 1
+			tPattern[t[index]] = index + 1
 		}
 	}
+
 	return true
 }
 
