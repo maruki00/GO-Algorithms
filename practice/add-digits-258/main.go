@@ -4,7 +4,7 @@ pckage main
 
 func addDigits(num int) int {
 	result := 0
-	var solution := func(n int)
+	var solution func(n int) int
 	solution = func(n int) int {
 		result := 0
 		if n <=9 {
@@ -19,5 +19,5 @@ func addDigits(num int) int {
 }
 
 func main(){
-
+	fmt.Println("result : ", addDigits(34))
 }
