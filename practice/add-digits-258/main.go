@@ -1,23 +1,23 @@
-pckage main
+package main
 
-
+import "fmt"
 
 func addDigits(num int) int {
-	result := 0
 	var solution func(n int) int
 	solution = func(n int) int {
-		result := 0
-		if n <=9 {
+		if n <= 9 {
 			return n
 		}
-		for n>0 {
-			result = (result*10) + int(n%10) 
-			n/= 10
+		result := 0
+		for n > 0 {
+			result += +int(n % 10)
+			n /= 10
 		}
 		return solution(result)
 	}
+	return solution(num)
 }
 
-func main(){
-	fmt.Println("result : ", addDigits(34))
+func main() {
+	fmt.Println("result : ", addDigits(38))
 }
