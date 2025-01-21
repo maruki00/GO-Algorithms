@@ -21,21 +21,20 @@ func guess(n int) int {
 }
 
 func guessNumber(n int) int {
-
 	start, end := 0, n
-	for start < end {
+	for start <= end {
 		middle := int((end + start) / 2)
 		guessed := guess(middle)
 		if guessed == 0 {
-			return n
+			return middle
 		}
-		if guessed == -1 {
+		if guessed == 1 {
 			start = middle + 1
 			continue
 		}
 		end = middle - 1
 	}
-	return n
+	return 0
 }
 
 func main() {
