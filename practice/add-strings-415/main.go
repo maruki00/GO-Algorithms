@@ -10,7 +10,7 @@ func addStrings(num1 string, num2 string) string {
 	for _, nn1 := range num2 {
 		n2 = (n2 * 10) + int(nn1-'0')
 	}
-	return "123"
+	return fmt.Sprintf("%d", n1+n2)
 }
 
 func main() {
