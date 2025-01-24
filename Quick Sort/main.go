@@ -7,9 +7,7 @@ func QuickSort(nums []int) []int {
 		return nums
 	}
 	pivot := nums[len(nums)-1]
-	left := []int{}
-	right := []int{}
-
+	left, right := []int{}, []int{}
 	for _, n := range nums[:len(nums)-1] {
 		if n > pivot {
 			right = append(right, n)
@@ -17,9 +15,10 @@ func QuickSort(nums []int) []int {
 		}
 		left = append(left, n)
 	}
-	return append(append(QuickSort(left), pivot), QuickSort(right)...)
-}
 
+	return append(append(QuickSort(left), pivot), QuickSort(right)...)
+
+}
 func main() {
 	nums := []int{1, 2, 8, 4, 2, 8, 9, 1}
 	fmt.Println(QuickSort(nums))
