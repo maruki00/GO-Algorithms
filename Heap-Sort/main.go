@@ -17,8 +17,8 @@ func HeapSort(arr []int) {
 
 func heapify(arr []int, n, i int) {
 	largest := i
-	left := 2*i + 1
-	right := 2*i + 2
+	left := 2 * i
+	right := 2*i + 1
 	if left < n && arr[left] > arr[largest] {
 		largest = left
 	}
@@ -37,3 +37,4 @@ func main() {
 	HeapSort(arr)
 	fmt.Println("Sorted array:  ", arr)
 }
+
