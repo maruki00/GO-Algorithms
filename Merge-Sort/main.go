@@ -9,12 +9,12 @@ func Sort(nums1, nums2 []int) []int {
 	ll1, ll2 := 0, 0
 
 	for ll1 < l1 && ll2 < l2 {
-		if nums1[l1] <= nums2[l2] {
+		if nums1[ll1] <= nums2[ll2] {
 			result = append(result, nums1[ll1])
 			ll1++
 			continue
 		}
-		result = append(result, nums2[ll1])
+		result = append(result, nums2[ll2])
 		ll2++
 	}
 	for ll1 < l2 {
