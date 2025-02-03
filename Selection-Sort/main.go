@@ -7,7 +7,7 @@ func Sort(nums []int) {
 	for i := 0; i < len(nums); i++ {
 		min_index := i
 		for j := i + 1; j < len(nums); j++ {
-			if nums[i] > nums[j] {
+			if nums[min_index] > nums[j] {
 				min_index = j
 			}
 		}
