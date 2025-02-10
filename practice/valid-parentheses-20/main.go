@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Stack struct {
 	items []byte
@@ -19,11 +21,7 @@ func (s *Stack) Empty() bool {
 	return len(s.items) == 0
 }
 func isValid(s string) bool {
-	items := map[byte]byte{
-		'(': ')',
-		'{': '}',
-		'[': ']',
-	}
+
 	stack := &Stack{}
 	for i := 0; i < len(s); i++ {
 		if s[i] == '(' || s[i] == '{' || s[i] == '[' {
@@ -34,9 +32,10 @@ func isValid(s string) bool {
 			return false
 		}
 		itm := stack.Pop()
-		if s[i] != items[itm] {
-			return false
+		if (s[i] == ')' && itm == '(') || (s[i] == ']' && itm == '[') || (s[i] == '}' && itm == '{') {
+			continue
 		}
+		return false
 	}
 	return stack.Empty()
 }
