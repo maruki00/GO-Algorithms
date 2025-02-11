@@ -34,7 +34,6 @@ func DFS(start byte, g *Graph) {
 		visited[item] = true
 		fmt.Println("Node visited : ", string(item))
 		queue = append(queue, g.adjancies[item]...)
-
 	}
 }
 
@@ -57,5 +56,5 @@ func main() {
 	g.AddAdjancy('2', '3')
 	g.AddAdjancy('4', '3')
 	g.Print()
-	DFS('a', g)
+	DFS('1', g)
 }
