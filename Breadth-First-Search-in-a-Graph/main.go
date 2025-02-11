@@ -52,10 +52,10 @@ func main() {
 	g := &Graph{
 		adjancies: make(map[byte][]byte),
 	}
-	g.AddAdjancy('a', 'b')
-	g.AddAdjancy('b', 'b')
-	g.AddAdjancy('c', 'b')
-	g.AddAdjancy('a', 'c')
+	g.AddAdjancy('1', '2')
+	g.AddAdjancy('1', '4')
+	g.AddAdjancy('2', '3')
+	g.AddAdjancy('4', '3')
 	g.Print()
 	DFS('a', g)
 }
