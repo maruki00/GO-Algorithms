@@ -25,7 +25,17 @@ func (g *Graph) AddAdjancy(node, adj byte) {
 func DFS(start byte, g *Graph) {
 	visited := make(map[byte]bool, len(g.adjancies))
 	queue := []byte{start}
-	fmt.Println(queue, visited)
+	for len(queue) > 0 {
+		item := queue[len(queue)-1]
+		queue = queue[:len(queue)-1]
+		if _, ok := visited[item]; ok {
+			continue
+		}
+		visited[item] = true
+		fmt.Println("Node visited : ", string(item))
+		queue = append(queue, g.adjancies[item]...)
+
+	}
 }
 
 func (g *Graph) Print() {
@@ -37,6 +47,7 @@ func (g *Graph) Print() {
 		fmt.Println("")
 	}
 }
+
 func main() {
 	g := &Graph{
 		adjancies: make(map[byte][]byte),
@@ -46,4 +57,5 @@ func main() {
 	g.AddAdjancy('c', 'b')
 	g.AddAdjancy('a', 'c')
 	g.Print()
+	DFS('a', g)
 }
