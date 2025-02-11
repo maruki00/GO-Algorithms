@@ -33,7 +33,7 @@ func BFS(start byte, g *Graph) {
 		}
 		visited[item] = true
 		fmt.Println("Node visited : ", string(item))
-		queue = append(queue, g.adjancies[item]...)
+		queue = append(g.adjancies[item], queue...)
 	}
 }
 
