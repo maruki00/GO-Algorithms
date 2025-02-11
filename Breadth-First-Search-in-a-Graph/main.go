@@ -22,7 +22,7 @@ func (g *Graph) AddAdjancy(node, adj byte) {
 	g.adjancies[node] = append(g.adjancies[node], adj)
 }
 
-func DFS(start byte, g *Graph) {
+func BFS(start byte, g *Graph) {
 	visited := make(map[byte]bool, len(g.adjancies))
 	queue := []byte{start}
 	for len(queue) > 0 {
