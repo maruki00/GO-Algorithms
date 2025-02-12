@@ -14,24 +14,17 @@ func lee(startX, startY int, mat [][]int) {
 	queue := list.New()
 	queue.PushBack([2]int{startX, startY})
 	mat[startX][startY] = -1
-
 	for queue.Len() > 0 {
 		e := queue.Front()
 		queue.Remove(e)
 		pos := e.Value.([2]int)
 		x, y := pos[0], pos[1]
-
 		for i := 0; i < 4; i++ {
 			xx := x + dl[i]
 			yy := y + dc[i]
-
 			if xx >= 0 && xx < n && yy >= 0 && yy < m && mat[xx][yy] == 0 {
 				queue.PushBack([2]int{xx, yy})
 				mat[xx][yy] = -1
-				for _, row := range mat {
-					fmt.Println(row)
-				}
-				fmt.Println("--------------------")
 			}
 		}
 	}
@@ -52,4 +45,3 @@ func main() {
 		fmt.Println(row)
 	}
 }
-
