@@ -28,6 +28,10 @@ func lee(startX, startY int, mat [][]int) {
 			if xx >= 0 && xx < n && yy >= 0 && yy < m && mat[xx][yy] == 0 {
 				queue.PushBack([2]int{xx, yy})
 				mat[xx][yy] = -1
+				for _, row := range mat {
+					fmt.Println(row)
+				}
+				fmt.Println("--------------------")
 			}
 		}
 	}
@@ -48,3 +52,4 @@ func main() {
 		fmt.Println(row)
 	}
 }
+
