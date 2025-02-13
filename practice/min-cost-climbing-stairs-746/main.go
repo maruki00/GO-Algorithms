@@ -1,7 +1,9 @@
 package main
 
+import "fmt"
+
 func minCostClimbingStairs(cost []int) int {
-	dp := make([]int, len(cost))
+	dp := make([]int, len(cost)+2)
 	dp[len(cost)-1] = 0
 	for i := len(cost) - 1; i >= 0; i-- {
 		dp[i] = cost[i] + min(dp[i+1], dp[i+2])
@@ -10,5 +12,6 @@ func minCostClimbingStairs(cost []int) int {
 }
 
 func main() {
-
+	nums := []int{1, 100, 1, 1, 1, 100, 1, 1, 100, 1}
+	fmt.Println(minCostClimbingStairs(nums))
 }
