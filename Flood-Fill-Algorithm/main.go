@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 const (
 	white = 0
 	black = 1
@@ -12,10 +14,7 @@ func floodFill(arr [][]int, turn, row, col int) {
 		return
 	}
 
-	if turn != black {
-		return
-	}
-	if arr[row][col] != white {
+	if arr[row][col] != turn {
 		return
 	}
 	arr[row][col] = 0
@@ -40,5 +39,8 @@ func main() {
 		{1, 4, 6, 3, 6, 7, 4},
 		{1, 4, 6, 3, 6, 7, 4},
 	}
-	floodFillAll(arr, 0)
+	floodFillAll(arr, 6)
+	for _, x := range arr {
+		fmt.Println(x)
+	}
 }
