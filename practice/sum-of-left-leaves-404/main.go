@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type TreeNode struct {
 	Val   int
@@ -15,7 +17,7 @@ func sumOfLeftLeaves(root *TreeNode) int {
 		if root == nil {
 			return
 		}
-		if root.Left == nil && tp == "left" {
+		if root.Left == nil && root.Right == nil && tp == "left" {
 
 			res += root.Val
 		}
