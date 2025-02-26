@@ -10,18 +10,19 @@ type TreeNode struct {
 
 func sumOfLeftLeaves(root *TreeNode) int {
 	res := 0
-	var dfs func(root *TreeNode)
-	dfs = func(root *TreeNode) {
+	var dfs func(root *TreeNode, tp string)
+	dfs = func(root *TreeNode, tp string) {
 		if root == nil {
 			return
 		}
-		fmt.Println("node : ", root.Val)
-		if root.Left != nil && (root.Left.Left == nil && root.Left.Right == nil) {
-			res += root.Left.Val
+		if root.Left == nil && tp == "left" {
+
+			res += root.Val
 		}
-		sumOfLeftLeaves(root.Left)
-		sumOfLeftLeaves(root.Right)
+		dfs(root.Left, "left")
+		dfs(root.Right, "right")
 	}
+	dfs(root, "root")
 	return res
 }
 
@@ -41,5 +42,5 @@ func main() {
 			},
 		},
 	}
-	_ = sumOfLeftLeaves(root)
+	fmt.Println(sumOfLeftLeaves(root))
 }
