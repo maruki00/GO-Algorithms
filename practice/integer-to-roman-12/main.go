@@ -3,23 +3,35 @@ package main
 import "fmt"
 
 func intToRoman(num int) string {
-	mp := map[int]byte{
-		0: '',
-		1:    'I',
-		5:    'V',
-		10:   'X',
-		50:   'L',
-		100:  'C',
-		500:  'D',
-		1000: 'M',
+	mp := map[int]string{
+		1000: "M",
+		900:  "CM",
+		500:  "D",
+		400:  "CD",
+		100:  "C",
+		90:   "XC",
+		50:   "L",
+		40:   "XL",
+		10:   "X",
+		5:    "V",
+		4:    "IV",
+		1:    "I",
 	}
-
 	result := ""
-	fmt.Println(mp)
+	for num > 0 {
+		for nu, sumbol := range mp {
+			if num-nu >= 0 {
+				result += sumbol
+				num -= nu
+				continue
+			}
+		}
+	}
 
 	return result
 }
 
 func main() {
-
+	in := 3749
+	fmt.Println("result : ", intToRoman(in))
 }
