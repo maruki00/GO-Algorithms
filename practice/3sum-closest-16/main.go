@@ -1,33 +1,37 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"slices"
+)
 
-func abs(num int) int {
-	if num < 0 {
-		return num * -1
-	}
-	return num
-}
-func min(a, b int) int {
-	if a > b {
-		return b
-	}
-	return a
-}
 func threeSumClosest(nums []int, target int) int {
-	resu := 0
-	i := 0
-	for ; i < 3 && i < len(nums); i++ {
-		resu += nums[i]
-	}
-	closeset := resu
+	slices.Sort(nums)
 
-	for ; i < len(nums)-3; i++ {
-		resu -= nums[i]
-		resu += nums[i+3]
-		closeset = min(closeset, abs(target-resu))
+	res := nums[0] + nums[1] + nums[2]
+	mn := max(res, target) - min(res, target)
+	total := res
+	for i := 0; i < len(nums); i++ {
+		p1 := i + 1
+		p2 := len(nums) - 1
+		for p1 < p2 {
+			if sum := nums[i] + nums[p1] + nums[p2]; sum < target {
+				res = sum
+				p1++
+			} else if sum > target {
+				res = sum
+				p2--
+			} else {
+				return target
+			}
+
+			if max(res, target)-min(res, target) < mn {
+				mn = max(res, target) - min(res, target)
+				total = res
+			}
+		}
 	}
-	return closeset
+	return total
 }
 
 func main() {
