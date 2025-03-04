@@ -1,33 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func intToRoman(num int) string {
-	mp := map[int]string{
-		1000: "M",
-		900:  "CM",
-		500:  "D",
-		400:  "CD",
-		100:  "C",
-		90:   "XC",
-		50:   "L",
-		40:   "XL",
-		10:   "X",
-		5:    "V",
-		4:    "IV",
-		1:    "I",
-	}
+	nums := []int{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1}
+	syms := []string{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
+
 	result := ""
 	for num > 0 {
-		for nu, sumbol := range mp {
+		for i, nu := range nums {
 			if num-nu >= 0 {
-				result += sumbol
+				result += syms[i]
 				num -= nu
-				continue
+				break
 			}
 		}
 	}
-
 	return result
 }
 
