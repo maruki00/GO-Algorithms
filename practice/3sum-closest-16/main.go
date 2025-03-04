@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func abs(num int) int {
 	if num < 0 {
 		return num * -1
@@ -29,5 +31,7 @@ func threeSumClosest(nums []int, target int) int {
 }
 
 func main() {
-
+	nums := []int{-1, 2, 1, -4}
+	target := 1
+	fmt.Println("result : ", threeSumClosest(nums, target))
 }
