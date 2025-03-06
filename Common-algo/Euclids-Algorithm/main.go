@@ -3,9 +3,12 @@ package main
 import "fmt"
 
 func gcd(a, b int) int {
+	index := 0
 	for b != 0 {
 		a, b = b, a%b
+		index++
 	}
+	println("times : ", index)
 	return a
 }
 
