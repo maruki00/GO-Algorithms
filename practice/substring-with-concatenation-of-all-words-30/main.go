@@ -5,6 +5,7 @@ import "fmt"
 func findSubstring(s string, words []string) []int {
 	wordsSet := make(map[byte]int)
 	sSet := make(map[byte]int)
+	result := make([]int, 0)
 	for _, w := range words {
 		for i := range w {
 			wordsSet[w[i]]++
@@ -15,7 +16,7 @@ func findSubstring(s string, words []string) []int {
 		sSet[s[i]]++
 	}
 	fmt.Println(lenght, sSet, s[:lenght])
-	return []int{}
+	return result
 }
 
 func main() {
