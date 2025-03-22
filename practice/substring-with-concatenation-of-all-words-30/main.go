@@ -11,10 +11,10 @@ func findSubstring(s string, words []string) []int {
 	}
 	lenght := len(words) * len(words[0])
 	lW0 := len(words[0])
-	for i := 0; i < len(s); i++ {
+	for i := 0; i < len(s)-lenght+1; i++ {
 		sSet := make(map[string]int, len(words))
 		for j := i; j < i+lenght && j < len(s); j += lW0 {
-			sSet[s[i:i+lW0]]++
+			sSet[s[j:j+lW0]]++
 		}
 		isOk := true
 		for k, w := range sSet {
@@ -25,15 +25,16 @@ func findSubstring(s string, words []string) []int {
 		}
 		if isOk {
 			result = append(result, i)
-			i += lenght
 		}
 	}
 	return result
 }
 
 func main() {
-	s := "barfoothefoobarman"
-	words := []string{"foo", "bar"}
+	// s := "barfoothefoobarman"
+	// words := []string{"foo", "bar"}
+	s := "wordgoodgoodgoodbestword"
+	words := []string{"word", "good", "best", "good"}
 
 	fmt.Println("result : ", findSubstring(s, words))
 
