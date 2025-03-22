@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func findSubstring(s string, words []string) []int {
-	wordsSet := make(map[string]int)
-
+	wordsSet := make(map[string]int, len(words))
+	sSet := make(map[string]int, len(words))
 	result := make([]int, 0)
 	for _, w := range words {
 		wordsSet[w]++
@@ -12,7 +12,9 @@ func findSubstring(s string, words []string) []int {
 	lenght := len(words) * len(words[0])
 	lW0 := len(words[0])
 	for i := 0; i < len(s)-lenght+1; i++ {
-		sSet := make(map[string]int, len(words))
+		for k := range sSet {
+			delete(sSet, k)
+		}
 		for j := i; j < i+lenght && j < len(s); j += lW0 {
 			sSet[s[j:j+lW0]]++
 		}
