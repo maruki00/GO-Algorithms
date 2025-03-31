@@ -1,21 +1,22 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-func reverseListNode(src, dst *ListNode) (*ListNode, int) {
+func reverseListNode(src *ListNode) []int {
 	tmp := src
-	counter := 0
+	result := []int{}
 	for tmp != nil {
-		dst = &ListNode{Val: tmp.Val, Next: dst}
+		result = append(result, tmp.Val)
 		tmp = tmp.Next
-		counter++
 	}
-	return dst, counter
+	return result
 }
 func printListNodee(src *ListNode) {
 	tmp := src
@@ -25,23 +26,48 @@ func printListNodee(src *ListNode) {
 	}
 }
 func reorderList(head *ListNode) {
-	var tmpNodes *ListNode
-	tmpNodes, counter := reverseListNode(head, tmpNodes)
-	visited := make(map[int]bool)
-	start, end := 0, counter
-	var finalList *ListNode
-	for visited[start] && visited[end] {
+	nodesArray := reverseListNode(head)
+	start, end := 0, len(nodesArray)-1
+	var finalList *ListNode = nil
+	visited := make([]bool, len(nodesArray))
+	var tmp *ListNode
+	for start <= end {
+		if !visited[start] {
+			if finalList == nil {
+				finalList = &ListNode{Val: nodesArray[start], Next: nil}
+				tmp = finalList
+			} else {
+				tmp.Next = &ListNode{Val: nodesArray[start], Next: nil}
+				tmp = tmp.Next
+			}
+			visited[start] = true
 
+		}
+		if end == start {
+			break
+		}
+		if !visited[end] {
+			tmp.Next = &ListNode{Val: nodesArray[end], Next: nil}
+			tmp = tmp.Next
+			visited[end] = true
+
+		}
+		end--
+		start++
 	}
-	printListNodee(head)
-	printListNodee(tmpNodes)
-
+	*head = *finalList
 }
-
+func input() {
+	var name string
+	fmt.Print("$")
+	fmt.Scan(&name)
+}
 func main() {
 	head := &ListNode{Val: 1}
 	head.Next = &ListNode{Val: 2}
 	head.Next.Next = &ListNode{Val: 3}
 	head.Next.Next.Next = &ListNode{Val: 4}
+	head.Next.Next.Next.Next = &ListNode{Val: 5}
 	reorderList(head)
+	printListNodee(head)
 }
