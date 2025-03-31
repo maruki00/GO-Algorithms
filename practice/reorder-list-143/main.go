@@ -57,11 +57,7 @@ func reorderList(head *ListNode) {
 	}
 	*head = *finalList
 }
-func input() {
-	var name string
-	fmt.Print("$")
-	fmt.Scan(&name)
-}
+
 func main() {
 	head := &ListNode{Val: 1}
 	head.Next = &ListNode{Val: 2}
