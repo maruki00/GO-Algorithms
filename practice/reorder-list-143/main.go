@@ -9,15 +9,6 @@ type ListNode struct {
 	Next *ListNode
 }
 
-func reverseListNode(src *ListNode) []int {
-	tmp := src
-	result := []int{}
-	for tmp != nil {
-		result = append(result, tmp.Val)
-		tmp = tmp.Next
-	}
-	return result
-}
 func printListNodee(src *ListNode) {
 	tmp := src
 	for tmp != nil {
@@ -25,21 +16,34 @@ func printListNodee(src *ListNode) {
 		tmp = tmp.Next
 	}
 }
+func lenList(node *ListNode) int {
+	counter := 0
+	tmp := node
+	for tmp != nil {
+		counter++
+		tmp = tmp.Next
+	}
+	return counter
+}
 func reorderList(head *ListNode) {
-	nodesArray := reverseListNode(head)
+	head1 := head
+	nodesArray := make([]int, lenList(head))
+	indx := 0
+	for head1 != nil {
+		nodesArray[indx] = head1.Val
+		indx++
+		head1 = head1.Next
+	}
+
 	start, end := 0, len(nodesArray)-1
-	var finalList *ListNode = nil
+	finalList := &ListNode{Val: nodesArray[0]}
 	visited := make([]bool, len(nodesArray))
-	var tmp *ListNode
+	tmp := finalList
+	visited[start] = true
 	for start <= end {
 		if !visited[start] {
-			if finalList == nil {
-				finalList = &ListNode{Val: nodesArray[start], Next: nil}
-				tmp = finalList
-			} else {
-				tmp.Next = &ListNode{Val: nodesArray[start], Next: nil}
-				tmp = tmp.Next
-			}
+			tmp.Next = &ListNode{Val: nodesArray[start], Next: nil}
+			tmp = tmp.Next
 			visited[start] = true
 
 		}
