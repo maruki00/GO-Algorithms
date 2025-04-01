@@ -28,7 +28,7 @@ func minWindow(s string, t string) string {
 	}
 
 	for end < len(s) {
-		for !isMatch(sMap, tMap) {
+		for !isMatch(sMap, tMap) && end < len(s) {
 			sMap[s[end]]++
 			end++
 		}
@@ -36,11 +36,20 @@ func minWindow(s string, t string) string {
 			sMap[s[start]]--
 			start++
 		}
-		fmt.Println(string(s[start:end]))
+
+		minSubString = minStr(minSubString, string(s[start:end]))
+		fmt.Println("result : ", minSubString, string(s[start:end]))
+		sMap[s[start]]--
+		start++
 	}
 	return minSubString
 }
-
+func minStr(a, b string) string {
+	if len(a) < len(b) {
+		return a
+	}
+	return b
+}
 func main() {
 	s := "ADOBECODEBANC"
 	t := "ABC"
