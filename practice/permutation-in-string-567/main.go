@@ -3,6 +3,9 @@ package main
 import "fmt"
 
 func checkInclusion(s1 string, s2 string) bool {
+	if len(s1) > len(s2) {
+		return false
+	}
 	s1Map := make(map[byte]int)
 	s2Map := make(map[byte]int)
 	for i := range s1 {
@@ -31,9 +34,7 @@ func checkInclusion(s1 string, s2 string) bool {
 		}
 		s2Map[s2[start-1]]--
 		s2Map[s2[end]]++
-
 	}
-
 	return false
 }
 
