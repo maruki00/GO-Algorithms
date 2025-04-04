@@ -11,18 +11,20 @@ func compress(chars []byte) int {
 	curr := chars[0]
 	count := 0
 	for i := 1; i < ln; i++ {
-		for curr == chars[i] {
+		if curr == chars[i] {
 			count++
 			continue
 		}
 		result += 2
-		if i < ln {
+		if i >= ln {
 			break
 		}
 		curr = chars[i]
-		count = 1
+		count = 0
 	}
-
+	if count != 0 {
+		result += 2
+	}
 	return result
 }
 
