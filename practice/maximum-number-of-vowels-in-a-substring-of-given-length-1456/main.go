@@ -18,7 +18,6 @@ func maxVowels(s string, k int) int {
 		}
 	}
 	for i := 1; i <= len(s)-k; i++ {
-		fmt.Println(string(s[i-1]), string(s[i+k-1]))
 		if isVowel(s[i-1]) {
 			tmpV--
 		}
