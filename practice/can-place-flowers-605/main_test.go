@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func canPlaceFlowersTest(t *testing.T) {
+func CanPlaceFlowersTest(t *testing.T) {
 	tests := []struct {
 		n       int
 		flowers []int
@@ -30,7 +30,7 @@ func canPlaceFlowersTest(t *testing.T) {
 		},
 	}
 	for _, ts := range tests {
-		w := canPlaceFlowers(ts.flowers, ts.n)
+		w := CanPlaceFlowers(ts.flowers, ts.n)
 		if w == ts.want {
 			t.Errorf("Failed")
 		}
