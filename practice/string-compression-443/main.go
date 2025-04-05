@@ -7,25 +7,26 @@ func compress(chars []byte) int {
 	if ln == 0 {
 		return 0
 	}
-	result := 0
-	curr := chars[0]
-	count := 0
-	for i := 1; i < ln; i++ {
-		if curr == chars[i] {
-			count++
+	pos, curr, next := 0, 0, 0
+	for next < ln {
+		if chars[curr] == chars[next] {
+			next++
 			continue
 		}
-		result += 2
-		if i >= ln {
-			break
+		count := next - curr
+		if count == 1 {
+			pos++
+			curr = next
+			continue
 		}
-		curr = chars[i]
-		count = 0
+		bts := []byte(fmt.Sprintf("%d", count)) // 123 = '1', '2', '3'
+		for i, bt := range bts {
+			chars[pos+1+i] = bt
+		}
+		pos += len(bts) + 1
+		curr = next
 	}
-	if count != 0 {
-		result += 2
-	}
-	return result
+	return curr
 }
 
 func main() {
