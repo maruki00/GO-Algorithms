@@ -17,11 +17,12 @@ func maxVowels(s string, k int) int {
 			maxV++
 		}
 	}
-	for i := k; i < len(s)-k; i++ {
-		if isVowel(s[i]) {
+	for i := 1; i <= len(s)-k; i++ {
+		fmt.Println(string(s[i-1]), string(s[i+k-1]))
+		if isVowel(s[i-1]) {
 			tmpV--
 		}
-		if isVowel(s[i+k]) {
+		if isVowel(s[i+k-1]) {
 			tmpV++
 		}
 		maxV = max(maxV, tmpV)
@@ -30,7 +31,7 @@ func maxVowels(s string, k int) int {
 }
 
 func main() {
-	s := "abciiidef"
-	k := 3
+	s := "weallloveyou"
+	k := 7
 	fmt.Println(maxVowels(s, k))
 }
