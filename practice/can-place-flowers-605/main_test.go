@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestcanPlaceFlowers(t *testing.T) {
+func canPlaceFlowersTest(t *testing.T) {
 	tests := []struct {
 		n       int
 		flowers []int
