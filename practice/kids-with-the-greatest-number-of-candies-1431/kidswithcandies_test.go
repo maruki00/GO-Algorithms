@@ -19,8 +19,8 @@ func equals(a, b []bool) bool {
 	}
 	return true
 }
-func Test_kidsWithCandies_Test(t *testing.T) {
-	testing := []struct {
+func TestKidsWithCandies(t *testing.T) {
+	tests := []struct {
 		candies      []int
 		extraCandies int
 		want         []bool
@@ -32,10 +32,11 @@ func Test_kidsWithCandies_Test(t *testing.T) {
 		},
 	}
 
-	for _, test := range testing {
+	for _, test := range tests {
 		result := kidsWithCandies(test.candies, test.extraCandies)
-		if equals(result, test.want) {
-			t.Errorf("Failed .")
+		if !equals(result, test.want) {
+			t.Errorf("kidsWithCandies(%v, %d) = %v; want %v",
+				test.candies, test.extraCandies, result, test.want)
 		}
 	}
 }
