@@ -29,13 +29,18 @@ func compress(chars []byte) int {
 		pos += len(bts) + 1
 		curr = next
 	}
-	if next-curr > 1 {
+	if next-curr >= 1 {
 		chars[pos] = chars[curr]
-		bts := []byte(fmt.Sprintf("%d", next-curr)) // 123 = '1', '2', '3'
-		for i, bt := range bts {
-			chars[pos+1+i] = bt
+		if next-curr > 1 {
+			bts := []byte(fmt.Sprintf("%d", next-curr)) // 123 = '1', '2', '3'
+			for i, bt := range bts {
+				chars[pos+1+i] = bt
+			}
+			pos += len(bts) + 1
+		} else {
+			pos++
 		}
-		pos += len(bts) + 1
+
 	}
 	return pos
 }
