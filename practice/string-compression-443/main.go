@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func compress(chars []byte) int {
 	ln := len(chars)
@@ -13,6 +15,7 @@ func compress(chars []byte) int {
 			next++
 			continue
 		}
+		chars[pos] = chars[curr]
 		count := next - curr
 		if count == 1 {
 			pos++
@@ -27,6 +30,7 @@ func compress(chars []byte) int {
 		curr = next
 	}
 	if next-curr > 1 {
+		chars[pos] = chars[curr]
 		bts := []byte(fmt.Sprintf("%d", next-curr)) // 123 = '1', '2', '3'
 		for i, bt := range bts {
 			chars[pos+1+i] = bt
@@ -39,6 +43,8 @@ func compress(chars []byte) int {
 func main() {
 	chars := []byte{'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'c', 'c', 'c'}
 	fmt.Println("result : ", compress(chars))
-	fmt.Println(chars)
+	for i, ch := range chars {
+		fmt.Println(i, string(ch))
+	}
 
 }
