@@ -26,11 +26,19 @@ func compress(chars []byte) int {
 		pos += len(bts) + 1
 		curr = next
 	}
-	return curr
+	if next-curr > 1 {
+		bts := []byte(fmt.Sprintf("%d", next-curr)) // 123 = '1', '2', '3'
+		for i, bt := range bts {
+			chars[pos+1+i] = bt
+		}
+		pos += len(bts) + 1
+	}
+	return pos
 }
 
 func main() {
-	chars := []byte{'a', 'a', 'b', 'b', 'c', 'c', 'c'}
+	chars := []byte{'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'c', 'c', 'c'}
 	fmt.Println("result : ", compress(chars))
+	fmt.Println(chars)
 
 }
