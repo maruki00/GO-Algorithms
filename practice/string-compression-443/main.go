@@ -41,7 +41,8 @@ func compress(chars []byte) int {
 }
 
 func main() {
-	chars := []byte{'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'c', 'c', 'c'}
+	//chars := []byte{'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'c', 'c', 'c'}
+	chars := []byte{'a', 'b', 'c'}
 	fmt.Println("result : ", compress(chars))
 	for i, ch := range chars {
 		fmt.Println(i, string(ch))
