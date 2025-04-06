@@ -14,13 +14,13 @@ func uniqueOccurrences(arr []int) bool {
 	for _, v := range occures {
 		tracking[v]++
 	}
-	for k, v := range tracking {
-		fmt.Println(k, v)
-		if v == k && v == 1 {
-			return true
+
+	for _, v := range tracking {
+		if v > 1 {
+			return false
 		}
 	}
-	return false
+	return true
 }
 
 func main() {
