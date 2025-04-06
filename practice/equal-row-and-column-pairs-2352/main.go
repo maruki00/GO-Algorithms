@@ -1,25 +1,35 @@
 package main
 
+import (
+	"fmt"
+)
+
 func equalPairs(grid [][]int) int {
-	visited := make(map[[2]int]bool)
-	counter := 0
-	n := len(grid[0])
+	n := len(grid)
+	m := make(map[[200]int]int)
+	arr := [200]int{}
 	for i := 0; i < n; i++ {
+		copy(arr[:], grid[i])
+		m[arr]++
+	}
+	res := 0
+	for i := 0; i < n; i++ {
+		arr = [200]int{}
 		for j := 0; j < n; j++ {
-			num1, ok1 := visited[[2]int{i, j}]
-			if ok1 {
-				continue
-			}
-			num2, ok2 := visited[[2]int{j, i}]
-			if num1 == num2 && !ok2 {
-				counter++
-				visited[[2]int{i, j}] = true
-			}
+			arr[j] = grid[j][i]
+		}
+		if v, ok := m[arr]; ok {
+			res += v
 		}
 	}
-	return counter
+	return res
 }
 
 func main() {
-
+	grid := [][]int{
+		{3, 2, 1},
+		{1, 7, 6},
+		{2, 7, 7},
+	}
+	fmt.Println("result : ", equalPairs(grid))
 }
