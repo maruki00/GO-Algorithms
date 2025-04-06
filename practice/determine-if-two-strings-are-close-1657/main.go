@@ -37,7 +37,9 @@ func closeStrings(word1 string, word2 string) bool {
 }
 
 func main() {
-	word1 := "cabbba"
-	word2 := "abbccc"
+	// word1 := "cabbba"
+	// word2 := "abbccc"
+	word1 := "abcbb"
+	word2 := "abccc"
 	fmt.Println("result : ", closeStrings(word1, word2))
 }
