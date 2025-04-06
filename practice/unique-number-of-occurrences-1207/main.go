@@ -4,11 +4,19 @@ import "fmt"
 
 func uniqueOccurrences(arr []int) bool {
 	occures := make(map[int]int)
+	tracking := make(map[int]int)
 	for _, num := range arr {
 		occures[num]++
 	}
+	if len(occures) == 1 {
+		return true
+	}
 	for _, v := range occures {
-		if v == 1 {
+		tracking[v]++
+	}
+	for k, v := range tracking {
+		fmt.Println(k, v)
+		if v == k && v == 1 {
 			return true
 		}
 	}
