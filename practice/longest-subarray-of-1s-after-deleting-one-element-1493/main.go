@@ -1,11 +1,11 @@
 package main
 
 func longestSubarray(nums []int) int {
-	i, j := 0, 0
+	j := 0
 	numOfZeros := 0
 	maxOnes := 0
-	for j < len(nums) {
-		for nums[i] != 0 {
+	for i:=0;i<len(nums);i++ {
+		for nums[j] != 0 {
 			i++
 		}
 		j = i
