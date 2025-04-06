@@ -12,16 +12,17 @@ func findDifference(nums1 []int, nums2 []int) [][]int {
 	for _, i := range nums2 {
 		nums2Map[i] = true
 	}
-	for k, _ := range nums2Map {
-		if ext, ok := nums1Map[k]; !(ok && ext) {
+	for k, _ := range nums1Map {
+		if ext, ok := nums2Map[k]; !(ok && ext) {
 			result[0] = append(result[0], k)
 		}
 	}
-	for k, _ := range nums1Map {
-		if ext, ok := nums2Map[k]; !(ok && ext) {
+	for k, _ := range nums2Map {
+		if ext, ok := nums1Map[k]; !(ok && ext) {
 			result[1] = append(result[1], k)
 		}
 	}
+
 	return result
 }
 
