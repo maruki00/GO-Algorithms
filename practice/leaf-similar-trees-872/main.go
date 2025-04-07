@@ -12,9 +12,14 @@ func leafSimilar(root1 *TreeNode, root2 *TreeNode) bool {
 	visited := make(map[int]bool)
 	var dfs func(root1 *TreeNode)
 	dfs = func(root *TreeNode) {
+		if root == nil {
+			return
+		}
 		if root.Left == nil && root.Right == nil {
 			visited[root.Val] = !visited[root.Val]
 		}
+		dfs(root.Left)
+		dfs(root.Right)
 	}
 	dfs(root1)
 	dfs(root2)
@@ -60,9 +65,16 @@ func printTree(node *TreeNode) {
 }
 
 func main() {
-	root1Data := []interface{}{3, 5, 1, 6, 2, 9, 8, nil, nil, 7, 4}
-	root2Data := []interface{}{3, 5, 1, 6, 7, 4, 2, nil, nil, nil, nil, nil, nil, 9, 8}
+	// root1Data := []interface{}{3, 5, 1, 6, 2, 9, 8, nil, nil, 7, 4}
+	// root2Data := []interface{}{3, 5, 1, 6, 7, 4, 2, nil, nil, nil, nil, nil, nil, 9, 8}
+
+	root1Data := []interface{}{1, 2, 3}
+	root2Data := []interface{}{1, 3, 2}
+
 	root1 := createBinaryTree(root1Data)
 	root2 := createBinaryTree(root2Data)
 	fmt.Println("result : ", leafSimilar(root1, root2))
 }
+
+// root1 = [1,2,3]
+// root2 = [1,3,2]
