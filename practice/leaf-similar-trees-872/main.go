@@ -9,22 +9,23 @@ type TreeNode struct {
 }
 
 func leafSimilar(root1 *TreeNode, root2 *TreeNode) bool {
-	visited := make(map[int]bool)
+	visited1 := make([]int, 0)
+	visited2 := make([]int, 0)
 	var dfs func(root1 *TreeNode)
 	dfs = func(root *TreeNode) {
 		if root == nil {
 			return
 		}
 		if root.Left == nil && root.Right == nil {
-			visited[root.Val] = !visited[root.Val]
+			visited1 = append(visited1, root.Val)
 		}
 		dfs(root.Left)
 		dfs(root.Right)
 	}
 	dfs(root1)
 	dfs(root2)
-	for _, k := range visited {
-		if k == true {
+	for i, k := range visited1 {
+		if visited2[i] != k {
 			return false
 		}
 	}
