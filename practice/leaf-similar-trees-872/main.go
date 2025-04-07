@@ -11,21 +11,24 @@ type TreeNode struct {
 func leafSimilar(root1 *TreeNode, root2 *TreeNode) bool {
 	visited1 := make([]int, 0)
 	visited2 := make([]int, 0)
-	var dfs func(root1 *TreeNode)
-	dfs = func(root *TreeNode) {
+	var dfs func(root *TreeNode, visited *[]int)
+	dfs = func(root *TreeNode, visited *[]int) {
 		if root == nil {
 			return
 		}
 		if root.Left == nil && root.Right == nil {
-			visited1 = append(visited1, root.Val)
+			*visited = append(*visited, root.Val)
 		}
-		dfs(root.Left)
-		dfs(root.Right)
+		dfs(root.Left, visited)
+		dfs(root.Right, visited)
 	}
-	dfs(root1)
-	dfs(root2)
-	for i, k := range visited1 {
-		if visited2[i] != k {
+	dfs(root1, &visited1)
+	dfs(root2, &visited2)
+	if len(visited1) != len(visited2) {
+		return false
+	}
+	for i := range visited1 {
+		if visited2[i] != visited1[i] {
 			return false
 		}
 	}
@@ -66,11 +69,11 @@ func printTree(node *TreeNode) {
 }
 
 func main() {
-	// root1Data := []interface{}{3, 5, 1, 6, 2, 9, 8, nil, nil, 7, 4}
-	// root2Data := []interface{}{3, 5, 1, 6, 7, 4, 2, nil, nil, nil, nil, nil, nil, 9, 8}
+	root1Data := []interface{}{3, 5, 1, 6, 2, 9, 8, nil, nil, 7, 4}
+	root2Data := []interface{}{3, 5, 1, 6, 7, 4, 2, nil, nil, nil, nil, nil, nil, 9, 8}
 
-	root1Data := []interface{}{1, 2, 3}
-	root2Data := []interface{}{1, 3, 2}
+	// root1Data := []interface{}{1, 2, 3}
+	// root2Data := []interface{}{1, 3, 2}
 
 	root1 := createBinaryTree(root1Data)
 	root2 := createBinaryTree(root2Data)
