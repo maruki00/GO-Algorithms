@@ -10,10 +10,7 @@ func longestSubarray(nums []int) int {
 	// to O(n) using window sliding
 	maxOnes := 0
 	i := 0
-	for {
-		if i < len(nums) {
-			breaker
-		}
+	for ; i < len(nums); i++ {
 		hasZero := 0
 		j := i
 		for ; j < len(nums); j++ {
@@ -29,7 +26,7 @@ func longestSubarray(nums []int) int {
 			}
 		}
 		maxOnes = max(maxOnes, j-i-1)
-		for nums[i] != 0 {
+		for i < len(nums) && nums[i] != 0 {
 			i++
 		}
 	}
