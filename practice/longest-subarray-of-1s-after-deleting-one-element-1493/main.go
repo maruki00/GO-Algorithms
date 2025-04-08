@@ -5,9 +5,6 @@ import (
 )
 
 func longestSubarray(nums []int) int {
-	// to be more effecient we should
-	// optimize the code from O(n^2)
-	// to O(n) using window sliding
 	maxOnes := 0
 	i := 0
 	for ; i < len(nums); i++ {
