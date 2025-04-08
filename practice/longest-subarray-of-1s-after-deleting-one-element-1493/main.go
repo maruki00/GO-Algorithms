@@ -1,13 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func longestSubarray(nums []int) int {
 	// to be more effecient we should
 	// optimize the code from O(n^2)
 	// to O(n) using window sliding
 	maxOnes := 0
-	for i := range nums {
+	i := 0
+	for {
+		if i < len(nums) {
+			breaker
+		}
 		hasZero := 0
 		j := i
 		for ; j < len(nums); j++ {
@@ -23,6 +29,9 @@ func longestSubarray(nums []int) int {
 			}
 		}
 		maxOnes = max(maxOnes, j-i-1)
+		for nums[i] != 0 {
+			i++
+		}
 	}
 	return maxOnes
 }
