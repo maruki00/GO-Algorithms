@@ -25,10 +25,13 @@ func pivotIndex(nums []int) int {
 			result++
 		}
 	}
+	if result == 0 {
+		return -1
+	}
 	return result
 }
 
 func main() {
-	nums := []int{1, 7, 3, 6, 5, 6}
+	nums := []int{1, 2, 3}
 	fmt.Println("result : ", pivotIndex(nums))
 }
