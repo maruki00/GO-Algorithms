@@ -12,8 +12,8 @@ func pivotIndex(nums []int) int {
 	i++
 	j--
 	for i < len(nums) && j >= 0 {
-		sumLift[i] = nums[i] + nums[i-1]
-		sumRight[j] = nums[j] + nums[j+1]
+		sumLift[i] = sumLift[i-1] + nums[i]
+		sumRight[j] = sumRight[j+1] + nums[j]
 		i++
 		j--
 	}
@@ -30,6 +30,6 @@ func pivotIndex(nums []int) int {
 }
 
 func main() {
-	nums := []int{1, 2, 3}
+	nums := []int{1, 7, 3, 6, 5, 6}
 	fmt.Println("result : ", pivotIndex(nums))
 }
