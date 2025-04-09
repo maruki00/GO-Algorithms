@@ -3,30 +3,20 @@ package main
 import "fmt"
 
 func pivotIndex(nums []int) int {
-	result := 0
-	sumLift := make([]int, len(nums))
-	sumRight := make([]int, len(nums))
-	i, j := 0, len(nums)-1
-	sumLift[i] = nums[i]
-	sumRight[j] = nums[j]
-	i++
-	j--
-	for i < len(nums) && j >= 0 {
-		sumLift[i] = sumLift[i-1] + nums[i]
-		sumRight[j] = sumRight[j+1] + nums[j]
-		i++
-		j--
+	totalL := 0
+	totalR := 0
+	for i := range nums {
+		totalL += nums[i]
 	}
 
-	for i := 0; i < len(nums); i++ {
-		if sumLift[i] == sumRight[i] {
-			result++
+	for i, w := range nums {
+		totalL -= w
+		if totalR == totalL {
+			return i
 		}
+		totalR += w
 	}
-	if result == 0 {
-		return -1
-	}
-	return result
+	return -1
 }
 
 func main() {
