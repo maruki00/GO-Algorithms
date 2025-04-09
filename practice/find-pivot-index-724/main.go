@@ -6,9 +6,12 @@ func pivotIndex(nums []int) int {
 	result := 0
 	sumLift := make([]int, len(nums))
 	sumRight := make([]int, len(nums))
-	for i := 0; i < len(nums); i++ {
-		sumLift[i] = nums[i]
-		sumRight[i] = nums[i]
+	i, j := 0, len(nums)-1
+	for i < len(nums) && j >= 0 {
+		sumLift[i] += nums[i]
+		sumRight[j] += nums[j]
+		i++
+		j--
 	}
 
 	for i := 0; i < len(nums); i++ {
