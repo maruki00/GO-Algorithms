@@ -16,8 +16,13 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 		if root == nil {
 			return
 		}
+		if root.Left==key && root.Left
 		if root.Val == key {
-			if root.Left != nil && root.Left.Val < key {
+			if root.Left==nil && root.Right==nil{
+				root=nil
+				return
+			}
+			if root.Left != nil && root.Left.Val > key {
 				root.Left.Val, root.Val = root.Val, root.Left.Val
 				dfs(root.Left)
 			} else {
