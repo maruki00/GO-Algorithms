@@ -2,8 +2,12 @@ package main
 
 import "fmt"
 
-func divisorGame(n int) bool {
+func divisorGame_(n int) bool {
 	return n%2 == 0
+}
+
+func divisorGame(n int) bool {
+	return n&1 == 0
 }
 
 func main() {
