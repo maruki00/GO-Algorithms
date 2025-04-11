@@ -10,7 +10,7 @@ type TreeNode struct {
 
 func deleteNode(root *TreeNode, key int) *TreeNode {
 	tmp := root
-	if tmp.Val == key && tmp.Left == tmp.Right && tmp.Right == nil {
+	if tmp == nil || (tmp.Val == key && tmp.Left == tmp.Right && tmp.Right == nil) {
 		return nil
 	}
 	var dfs func(root *TreeNode)
@@ -39,8 +39,16 @@ func deleteNode(root *TreeNode, key int) *TreeNode {
 				dfs(root.Right)
 			}
 		} else if root.Val > key {
+			if root.Left != nil && root.Left.Val == key && (root.Left.Left == nil && root.Left.Right == nil) {
+				root.Left = nil
+				return
+			}
 			dfs(root.Left)
 		} else {
+			if root.Right != nil && root.Right.Val == key && (root.Right.Left == nil && root.Right.Right == nil) {
+				root.Right = nil
+				return
+			}
 			dfs(root.Right)
 		}
 	}
