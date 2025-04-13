@@ -1,40 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"dsa/ds"
+)
 
 /*
 1. Reverse a linked list.
 **/
 
-type Node struct {
-	Val  int
-	Next *Node
-}
-
-type LinkedList struct {
-	root   *Node
-	tail   *Node
-	lenght int
-}
-
-func NewLinkedList(val int) *LinkedList {
-	root := &Node{Val: val}
-	return &LinkedList{
-		root:   root,
-		tail:   root,
-		lenght: 1,
-	}
-}
-
-func Insert(val int, l *LinkedList) {
-	node := &Node{Val: val}
-	l.tail.Next = node
-	l.tail = node
-	l.lenght++
-}
-
-func Reverse(l *Node) *Node {
-	var prev *Node
+func Reverse(l *ds.List[int]) *ds.List[int] {
+	var prev *ds.List[int]
 	curr := l
 	next := curr.Next
 	for curr != nil {
@@ -46,26 +21,15 @@ func Reverse(l *Node) *Node {
 	return prev
 }
 
-func Print(l *Node) {
-	println("-------------------")
-	tmp := l
-	for tmp != nil {
-		fmt.Println("item : ", tmp.Val)
-		tmp = tmp.Next
-	}
-}
-
 func main() {
-	list := NewLinkedList(1)
-	// for i := range 1000000 {
-	// 	Insert(i, list)
-	// }
 
-	Insert(2, list)
-	Insert(3, list)
-	Insert(4, list)
-	Insert(5, list)
-	Print(list.root)
-	list.root = Reverse(list.root)
-	Print(list.root)
+	list := ds.NewList(1)
+
+	list.Insert(2)
+	// Insert(3, list)
+	// Insert(4, list)
+	// Insert(5, list)
+	list.Print()
+	list = Reverse(list)
+	list.Print()
 }
