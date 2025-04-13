@@ -37,14 +37,15 @@ func Reverse(l *Node) *Node {
 	if l.Next == nil {
 		return l
 	}
-	root := l
+
+	var prev *Node
 	curr := l
-	for root.Next.Next != nil {
-		tmp := root.Next.Next
-		curr := tmp
-		next := tmp.Next
-		next.Next = curr
-		curr = next
+	next := curr.Next
+	for next != nil {
+		tmp := next
+		curr.Next = prev
+		next = next.Next
+		curr = tmp
 	}
 	return curr
 }
@@ -59,13 +60,14 @@ func Print(l *Node) {
 
 func main() {
 	list := NewLinkedList(1)
-	for i := range 1000000 {
-		Insert(i, list)
-	}
+	// for i := range 1000000 {
+	// 	Insert(i, list)
+	// }
 
-	// Insert(3, list)
-	// Insert(4, list)
-	// Insert(5, list)
+	Insert(2, list)
+	Insert(3, list)
+	Insert(4, list)
+	Insert(5, list)
 	Print(list.root)
 	list.root = Reverse(list.root)
 	Print(list.root)
