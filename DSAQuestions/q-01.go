@@ -51,6 +51,7 @@ func Reverse(l *Node) *Node {
 }
 
 func Print(l *Node) {
+	println("-------------------")
 	tmp := l
 	for tmp != nil {
 		fmt.Println("item : ", tmp.Val)
