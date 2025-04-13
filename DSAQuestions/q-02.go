@@ -23,5 +23,6 @@ func main() {
 	list.Insert(4)
 	list.Insert(5)
 	list.Insert(6)
+	list.Insert(7)
 	fmt.Println("middle is : ", MiddleFind(list))
 }
