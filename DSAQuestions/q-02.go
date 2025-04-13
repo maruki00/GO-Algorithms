@@ -8,12 +8,12 @@ import (
 // 2. Find the middle element of a linked list.
 
 func MiddleFind(l *ds.List[int]) int {
-	start, end := l, l.Next
-	for end != nil {
-		end = end.Next
-		start = start.Next
+	slow, fast := l, l.Next
+	for fast.Next != nil {
+		fast = fast.Next.Next
+		slow = slow.Next
 	}
-	return start.Val
+	return slow.Val
 }
 
 func main() {
