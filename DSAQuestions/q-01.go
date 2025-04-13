@@ -25,26 +25,48 @@ func NewLinkedList(val int) *LinkedList {
 		lenght: 1,
 	}
 }
-func Insert(val int, l *LinkedList) *LinkedList {
+
+func Insert(val int, l *LinkedList) {
 	node := &Node{Val: val}
 	l.tail.Next = node
 	l.tail = node
 	l.lenght++
 }
 
-func Print(l *LinkedList) {
-	tmp := l.root
+func Reverse(l *Node) *Node {
+	if l.Next == nil {
+		return l
+	}
+	root := l
+	curr := l
+	for root.Next.Next != nil {
+		tmp := root.Next.Next
+		curr := tmp
+		next := tmp.Next
+		next.Next = curr
+		curr = next
+	}
+	return curr
+}
+
+func Print(l *Node) {
+	tmp := l
 	for tmp != nil {
 		fmt.Println("item : ", tmp.Val)
 		tmp = tmp.Next
 	}
 }
 
-func mai() {
+func main() {
 	list := NewLinkedList(1)
-	Insert(2, list)
-	Insert(3, list)
-	Insert(4, list)
-	Insert(5, list)
-	Print(list)
+	for i := range 1000000 {
+		Insert(i, list)
+	}
+
+	// Insert(3, list)
+	// Insert(4, list)
+	// Insert(5, list)
+	Print(list.root)
+	list.root = Reverse(list.root)
+	Print(list.root)
 }
