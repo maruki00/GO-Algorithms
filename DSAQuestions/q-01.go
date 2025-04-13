@@ -26,9 +26,9 @@ func main() {
 	list := ds.NewList(1)
 
 	list.Insert(2)
-	// Insert(3, list)
-	// Insert(4, list)
-	// Insert(5, list)
+	list.Insert(3)
+	list.Insert(4)
+	list.Insert(5)
 	list.Print()
 	list = Reverse(list)
 	list.Print()
