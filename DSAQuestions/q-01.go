@@ -33,21 +33,21 @@ func Insert(val int, l *LinkedList) {
 	l.lenght++
 }
 
-func Reverse(l *Node) *Node {
+func Reverse(l *Node) {
 	if l.Next == nil {
-		return l
+		return
 	}
 
 	var prev *Node
 	curr := l
 	next := curr.Next
-	for next != nil {
-		tmp := next
+	for curr != nil {
+		next = curr.Next
 		curr.Next = prev
-		next = next.Next
-		curr = tmp
+		prev = curr
+		curr = next
 	}
-	return curr
+	// return curr
 }
 
 func Print(l *Node) {
