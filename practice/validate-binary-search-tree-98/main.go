@@ -12,6 +12,7 @@ func isValidBST(root *TreeNode) bool {
 	var dfs func(root *TreeNode, val int) bool
 	dfs = func(root *TreeNode, val int) bool {
 		if root == nil {
+			return true
 		}
 		val += root.Val
 		if root.Left != nil && root.Val <= root.Left.Val && val < root.Left.Val {
