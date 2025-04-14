@@ -15,10 +15,10 @@ func isValidBST(root *TreeNode) bool {
 			return true
 		}
 		val += root.Val
-		if root.Left != nil && root.Val <= root.Left.Val && val < root.Left.Val {
+		if root.Left != nil && val < root.Left.Val {
 			return false
 		}
-		if root.Right != nil && root.Val >= root.Right.Val && val > root.Right.Val {
+		if root.Right != nil && val > root.Right.Val {
 			return false
 		}
 		return dfs(root.Left, root.Val+val) && dfs(root.Right, root.Val+val)
