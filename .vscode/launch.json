@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "go",
+            "name": "debug main.go",
+            "request": "launch",
+            "mode": "auto",
+            "args": [],
+            "program": "/home/user/Desktop/go/practice/validate-binary-search-tree-98/main.go"
+        }
+    ]
+}
