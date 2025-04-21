@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type TreeNode struct {
 	Val   int
@@ -9,17 +12,17 @@ type TreeNode struct {
 }
 
 func isValidBST(root *TreeNode) bool {
-	var dfs func(root *TreeNode, mxVal, mnVal int) bool
-	dfs = func(root *TreeNode, mxVal, mnVal int) bool {
-		if root == nil {
+	var dfs func(node *TreeNode, mnVal int, mxVal int) bool
+	dfs = func(node *TreeNode, mnVal int, mxVal int) bool {
+		if node == nil {
 			return true
 		}
-		if root.Val < mnVal && root.Val > mxVal {
+		if !(mnVal < node.Val && node.Val < mxVal) {
 			return false
 		}
-		return dfs(root.Left, root.Val, mnVal) && dfs(root.Right, mxVal, root.Val)
+		return dfs(node.Left, mnVal, node.Val) && dfs(node.Right, node.Val, mxVal)
 	}
-	return dfs(root, 0, 0)
+	return dfs(root, math.MinInt, math.MaxInt)
 }
 
 func main() {
@@ -40,6 +43,7 @@ func main() {
 	// 		},
 	// 	},
 	// }
+
 	root := &TreeNode{Val: 2, Left: &TreeNode{Val: 2}, Right: &TreeNode{Val: 2}}
 	fmt.Println("result : ", isValidBST(root))
 }
