@@ -9,21 +9,17 @@ type TreeNode struct {
 }
 
 func isValidBST(root *TreeNode) bool {
-	var dfs func(root *TreeNode, val int) bool
-	dfs = func(root *TreeNode, val int) bool {
+	var dfs func(root *TreeNode, mxVal, mnVal int) bool
+	dfs = func(root *TreeNode, mxVal, mnVal int) bool {
 		if root == nil {
 			return true
 		}
-		val += root.Val
-		if root.Left != nil && val <= root.Left.Val {
+		if root.Val < mnVal && root.Val > mxVal {
 			return false
 		}
-		if root.Right != nil && val >= root.Right.Val {
-			return false
-		}
-		return dfs(root.Left, root.Val) && dfs(root.Right, root.Val+val)
+		return dfs(root.Left, root.Val, mnVal) && dfs(root.Right, mxVal, root.Val)
 	}
-	return dfs(root, 0)
+	return dfs(root, 0, 0)
 }
 
 func main() {
