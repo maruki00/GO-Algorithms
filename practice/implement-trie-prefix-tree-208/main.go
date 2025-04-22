@@ -45,7 +45,7 @@ func (t *Trie) StartsWith(prefix string) bool {
 }
 
 func main() {
-	// trie := NewTrie()
+	// trie := Constructor()
 
 	// trie.Insert("apple")
 	// fmt.Println(trie.Search("apple"))
@@ -54,7 +54,7 @@ func main() {
 	// trie.Insert("app")
 	// fmt.Println(trie.Search("app"))
 
-	trie := NewTrie()
+	trie := Constructor()
 	trie.Insert("apple")
 	fmt.Println(trie.Search("apple"), "returns True")   // return True
 	fmt.Println(trie.Search("app"), "returns False")    // return False
