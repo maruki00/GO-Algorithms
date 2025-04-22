@@ -7,8 +7,8 @@ type Trie struct {
 	isEnd bool
 }
 
-func NewTrie() *Trie {
-	return &Trie{root: make(map[rune]*Trie)}
+func Constructor() Trie {
+	return Trie{root: make(map[rune]*Trie)}
 }
 
 func (t *Trie) Insert(word string) {
