@@ -45,12 +45,21 @@ func (t *Trie) StartsWith(prefix string) bool {
 }
 
 func main() {
-	trie := NewTrie()
+	// trie := NewTrie()
 
+	// trie.Insert("apple")
+	// fmt.Println(trie.Search("apple"))
+	// fmt.Println(trie.Search("app"))
+	// fmt.Println(trie.StartsWith("app"))
+	// trie.Insert("app")
+	// fmt.Println(trie.Search("app"))
+
+	trie := NewTrie()
 	trie.Insert("apple")
-	fmt.Println(trie.Search("apple"))   // true
-	fmt.Println(trie.Search("app"))     // false
-	fmt.Println(trie.StartsWith("app")) // true
+	fmt.Println(trie.Search("apple"), "returns True")   // return True
+	fmt.Println(trie.Search("app"), "returns False")    // return False
+	fmt.Println(trie.StartsWith("app"), "returns True") // return True
 	trie.Insert("app")
-	fmt.Println(trie.Search("app")) // true
+	fmt.Println(trie.Search("app"), "return True") // return True
+
 }
