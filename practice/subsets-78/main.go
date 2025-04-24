@@ -6,8 +6,8 @@ func subsets(nums []int) [][]int {
 
 	result := make([][]int, 0)
 
-	var backtracking func(nms []int, indx int)
-	backtracking = func(nms []int, indx int) {
+	var backtracking func(indx int)
+	backtracking = func(indx int) {
 		if len(nms) == 0 || indx >= len(nums) {
 			return
 		}
