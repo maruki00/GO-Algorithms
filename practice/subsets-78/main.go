@@ -20,7 +20,7 @@ func subsets(nums []int) [][]int {
 		// nms = nms[:len(nms)-1]
 	}
 
-	backtracking(nums, 0)
+	backtracking([]int{0}, 0)
 
 	return result
 }
