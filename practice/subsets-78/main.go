@@ -3,17 +3,16 @@ package main
 import "fmt"
 
 func subsets(nums []int) [][]int {
-
-	result := make([][]int, 0)
-
-	var backtracking func(nms []int, subnums []int)
-	backtracking = func(nms []int, subnums []int) {
-
+	output := [][]int{{}}
+	for _, num := range nums {
+		newSubsets := [][]int{}
+		for _, curr := range output {
+			newSubset := append([]int{num}, curr...)
+			newSubsets = append(newSubsets, newSubset)
+		}
+		output = append(output, newSubsets...)
 	}
-
-	backtracking([]int{0}, 0)
-
-	return result
+	return output
 }
 
 func main() {
