@@ -3,12 +3,28 @@ package main
 import "fmt"
 
 func permute(nums []int) [][]int {
-
-	result := make([][]int, 0)
-	for i := 0; i < len(nums); i++ {
-		result = append(result, append([]int{nums[i]}, append(nums[i+1:], nums[:i]...)...))
+	var res [][]int
+	permutation := make([]int, len(nums))
+	visit := make([]bool, len(nums))
+	var backtrack func(int)
+	backtrack = func(index int) {
+		if index == len(nums) {
+			copiedPermutation := make([]int, len(nums))
+			copy(copiedPermutation, permutation)
+			res = append(res, copiedPermutation)
+			return
+		}
+		for i := 0; i < len(nums); i++ {
+			if !visit[i] {
+				visit[i] = true
+				permutation[index] = nums[i]
+				backtrack(index + 1)
+				visit[i] = false
+			}
+		}
 	}
-	return result
+	backtrack(0)
+	return res
 }
 
 func main() {
