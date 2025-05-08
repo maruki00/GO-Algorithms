@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 /**
@@ -26,11 +25,19 @@ Explanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is re
 
 */
 
+func abs(a int) int {
+	if a < 0 {
+		return a * -1
+	}
+	return a
+}
 func findClosestNumber(nums []int) int {
-	var closest = math.MaxInt
+	var closest = nums[0]
+
 	for i := range nums {
-		fmt.Println("items : ", nums[i], int(math.Abs(float64(0-nums[i]))))
-		closest = min(closest, int(math.Abs(float64(0-nums[i]))))
+		if abs(0-closest) >= abs(0-nums[i]) {
+			closest = nums[i]
+		}
 	}
 	return closest
 }
