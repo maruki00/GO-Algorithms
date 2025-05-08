@@ -27,9 +27,9 @@ Explanation: 1 and -1 are both the closest numbers to 0, so 1 being larger is re
 */
 
 func findClosestNumber(nums []int) int {
-	var closest = nums[0]
+	var closest = math.MaxInt
 	for i := range nums {
-		fmt.Println("items : ", int(math.Abs(float64(0-nums[i]))), i, nums[i])
+		fmt.Println("items : ", nums[i], int(math.Abs(float64(0-nums[i]))))
 		closest = min(closest, int(math.Abs(float64(0-nums[i]))))
 	}
 	return closest
