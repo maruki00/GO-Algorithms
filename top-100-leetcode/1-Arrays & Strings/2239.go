@@ -35,7 +35,11 @@ func findClosestNumber(nums []int) int {
 	var closest = nums[0]
 
 	for i := range nums {
-		if abs(0-closest) >= abs(0-nums[i]) {
+		if abs(0-closest) == abs(0-nums[i]) && closest <= nums[i] {
+			closest = nums[i]
+			continue
+		}
+		if abs(0-closest) > abs(0-nums[i]) {
 			closest = nums[i]
 		}
 	}
