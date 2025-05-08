@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "go",
+            "name": "debug 13.go",
+            "request": "launch",
+            "mode": "auto",
+            "args": [],
+            "program": "/home/user/Desktop/go/top-100-leetcode/1-Arrays & Strings/13.go"
+        }
+    ]
+}
