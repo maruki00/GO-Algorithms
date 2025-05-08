@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 Symbol       Value
@@ -64,5 +66,8 @@ func romanToInt(s string) int {
 }
 
 func main() {
+
+	romans := "XXVII"
+	fmt.Println("result : ", romanToInt(romans))
 
 }
